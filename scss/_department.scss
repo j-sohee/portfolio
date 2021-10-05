@@ -1,6 +1,40 @@
 /*department---------------------------------*/
 .department{
     .sub_visual{
-        background-color: olivedrab;
+        background:url(../img/department/bg3.jpg) no-repeat center/cover;
+    }
+
+    .inner{
+        .wrap{
+            width:100%;
+            border-top:1px solid #ddd;
+            margin-top:20px;
+            &::after{
+                content:''; display:block; clear:both;
+            }
+            article{
+                width:380px; height:180px;
+                margin-right:20px; margin-top:60px;
+                float:left; text-align:center;
+                &:nth-of-type(3n){
+                    margin-right:0;
+                }
+                .icon{
+                    width:64px; height:64px;
+                    margin:0 auto;
+                    img{ width:100%; height:100%; }
+                }
+                h2{
+                    font:bold 18px/1 $font; color:#333;
+                    margin-top:10px;
+                }
+                p{
+                    display:inline-block;
+                    font:14px/1.2 $font; color:#666;
+                    padding:20px 30px;
+                    box-sizing:border-box;
+                }
+            }
+        }
     }
 }
