@@ -122,7 +122,7 @@ a {
       color: #000;
       margin-bottom: 10px;
       text-align: center; }
-    .content .inner p {
+    .content .inner > p {
       font: normal 14px/1 "Noto Sans";
       color: #999;
       text-align: center;

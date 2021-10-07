@@ -24,12 +24,12 @@ $.ajax({
     console.log(data.photos.photo);
     let items = data.photos.photo;
 
-    $(".gallery").append("<ul>");
+    $(".imgGallery").append("<ul>");
     $(items).each(function(index,data){
 
         let text = data.title; 
 
-        $(".gallery ul")
+        $(".imgGallery ul")
             .append(
                 $("<li>")
                     .append(
@@ -49,5 +49,5 @@ $.ajax({
     })
 })
 .error(function(err){
-    console.err(err);
+    console.err("데이터를 호출하는데 실패했습니다");
 })
