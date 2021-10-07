@@ -13,37 +13,44 @@ $.ajax({
     dataType : "json",
     data : {
         api_key : "c28561608d1c0e9f7db60ecfda79bf27",
-        per_page : 5,
+        per_page : 9,
         format: "json",
         nojsoncallback:1,
         privacy_filter:5,
-        tags : "cloud"
+        tags : "sky"
     }
 })
 .success(function(data){
     console.log(data.photos.photo);
     let items = data.photos.photo;
 
-    $(".imgGallery").append("<ul>");
+    $(".myImg").append("<ul>");
     $(items).each(function(index,data){
 
         let text = data.title; 
 
-        $(".imgGallery ul")
+        $(".myImg ul")
             .append(
                 $("<li>")
                     .append(
-                        $("<a>").attr({
-                            href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
-                        })
-                            .append(
-                                $("<img>").attr({
-                                    src: "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_m.jpg"
-                                })
-                            )
+                        $("<h2>").text(text)
                     )
                     .append(
-                        $("<p>").text(text)
+                        $("<div class='imgBox'>")
+                            .append(
+                                $("<a>").attr({
+                                    href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
+                                })
+                                    .append(
+                                        $("<img>").attr({
+                                            src: "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_w.jpg"
+                                        })
+                                    )
+                            )
+                    )
+                    
+                    .append(
+                        $("<p>").text("quis illum consectetur")
                     )
             )
     })

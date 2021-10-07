@@ -3,5 +3,43 @@
     .sub_visual{
         background:#ddd;
     }
+    .inner{
+        .myImg{
+            width:100%;
+            border-top:1px solid #bbb;
+            margin-top:100px;
+            ul{
+                width:100%;
 
+                &::after{ content:''; display:block; clear:both; }
+
+                li{
+                    float:left; width:33%;  height:500px; padding:20px;
+                    border-bottom:1px solid #bbb;
+                    border-right:1px solid #bbb;
+                    &:nth-of-type(3n){ border-right:none; }
+                    
+                    &:nth-of-type(odd) .imgBox a{ background:#FDEFEF;}
+                    &:nth-of-type(even) .imgBox a{background:#F4DFD0;}
+                    h2{
+                        font:bold 16px/1 $font; color:#333;
+                        margin-bottom:20px;
+                    }
+                    .imgBox{
+                        a{
+                            display:block; width:100%; height:360px;
+                            padding:20px; box-sizing:border-box; line-height:500px; text-align:center;
+                            img{
+                                width:90%; height:60%;
+                            }
+                        }
+                    }
+                    p{
+                        font:14px/1 $font; color:#666;
+                        text-align:right; margin-top:20px;
+                    }
+                }
+            } 
+        }
+    }
 }
