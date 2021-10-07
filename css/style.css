@@ -240,7 +240,7 @@ a {
 
 /*department---------------------------------*/
 .department .sub_visual {
-  background: url(../img/department/bg3.jpg) no-repeat center/cover; }
+  background: url(../img/department/bg5.jpg) no-repeat center/cover; }
 .department .inner .wrap {
   width: 100%;
   border-top: 1px solid #ddd;
@@ -345,6 +345,18 @@ a {
 /*join---------------------------------*/
 .join .sub_visual {
   background-color: burlywood; }
+
+/*department---------------------------------*/
+.gallery .sub_visual {
+  background: #ddd; }
+
+/*youtube---------------------------------*/
+.youtube .sub_visual {
+  background: #ddd; }
+
+/*location---------------------------------*/
+.location .sub_visual {
+  background: #ddd; }
 
 #header {
   width: 100%;
