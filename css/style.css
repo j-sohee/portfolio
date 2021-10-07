@@ -115,8 +115,7 @@ a {
     background: #ddd; }
   .content .inner {
     width: 1180px;
-    margin: 0 auto;
-    min-height: 500px; }
+    margin: 0 auto; }
     .content .inner h1 {
       font: normal 32px/1 "Noto Sans";
       color: #000;
@@ -346,7 +345,7 @@ a {
 .join .sub_visual {
   background-color: burlywood; }
 
-/*department---------------------------------*/
+/*gallery---------------------------------*/
 .gallery .sub_visual {
   background: #ddd; }
 
