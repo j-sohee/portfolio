@@ -3,5 +3,24 @@
     .sub_visual{
         background:#ddd;
     }
+    .inner{
+        width:100%;
+        .vidGallery{
+            width:100%;
+            article{
+                width:100%; border:1px solid #ccc;
+                padding:30px; margin-bottom:30px;
+                display:flex; justify-content:space-between;
+                flex-wrap:wrap;
+                a{
+                    width:30%;
+                    img { width:100%; }
+                }
+                .con{
+                    width:65%;
+                }
+            }
+        }
+    }
 
 }

@@ -20,6 +20,7 @@ $.ajax({
         tags : "sky"
     }
 })
+
 .success(function(data){
     console.log(data.photos.photo);
     let items = data.photos.photo;
@@ -28,6 +29,9 @@ $.ajax({
     $(items).each(function(index,data){
 
         let text = data.title; 
+        if(!data.title){
+            text = "No description in this photo";
+        }
 
         $(".myImg ul")
             .append(
