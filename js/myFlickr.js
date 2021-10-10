@@ -13,11 +13,11 @@ $.ajax({
     dataType : "json",
     data : {
         api_key : "c28561608d1c0e9f7db60ecfda79bf27",
-        per_page : 9,
+        per_page : 16,
         format: "json",
         nojsoncallback:1,
         privacy_filter:5,
-        tags : "sky"
+        tags : "blue_sky"
     }
 })
 
@@ -34,29 +34,23 @@ $.ajax({
         }
 
         $(".myImg ul")
+        .append(
+            $("<li>")
             .append(
-                $("<li>")
+                $("<a>").attr({
+                    href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
+                })
                     .append(
-                        $("<h2>").text(text)
-                    )
-                    .append(
-                        $("<div class='imgBox'>")
-                            .append(
-                                $("<a>").attr({
-                                    href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
-                                })
-                                    .append(
-                                        $("<img>").attr({
-                                            src: "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_w.jpg"
-                                        })
-                                    )
-                            )
-                    )
-                    
-                    .append(
-                        $("<p>").text("quis illum consectetur")
+                        $("<img>").attr({ src : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_m.jpg" })
                     )
             )
+            .append(
+                $("<span>").text("Lorem, ipsum dolor")
+            )
+            .append(
+                $("<h2>").text(text)
+            )
+        )
     })
 })
 .error(function(err){

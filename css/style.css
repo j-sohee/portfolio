@@ -349,9 +349,7 @@ a {
 .gallery .sub_visual {
   background: #ddd; }
 .gallery .inner .myImg {
-  width: 100%;
-  border-top: 1px solid #bbb;
-  margin-top: 100px; }
+  width: 100%; }
   .gallery .inner .myImg ul {
     width: 100%; }
     .gallery .inner .myImg ul::after {
@@ -359,44 +357,34 @@ a {
       display: block;
       clear: both; }
     .gallery .inner .myImg ul li {
+      width: 25%;
       float: left;
-      width: 33%;
-      height: 500px;
-      padding: 20px;
-      border-bottom: 1px solid #bbb;
-      border-right: 1px solid #bbb; }
-      .gallery .inner .myImg ul li:nth-of-type(3n) {
-        border-right: none; }
-      .gallery .inner .myImg ul li:nth-of-type(odd) .imgBox a {
-        background: #ddd; }
-      .gallery .inner .myImg ul li:nth-of-type(even) .imgBox a {
-        background: #eee; }
-      .gallery .inner .myImg ul li h2 {
-        font: bold 16px/1 "Noto Sans";
-        color: #333;
-        margin-bottom: 20px; }
-      .gallery .inner .myImg ul li .imgBox a {
+      padding: 10px;
+      box-sizing: border-box; }
+      .gallery .inner .myImg ul li:nth-of-type(4n) {
+        padding-right: 0px; }
+      .gallery .inner .myImg ul li a {
         display: block;
         width: 100%;
-        height: 360px;
-        padding: 20px;
-        box-sizing: border-box;
-        line-height: 500px;
-        text-align: center; }
-        .gallery .inner .myImg ul li .imgBox a img {
-          width: 90%;
-          height: 60%; }
-      .gallery .inner .myImg ul li p {
+        height: 400px;
+        margin-bottom: 10px; }
+        .gallery .inner .myImg ul li a img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      .gallery .inner .myImg ul li span {
         font: 14px/1 "Noto Sans";
-        color: #666;
-        text-align: right;
-        margin-top: 20px; }
+        color: #666; }
+      .gallery .inner .myImg ul li h2 {
+        font: bold 16px/1.3 "Noto Sans";
+        color: #333;
+        margin-top: 5px; }
 
 /*youtube---------------------------------*/
 .youtube .sub_visual {
   background: #ddd; }
 .youtube .inner {
-  width: 100%; }
+  width: 1180px; }
   .youtube .inner .vidGallery {
     width: 100%; }
     .youtube .inner .vidGallery article {
