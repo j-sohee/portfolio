@@ -17,7 +17,7 @@ $.ajax({
         format: "json",
         nojsoncallback:1,
         privacy_filter:5,
-        tags : "blue_sky"
+        tags : "Moonlit"
     }
 })
 
@@ -41,7 +41,7 @@ $.ajax({
                     href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
                 })
                     .append(
-                        $("<img>").attr({ src : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_m.jpg" })
+                        $("<img>").attr({ src : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg" })
                     )
             )
             .append(
