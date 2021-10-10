@@ -360,7 +360,7 @@ a {
     .gallery .inner .myImg ul li {
       width: 280px;
       margin-right: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       float: left; }
       .gallery .inner .myImg ul li:nth-of-type(4n) {
         margin-right: 0; }
