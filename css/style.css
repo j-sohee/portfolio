@@ -489,6 +489,9 @@ a {
 /*location---------------------------------*/
 .location .sub_visual {
   background: #ddd; }
+.location .inner #map {
+  width: 100%;
+  height: 500px; }
 
 #header {
   width: 100%;

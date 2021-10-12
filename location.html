@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Location</title>
     <script src="https://kit.fontawesome.com/6ce8152991.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a2d3458fdaea61a640a9844474f83c67"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/map.js"></script>
 </head>
 <body>
     <header id="header_sub">
@@ -35,7 +37,12 @@
     <section class="content location">
         <div class="sub_visual"></div>
         <div class="inner">
-
+            <div id="map"></div>
+            <ul class="branch">
+                <li data-index="1" class="on"><a href="#">본점</a></li>
+                <li data-index="2"><a href="#">지점1</a></li>
+                <li data-index="3"><a href="#">지점2</a></li>
+            </ul>
         </div>
     </section>
     <footer id="footer_sub">
