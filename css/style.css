@@ -497,7 +497,7 @@ a {
   float: right;
   margin-top: 20px; }
   .location .inner .branch li {
-    float: right;
+    float: left;
     margin-left: 10px; }
     .location .inner .branch li a {
       display: block;
@@ -507,6 +507,9 @@ a {
       font: bold 12px/40px "맑은 고딕";
       color: #fff;
       text-align: center; }
+    .location .inner .branch li.on a {
+      background: #aaa;
+      color: #333; }
 
 #header {
   width: 100%;

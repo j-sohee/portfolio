@@ -10,11 +10,16 @@
         .branch{
             float:right; margin-top:20px;
             li{
-                float:right; margin-left:10px;
+                float:left; margin-left:10px;
                 a{
                     display:block; width:200px; height:40px;
                     background:#555;
                     font:bold 12px/40px "맑은 고딕"; color:#fff; text-align:center;
+                }
+                &.on{
+                    a{
+                        background:#aaa; color:#333;
+                    }
                 }
             }
         }
