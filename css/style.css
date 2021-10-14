@@ -609,6 +609,28 @@ a {
     width: 1180px;
     height: calc(100vh - 136px);
     margin: 0 auto; }
+    #section .inner #popup {
+      width: 350px;
+      background: #ddd;
+      padding: 40px;
+      box-sizing: border-box;
+      color: #111; }
+      #section .inner #popup::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #section .inner #popup .content {
+        width: 100%;
+        min-height: 300px;
+        text-align: center; }
+      #section .inner #popup .wrap {
+        float: left;
+        font: 12px/1 "맑은 고딕";
+        color: #333; }
+      #section .inner #popup .close {
+        float: right;
+        font: 12px/1 "arial";
+        color: #333; }
 
 #footer {
   width: 100%;

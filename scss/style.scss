@@ -127,6 +127,27 @@ $font : "Noto Sans";
         width:1180px;
         height:calc(100vh - 136px);
         margin:0 auto;
+        #popup{
+            width:350px; background:#ddd;
+            padding:40px; box-sizing:border-box;
+
+            &::after{
+                content:''; display:block; clear:both;
+            }
+            color:#111;
+            .content{
+                width:100%; min-height:300px;
+                text-align:center;
+            }
+            .wrap{
+                float:left;
+                font:12px/1 "맑은 고딕"; color:#333;
+            }
+            .close{
+                float:right; font:12px/1 "arial";
+                color:#333;
+            }
+        }
     }
 }
 
