@@ -297,7 +297,7 @@ a {
     float: left;
     transition: 0.5s; }
     .department .inner .team > article:hover .teamBox {
-      display: block;
+      opacity: 1;
       bottom: 0; }
     .department .inner .team > article:hover .pic img {
       filter: grayscale(0%); }
@@ -317,7 +317,7 @@ a {
       left: 0;
       padding: 20px 30px 35px;
       transition: 0.5s;
-      display: none; }
+      opacity: 0; }
       .department .inner .team > article .teamBox h3 {
         font: 20px/1 "Noto Sans";
         color: #fff;
@@ -338,6 +338,40 @@ a {
           color: #333;
           line-height: 30px;
           padding: 0 5px; }
+    .department .inner .team > article:nth-of-type(7) {
+      padding: 40px;
+      background: #faf0f0; }
+      .department .inner .team > article:nth-of-type(7) p {
+        text-align: left;
+        padding: 0 0 0 10px;
+        font: 12px/1 "Noto Sans";
+        color: #666;
+        letter-spacing: 2px;
+        margin-top: 60px;
+        margin-bottom: 10px; }
+        .department .inner .team > article:nth-of-type(7) p::before {
+          content: '';
+          display: inline-block;
+          width: 1px;
+          height: 23px;
+          background: #daa5a5;
+          transform: rotate(55deg);
+          margin-right: 15px; }
+      .department .inner .team > article:nth-of-type(7) span {
+        display: block;
+        font: 18px/1.4 "arial";
+        color: #3b3b3b;
+        letter-spacing: 2px; }
+      .department .inner .team > article:nth-of-type(7) a {
+        display: block;
+        width: 150px;
+        height: 40px;
+        border: 1px solid #daa5a5;
+        font: 12px/40px "Noto Sans";
+        color: #daa5a5;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-top: 40px; }
 
 /*community---------------------------------*/
 .community .sub_visual {
@@ -609,28 +643,6 @@ a {
     width: 1180px;
     height: calc(100vh - 136px);
     margin: 0 auto; }
-    #section .inner #popup {
-      width: 350px;
-      background: #ddd;
-      padding: 40px;
-      box-sizing: border-box;
-      color: #111; }
-      #section .inner #popup::after {
-        content: '';
-        display: block;
-        clear: both; }
-      #section .inner #popup .content {
-        width: 100%;
-        min-height: 300px;
-        text-align: center; }
-      #section .inner #popup .wrap {
-        float: left;
-        font: 12px/1 "맑은 고딕";
-        color: #333; }
-      #section .inner #popup .close {
-        float: right;
-        font: 12px/1 "arial";
-        color: #333; }
 
 #footer {
   width: 100%;
@@ -740,5 +752,37 @@ a {
           #footer .innerBt .footerBox .rightBox .service p {
             font: 12px/18px "Noto Sans";
             color: #999; }
+
+#popup {
+  width: 350px;
+  background: #000;
+  padding: 40px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 150px;
+  left: 350px; }
+  #popup::after {
+    content: '';
+    display: block;
+    clear: both; }
+  #popup .content {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    margin-top: 20px; }
+    #popup .content p {
+      font: 48px/1 "Noto Sans";
+      color: #fff; }
+    #popup .content span {
+      font: 12px/1 "Noto Sans";
+      color: #ccc; }
+  #popup .wrap {
+    float: left;
+    font: 12px/1 "맑은 고딕";
+    color: #eee; }
+  #popup .close {
+    float: right;
+    font: 12px/1 "arial";
+    color: #eee; }
 
 /*# sourceMappingURL=style.css.map */

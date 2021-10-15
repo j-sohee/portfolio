@@ -1,4 +1,4 @@
-
+//쿠키팝업----------------------------------------------
 let isCookie = document.cookie.indexOf("popup=done");
 console.log(isCookie);
 
@@ -7,14 +7,6 @@ if(isCookie == -1){
 }else{
     $("#popup").hide();
 }
-
-$(".del").on("click", function(){
-    setCookie(0);
-    alert("쿠키삭제완료");
-});
-$(".view").on("click", function(){
-    console.log(document.cookie);
-});
 
 $("#popup .close").on("click", function(e){
     e.preventDefault();

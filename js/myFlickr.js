@@ -25,7 +25,6 @@ $.ajax({
     console.log(data.photos.photo);
     let items = data.photos.photo;
 
-    $(".myImg").append("<ul>");
     $(items).each(function(index,data){
 
         let text = data.title; 
@@ -33,31 +32,34 @@ $.ajax({
             text = "No description in this photo";
         }
 
-        $(".myImg ul")
-        .append(
-            $("<li>")
-            .append(
-                $("<a>").attr({
-                    href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
-                })
-                    .append(
-                        $("<img>").attr({ src : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg" })
-                    )
+        $(".myImg").append(
+            $("<article>")
+                .append(
+                    $("<div class='item'>")
+                        .append(
+                            $("<a>").attr({
+                                href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
+                            })
+                                .append(
+                                    $("<img>").attr({ src : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg" })
+                                )
+                        )
+                        .append(
+                            $("<span>").text("Lorem, ipsum dolor")
+                        )
+                        .append(
+                            $("<h2>").text(text)
+                        )
+                )
             )
-            .append(
-                $("<span>").text("Lorem, ipsum dolor")
-            )
-            .append(
-                $("<h2>").text(text)
-            )
-        )
     })
 })
+
 .error(function(err){
     console.err("데이터를 호출하는데 실패했습니다");
 })
 
-$("body").on("click", ".myImg ul li", function(e){
+$("body").on("click", ".myImg article .item", function(e){
     e.preventDefault();
 
     let imgSrc = $(this).children("a").attr("href");
@@ -69,8 +71,9 @@ $("body").on("click", ".myImg ul li", function(e){
                 $("<span>").text("close")
             )
     )
-});
+})
 
 $("body").on("click", ".pop span", function(){
     $(".pop").remove();
 })
+

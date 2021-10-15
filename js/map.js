@@ -59,7 +59,8 @@ const markerOptions = [
 		image:new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption)
 	});
 
-	markerOptions[i].button.onclick = function(){
+	markerOptions[i].button.onclick = function(e){
+
 
 		moveTo(markerOptions[i].latlng); //해당지점으로 이동
 
