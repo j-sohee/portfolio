@@ -17,16 +17,17 @@
                     float:left; border:1px solid #ccc;
                     box-shadow:5px 5px 5px rgba(0,0,0,0.1);
                     border-radius: 10px; padding:40px;
-                    margin-right:20px;
-                    text-align:center;
+                    margin-right:20px; 
+                    text-align:center; transition:0.5s;
                     
                     &:last-child{ margin-right:0px; }
                     a{
-                        display:block;
+                        display:block; transition:0.5s;
                         img{ width:50px; height:50px; }
                         h2{
                             margin-top:20px;
                             font:24px/1 $font; color:#333;
+                            transition:0.5s;
                         }
                         p{
                             margin-top:10px;
@@ -76,7 +77,7 @@
             }
         }
         .pagination{
-            width:100%; margin-bottom:60px;
+            width:100%; margin-bottom:80px;
             text-align:center;
             
             .prev{
@@ -130,7 +131,7 @@
                     display:inline-block;
                     width:30px; height:20px;
                     font: 14px/20px $font; color:#666;
-                    margin:0 5px;
+                    margin:0 5px; transition:0.5s;
 
                     &:hover{
                         font-weight: bold; color:#333;
@@ -146,6 +147,7 @@
             }
             p{
                 font:16px/1.6 $font; color:#888;
+                text-align:center; margin-bottom:40px;
             }
             ul{
                 width:100%; text-align:center;
@@ -175,7 +177,7 @@
                         span{
                             font:14px/1 $font; color:#999;
                             letter-spacing: 1px;
-                            transition:0.5s;
+                            transition:0.5s; 
                         }
                     }
                     &:hover{
