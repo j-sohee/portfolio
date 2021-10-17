@@ -119,10 +119,10 @@
         position: relative;
 
         h1{
-            font:normal 32px/1 $font;
-            color:#000;
-            margin-bottom:40px;
-            text-align:center;
+            font:32px/1 $font; 
+            color:#000; margin-bottom:40px;
+            padding-bottom:30px; 
+            border-bottom:1px solid #ddd;
         }
     }
 }

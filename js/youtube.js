@@ -4,45 +4,70 @@ $.ajax({
     data : {
         part : "snippet",
         key : "AIzaSyAAMk0RKq2aVlltRyS8dlW_Hr1zw8_ouCs",
-        maxResult : 6,
-        playlistId : "PL_R5V_bKthTv_06V-xhGR6l0S-CvfmyNJ",
+        maxResults : 9,
+        playlistId : "PL_R5V_bKthTtOskiIsA-w_VcyqRlaLdc0"
     }
 })
 .success(function(data){
-    // console.log(data);
 
     let items = data.items;
     console.log(items);
 
-    $(items).each(function(index,data){
 
-        let txt = data.snippet.description;
+    $(items).each(function(index, data){
+
+        let txt = data.snippet.description; //본문
+        let tit = data.snippet.title; // 타이틀
         let len = txt.length;
-        if( len >  150){
-            txt = txt.substr(0, 150) + "...";
-        }
-
+        let titLen = tit.length;
         let date = data.snippet.publishedAt;
         date = date.split("T")[0];
-        
-        $(".vidGallery")
+
+        if( len >  70){
+            txt = txt.substr(0, 70) + "...";
+        }
+        if( titLen > 50){
+            tit = tit.substr(0, 50) + "...";
+        }
+
+        $("#vidGallery")
             .append(
                 $("<article>")
                     .append(
-                        $("<a>").attr({ href : data.snippet.resourceId.videoId })
+                        $("<a>").attr({ href : data.snippet.resourceId.videoId})
                                 .append(
                                     $("<img>").attr({ src : data.snippet.thumbnails.high.url })
                                  ),
                         $("<div class='con'>")
                                 .append(
-                                    $("<h2>").text(data.snippet.title),
+                                    $("<h2>").text(tit),
                                     $("<p>").text(txt),
                                     $("<span>").text(date)
                                 )
                     )
             )
-    })
+    });
 })
 .error(function(err){
     console.error(err);
 })
+
+$("body").on("click", "#vidGallery article a", function(e){
+    e.preventDefault();
+
+    let vidId = $(this).attr("href");
+
+    $("body")
+        .append(
+            $("<div class='vidpop'>")
+                .append(
+                    $("<iframe>").attr({
+                        src : "https://www.youtube.com/embed/"+vidId,
+                        frameborder : 0,
+                        width:"100%",
+                        height: 600
+                    }),
+                    $("<span>").text("close")
+                )
+        )
+});

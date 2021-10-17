@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
 * {
   margin: 0;
@@ -128,10 +128,11 @@ fieldset {
     margin: 0 auto;
     position: relative; }
     .content .inner h1 {
-      font: normal 32px/1 "Noto Sans", "Noto Sans KR";
+      font: 32px/1 "Noto Sans", "Noto Sans KR";
       color: #000;
       margin-bottom: 40px;
-      text-align: center; }
+      padding-bottom: 30px;
+      border-bottom: 1px solid #ddd; }
 
 /*footer_sub--------------------------*/
 #footer_sub {
@@ -383,6 +384,16 @@ fieldset {
 .community .inner .cs_guide {
   width: 100%;
   margin: 60px 0 80px 0; }
+  .community .inner .cs_guide h2 {
+    font: 26px/1 "Noto Sans", "Noto Sans KR";
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px; }
+  .community .inner .cs_guide p {
+    font: 14px/1 "Noto Sans", "Noto Sans KR";
+    color: #999;
+    text-align: center;
+    margin-bottom: 50px; }
   .community .inner .cs_guide .cs {
     width: 100%;
     margin: 0 auto; }
@@ -409,7 +420,7 @@ fieldset {
         .community .inner .cs_guide .cs li a img {
           width: 50px;
           height: 50px; }
-        .community .inner .cs_guide .cs li a h2 {
+        .community .inner .cs_guide .cs li a h3 {
           margin-top: 20px;
           font: 24px/1 "Noto Sans", "Noto Sans KR";
           color: #333;
@@ -419,7 +430,7 @@ fieldset {
           font: 14px/1.3 "Noto Sans", "Noto Sans KR";
           color: #666;
           letter-spacing: 0.5px; }
-      .community .inner .cs_guide .cs li:hover h2 {
+      .community .inner .cs_guide .cs li:hover h3 {
         color: #F55C47; }
 .community .inner table {
   width: 100%;
@@ -539,7 +550,7 @@ fieldset {
   width: 100%;
   margin: 0 auto;
   position: relative; }
-  .community .inner .cs_contact h3 {
+  .community .inner .cs_contact h4 {
     font: 26px/1 "Noto Sans", "Noto Sans KR";
     color: #333;
     text-align: center;
@@ -822,25 +833,96 @@ fieldset {
 
 /*youtube---------------------------------*/
 .youtube .sub_visual {
-  background: #ddd; }
+  background: url(../img/youtube/bg1.jpg) no-repeat center/cover;
+  filter: saturate(60%); }
 .youtube .inner {
   width: 1180px; }
-  .youtube .inner .vidGallery {
-    width: 100%; }
-    .youtube .inner .vidGallery article {
+  .youtube .inner #vidGallery {
+    width: 100%;
+    position: relative; }
+    .youtube .inner #vidGallery::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .youtube .inner #vidGallery article {
+      width: 380px;
+      height: 400px;
+      float: left;
+      position: relative;
+      background: #eee;
+      transition: 0.5s;
+      margin-right: 20px;
+      margin-bottom: 30px; }
+      .youtube .inner #vidGallery article:nth-of-type(3n) {
+        margin-right: 0px; }
+      .youtube .inner #vidGallery article:hover a {
+        filter: grayscale(0); }
+      .youtube .inner #vidGallery article:hover img {
+        transform: scale(1.5); }
+      .youtube .inner #vidGallery article:hover .con {
+        width: 100%;
+        bottom: 0px;
+        background: #eee; }
+      .youtube .inner #vidGallery article a {
+        display: block;
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        filter: saturate(100%);
+        margin-bottom: 20px;
+        transition: 0.5s; }
+        .youtube .inner #vidGallery article a img {
+          width: 100%;
+          transform: scale(1.4);
+          transition: 0.5s; }
+      .youtube .inner #vidGallery article .con {
+        width: 80%;
+        height: 150px;
+        background: #fff;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 20px 10px;
+        transition: 0.5s; }
+        .youtube .inner #vidGallery article .con h2 {
+          font: 700 16px/1.2 "Noto Sans", "Noto Sans KR";
+          color: #000;
+          text-align: center;
+          margin-bottom: 10px;
+          letter-spacing: 0.8px;
+          transition: 0.5s; }
+        .youtube .inner #vidGallery article .con p {
+          font: 13px/1.4 "Noto Sans", "Noto Sans KR";
+          color: #666;
+          text-align: center;
+          margin-bottom: 20px;
+          transition: 0.5s; }
+        .youtube .inner #vidGallery article .con span {
+          display: block;
+          font: 13px/1 "Noto Sans", "Noto Sans KR";
+          color: #999;
+          text-align: center;
+          transition: 0.5s; }
+  .youtube .inner .vidpop {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 80px; }
+    .youtube .inner .vidpop img {
       width: 100%;
-      border: 1px solid #ccc;
-      padding: 30px;
-      margin-bottom: 30px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap; }
-      .youtube .inner .vidGallery article a {
-        width: 30%; }
-        .youtube .inner .vidGallery article a img {
-          width: 100%; }
-      .youtube .inner .vidGallery article .con {
-        width: 65%; }
+      height: 100%; }
+    .youtube .inner .vidpop span {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font: bold 14px/1 "Noto Sans", "Noto Sans KR";
+      color: #fff;
+      cursor: pointer; }
 
 /*location---------------------------------*/
 .location .sub_visual {
