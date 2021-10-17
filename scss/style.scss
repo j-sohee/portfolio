@@ -2,8 +2,9 @@
 @import "reset.scss";
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
 
-$font : "Noto Sans";
+$font : "Noto Sans", 'Noto Sans KR';
 
 @import "sub_layout.scss";
 @import "department.scss";

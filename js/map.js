@@ -48,8 +48,19 @@ const markerOptions = [
 		title : "신세계프리미엄아울렛 시흥점",
 		latlng : new kakao.maps.LatLng(37.37985804700607,126.7370634838679),
 		button: branch_btns[1]
+	 },
+	 {
+		title : "영등포 타임스퀘어",
+		latlng : new kakao.maps.LatLng(37.51712084872874,126.90566030935004),
+		button: branch_btns[2]
+	 },
+	 {
+		title : "송도 현대프리미엄아울렛",
+		latlng : new kakao.maps.LatLng(37.38167174962092,126.65795857415686),
+		button: branch_btns[3]
 	 }
  ];
+ 
 
  for(let i=0; i<markerOptions.length; i++){
 	new kakao.maps.Marker({
@@ -60,7 +71,7 @@ const markerOptions = [
 	});
 
 	markerOptions[i].button.onclick = function(e){
-
+		e.preventDefault();
 
 		moveTo(markerOptions[i].latlng); //해당지점으로 이동
 
@@ -78,7 +89,6 @@ function moveTo(target) {
     
     map.setCenter(moveLatLon);
 }
-
 
 window.onresize = function(){
     let active_btn = document.querySelector(".branch li.on");

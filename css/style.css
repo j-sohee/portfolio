@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +35,7 @@ fieldset {
       left: 50%;
       transform: translateX(-50%); }
       #header_sub .inner h1 a {
-        font: 26px/1 "Noto Sans";
+        font: 26px/1 "Noto Sans", "Noto Sans KR";
         color: #111; }
     #header_sub .inner .util {
       position: absolute;
@@ -95,7 +96,7 @@ fieldset {
             display: block;
             width: 100%;
             height: 100%;
-            font: 14px/60px "Noto Sans";
+            font: 14px/60px "Noto Sans", "Noto Sans KR";
             color: #555;
             text-align: center; }
     #header_sub .inner .user {
@@ -127,7 +128,7 @@ fieldset {
     margin: 0 auto;
     position: relative; }
     .content .inner h1 {
-      font: normal 32px/1 "Noto Sans";
+      font: normal 32px/1 "Noto Sans", "Noto Sans KR";
       color: #000;
       margin-bottom: 40px;
       text-align: center; }
@@ -150,7 +151,7 @@ fieldset {
       #footer_sub .inner .linkCompany li a {
         display: inline-block;
         padding: 20px 20px 20px 0;
-        font: 15px/1 "Noto Sans";
+        font: 15px/1 "Noto Sans", "Noto Sans KR";
         color: #333; }
     #footer_sub .inner .linkSns {
       position: absolute;
@@ -187,7 +188,7 @@ fieldset {
           float: left;
           border-right: 1px solid #bbb; }
           #footer_sub .innerBt .footerBox .leftBox .logo h1 {
-            font: 38px/43px "Noto Sans";
+            font: 38px/43px "Noto Sans", "Noto Sans KR";
             color: #333; }
         #footer_sub .innerBt .footerBox .leftBox .cs {
           width: 85%;
@@ -201,7 +202,7 @@ fieldset {
           #footer_sub .innerBt .footerBox .leftBox .cs .csBox {
             float: left;
             padding-left: 15px;
-            font: 14px/20px "Noto Sans";
+            font: 14px/20px "Noto Sans", "Noto Sans KR";
             color: #555; }
             #footer_sub .innerBt .footerBox .leftBox .cs .csBox strong {
               display: block;
@@ -211,14 +212,14 @@ fieldset {
           #footer_sub .innerBt .footerBox .leftBox .cs .csTime {
             float: left;
             padding-left: 30px;
-            font: 14px/20px "Noto Sans";
+            font: 14px/20px "Noto Sans", "Noto Sans KR";
             color: #888;
             margin-top: 3px; }
         #footer_sub .innerBt .footerBox .leftBox address {
           width: 100%;
           float: left;
           margin-top: 50px;
-          font: 12px/20px "Noto Sans";
+          font: 12px/20px "Noto Sans", "Noto Sans KR";
           color: #777; }
           #footer_sub .innerBt .footerBox .leftBox address p {
             margin-top: 20px;
@@ -231,7 +232,7 @@ fieldset {
           height: 45px;
           border: none;
           border-bottom: 2px solid #555;
-          font: 16px/45px "Noto Sans";
+          font: 16px/45px "Noto Sans", "Noto Sans KR";
           color: #666; }
         #footer_sub .innerBt .footerBox .rightBox .service {
           width: 100%;
@@ -239,7 +240,7 @@ fieldset {
           margin-top: 40px;
           padding: 10px 20px; }
           #footer_sub .innerBt .footerBox .rightBox .service p {
-            font: 12px/18px "Noto Sans";
+            font: 12px/18px "Noto Sans", "Noto Sans KR";
             color: #999; }
 
 /*department---------------------------------*/
@@ -270,12 +271,12 @@ fieldset {
         width: 100%;
         height: 100%; }
     .department .inner .wrap article h2 {
-      font: bold 16px/1 "Noto Sans";
+      font: bold 16px/1 "Noto Sans", "Noto Sans KR";
       color: #333;
       margin-top: 20px; }
     .department .inner .wrap article p {
       display: inline-block;
-      font: 14px/1.3 "Noto Sans";
+      font: 14px/1.3 "Noto Sans", "Noto Sans KR";
       color: #666;
       padding: 15px 30px;
       box-sizing: border-box; }
@@ -286,7 +287,7 @@ fieldset {
     display: block;
     clear: both; }
   .department .inner .team h2 {
-    font: normal 32px/1 "Noto Sans";
+    font: normal 32px/1 "Noto Sans", "Noto Sans KR";
     color: #000;
     margin-top: 100px;
     margin-bottom: 60px;
@@ -322,11 +323,11 @@ fieldset {
       transition: 0.5s;
       opacity: 0; }
       .department .inner .team > article .teamBox h3 {
-        font: 20px/1 "Noto Sans";
+        font: 20px/1 "Noto Sans", "Noto Sans KR";
         color: #fff;
         margin-bottom: 10px; }
       .department .inner .team > article .teamBox span {
-        font: 12px/1 "Noto Sans";
+        font: 12px/1 "Noto Sans", "Noto Sans KR";
         color: #eee;
         letter-spacing: 1px; }
       .department .inner .team > article .teamBox .sns {
@@ -347,7 +348,7 @@ fieldset {
       .department .inner .team > article:nth-of-type(7) p {
         text-align: left;
         padding: 0 0 0 10px;
-        font: 12px/1 "Noto Sans";
+        font: 12px/1 "Noto Sans", "Noto Sans KR";
         color: #666;
         letter-spacing: 2px;
         margin-top: 60px;
@@ -370,7 +371,7 @@ fieldset {
         width: 150px;
         height: 40px;
         border: 1px solid #daa5a5;
-        font: 12px/40px "Noto Sans";
+        font: 12px/40px "Noto Sans", "Noto Sans KR";
         color: #daa5a5;
         letter-spacing: 2px;
         text-align: center;
@@ -410,12 +411,12 @@ fieldset {
           height: 50px; }
         .community .inner .cs_guide .cs li a h2 {
           margin-top: 20px;
-          font: 24px/1 "Noto Sans";
+          font: 24px/1 "Noto Sans", "Noto Sans KR";
           color: #333;
           transition: 0.5s; }
         .community .inner .cs_guide .cs li a p {
           margin-top: 10px;
-          font: 14px/1.3 "Noto Sans";
+          font: 14px/1.3 "Noto Sans", "Noto Sans KR";
           color: #666;
           letter-spacing: 0.5px; }
       .community .inner .cs_guide .cs li:hover h2 {
@@ -429,7 +430,7 @@ fieldset {
     border-bottom: 1px solid #dfdfdf;
     padding: 10px;
     background: #fff;
-    font: 14px/1 "Noto Sans";
+    font: 14px/1 "Noto Sans", "Noto Sans KR";
     color: #333; }
     .community .inner table tr th:nth-of-type(1) {
       width: 10%; }
@@ -443,15 +444,15 @@ fieldset {
     text-align: center;
     transition: all 0.5s; }
     .community .inner table tr td:nth-of-type(1), .community .inner table tr td:nth-of-type(3) {
-      font: normal 15px/1 "Noto Sans";
+      font: normal 15px/1 "Noto Sans", "Noto Sans KR";
       color: #333; }
     .community .inner table tr td:nth-of-type(2) {
       text-align: left; }
       .community .inner table tr td:nth-of-type(2) span {
-        font: 15px/1 "Noto Sans";
+        font: 15px/1 "Noto Sans", "Noto Sans KR";
         color: #666; }
       .community .inner table tr td:nth-of-type(2) a {
-        font: 15px/1 "Noto Sans";
+        font: 15px/1 "Noto Sans", "Noto Sans KR";
         color: #333; }
     .community .inner table tr td:nth-of-type(2):hover a {
       color: #000;
@@ -464,7 +465,7 @@ fieldset {
     display: inline-block;
     width: 10px;
     height: 10px;
-    font: 14px/10px "Noto Sans";
+    font: 14px/10px "Noto Sans", "Noto Sans KR";
     color: #aaa;
     position: relative;
     text-indent: -9999px; }
@@ -494,7 +495,7 @@ fieldset {
     display: inline-block;
     width: 10px;
     height: 10px;
-    font: 14px/10px "Noto Sans";
+    font: 14px/10px "Noto Sans", "Noto Sans KR";
     color: #aaa;
     position: relative;
     text-indent: -9999px; }
@@ -527,7 +528,7 @@ fieldset {
       display: inline-block;
       width: 30px;
       height: 20px;
-      font: 14px/20px "Noto Sans";
+      font: 14px/20px "Noto Sans", "Noto Sans KR";
       color: #666;
       margin: 0 5px;
       transition: 0.5s; }
@@ -539,12 +540,12 @@ fieldset {
   margin: 0 auto;
   position: relative; }
   .community .inner .cs_contact h3 {
-    font: 26px/1 "Noto Sans";
+    font: 26px/1 "Noto Sans", "Noto Sans KR";
     color: #333;
     text-align: center;
     margin-bottom: 20px; }
   .community .inner .cs_contact p {
-    font: 16px/1.6 "Noto Sans";
+    font: 16px/1.6 "Noto Sans", "Noto Sans KR";
     color: #888;
     text-align: center;
     margin-bottom: 40px; }
@@ -576,12 +577,12 @@ fieldset {
           margin-bottom: 15px;
           transition: 0.5s; }
         .community .inner .cs_contact ul li a p {
-          font: 18px/1 "Noto Sans";
+          font: 18px/1 "Noto Sans", "Noto Sans KR";
           color: #666;
           margin-bottom: 15px;
           transition: 0.5s; }
         .community .inner .cs_contact ul li a span {
-          font: 14px/1 "Noto Sans";
+          font: 14px/1 "Noto Sans", "Noto Sans KR";
           color: #999;
           letter-spacing: 1px;
           transition: 0.5s; }
@@ -601,7 +602,7 @@ fieldset {
   margin-top: 20px; }
   .join .inner .top_txt span {
     display: block;
-    font: bold 22px/1 "Noto Sans";
+    font: bold 22px/1 "Noto Sans", "Noto Sans KR";
     color: #000;
     text-align: left;
     margin-bottom: 20px; }
@@ -611,7 +612,7 @@ fieldset {
   border-bottom: 1px solid #ddd; }
   .join .inner .all_agree label {
     display: inline-block;
-    font: bold 18px/1 "Noto Sans";
+    font: bold 18px/1 "Noto Sans", "Noto Sans KR";
     color: #333; }
 .join .inner .wrap {
   width: 100%;
@@ -659,7 +660,7 @@ fieldset {
         transform-origin: top center;
         transform: rotate(40deg); }
     .join .inner .wrap dt > label {
-      font: 15px/1 "Noto Sans";
+      font: 15px/1 "Noto Sans", "Noto Sans KR";
       color: #111;
       vertical-align: middle;
       text-align: left; }
@@ -673,7 +674,7 @@ fieldset {
     .join .inner .wrap dd .scroll_txt {
       width: 100%;
       height: 100%;
-      font: 14px/1.6 "Noto Sans";
+      font: 14px/1.6 "Noto Sans", "Noto Sans KR";
       color: #555;
       overflow-y: scroll; }
   .join .inner .wrap input[type=checkbox] {
@@ -685,7 +686,7 @@ fieldset {
   margin-top: 20px; }
   .join .inner table th {
     width: 15%;
-    font: bold 15px/1 "Noto Sans";
+    font: bold 15px/1 "Noto Sans", "Noto Sans KR";
     color: #333;
     text-align: left;
     padding: 20px 10px 20px 20px; }
@@ -707,7 +708,7 @@ fieldset {
       height: 40px;
       border: none;
       border-bottom: 1px solid #999;
-      font: 14px/40px "Noto Sans";
+      font: 14px/40px "Noto Sans", "Noto Sans KR";
       color: #000;
       padding: 0 5px; }
     .join .inner table td select {
@@ -715,14 +716,14 @@ fieldset {
       height: 40px;
       border: 1px solid #999;
       padding: 10px;
-      font: 14px/40px "Noto Sans";
+      font: 14px/40px "Noto Sans", "Noto Sans KR";
       color: #666; }
     .join .inner table td .btn {
       display: inline-block;
       width: 200px;
       height: 40px;
       border: 1px solid #666;
-      font: bold 14px/40px "Noto Sans";
+      font: bold 14px/40px "Noto Sans", "Noto Sans KR";
       color: #555;
       text-align: center;
       vertical-align: top;
@@ -741,7 +742,7 @@ fieldset {
     height: 60px;
     background: #bbb;
     border: none;
-    font: 16px/60px "Noto Sans";
+    font: 16px/60px "Noto Sans", "Noto Sans KR";
     color: #fff;
     text-align: center;
     margin-right: 10px; }
@@ -750,14 +751,14 @@ fieldset {
     height: 60px;
     background: #000;
     border: none;
-    font: 16px/60px "Noto Sans";
+    font: 16px/60px "Noto Sans", "Noto Sans KR";
     color: #fff;
     text-align: center; }
   .join .inner table .err_txt {
     width: 100%;
     padding: 0 5px; }
     .join .inner table .err_txt > p {
-      font: 12px/1 "Noto Sans";
+      font: 12px/1 "Noto Sans", "Noto Sans KR";
       color: #ee1c25;
       margin-top: 10px;
       text-align: left;
@@ -792,11 +793,11 @@ fieldset {
           width: 100%;
           height: 100%; }
       .gallery .inner .myImg article .item span {
-        font: 12px/1 "Noto Sans";
+        font: 12px/1 "Noto Sans", "Noto Sans KR";
         color: #666;
         margin-bottom: 5px; }
       .gallery .inner .myImg article .item h2 {
-        font: bold 16px/1.3 "Noto Sans";
+        font: bold 16px/1.3 "Noto Sans", "Noto Sans KR";
         color: #333; }
 
 .pop {
@@ -815,7 +816,7 @@ fieldset {
     position: absolute;
     top: 20px;
     right: 20px;
-    font: bold 14px/1 "Noto Sans";
+    font: bold 14px/1 "Noto Sans", "Noto Sans KR";
     color: #fff;
     cursor: pointer; }
 
@@ -843,27 +844,70 @@ fieldset {
 
 /*location---------------------------------*/
 .location .sub_visual {
-  background: #ddd; }
-.location .inner #map {
-  width: 100%;
-  height: 500px; }
+  background: url(../img/location/bg3.jpg) no-repeat bottom/cover;
+  filter: saturate(50%); }
 .location .inner .branch {
-  float: right;
-  margin-top: 20px; }
+  width: 100%;
+  margin-bottom: 40px; }
+  .location .inner .branch::after {
+    content: '';
+    display: block;
+    clear: both; }
   .location .inner .branch li {
-    float: left;
-    margin-left: 10px; }
+    width: 295px;
+    height: 40px;
+    float: left; }
     .location .inner .branch li a {
       display: block;
-      width: 200px;
-      height: 40px;
-      background: #555;
-      font: bold 12px/40px "맑은 고딕";
-      color: #fff;
-      text-align: center; }
+      width: 100%;
+      height: 100%;
+      border-bottom: 1px solid #ddd;
+      font: bold 13px/40px "Noto Sans", "Noto Sans KR";
+      color: #666;
+      text-align: center;
+      transition: 0.5s; }
     .location .inner .branch li.on a {
-      background: #aaa;
-      color: #333; }
+      border-bottom: 1px solid orangered;
+      color: orangered; }
+.location .inner #map {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 40px; }
+.location .inner .shop_infor {
+  width: 100%; }
+  .location .inner .shop_infor::after {
+    content: '';
+    display: block;
+    clear: both; }
+  .location .inner .shop_infor article {
+    width: 580px;
+    height: 200px;
+    float: left;
+    margin-right: 20px; }
+    .location .inner .shop_infor article:last-child {
+      margin-right: 0px; }
+    .location .inner .shop_infor article h2 {
+      font: bold 20px/1 "Noto Sans", "Noto Sans KR";
+      color: #000;
+      border-bottom: 1px solid #000;
+      padding-bottom: 15px; }
+    .location .inner .shop_infor article ul {
+      width: 100%; }
+      .location .inner .shop_infor article ul li {
+        width: 100%;
+        height: 40px; }
+        .location .inner .shop_infor article ul li span {
+          display: inline-block;
+          width: 10%;
+          height: 100%;
+          font: bold 14px/40px "Noto Sans", "Noto Sans KR";
+          color: #111;
+          margin-right: 10px;
+          vertical-align: top; }
+        .location .inner .shop_infor article ul li p {
+          display: inline-block;
+          font: 14px/40px "Noto Sans", "Noto Sans KR";
+          color: #111; }
 
 #header {
   width: 100%;
@@ -879,7 +923,7 @@ fieldset {
       left: 50%;
       transform: translateX(-50%); }
       #header .inner h1 a {
-        font: 26px/1 "Noto Sans";
+        font: 26px/1 "Noto Sans", "Noto Sans KR";
         color: #111; }
     #header .inner .util {
       position: absolute;
@@ -940,7 +984,7 @@ fieldset {
             display: block;
             width: 100%;
             height: 100%;
-            font: 14px/60px "Noto Sans";
+            font: 14px/60px "Noto Sans", "Noto Sans KR";
             color: #555;
             text-align: center; }
     #header .inner .user {
@@ -981,7 +1025,7 @@ fieldset {
       #footer .inner .linkCompany li a {
         display: inline-block;
         padding: 20px 20px 20px 0;
-        font: 15px/1 "Noto Sans";
+        font: 15px/1 "Noto Sans", "Noto Sans KR";
         color: #333; }
     #footer .inner .linkSns {
       position: absolute;
@@ -1018,7 +1062,7 @@ fieldset {
           float: left;
           border-right: 1px solid #bbb; }
           #footer .innerBt .footerBox .leftBox .logo h1 {
-            font: 38px/43px "Noto Sans";
+            font: 38px/43px "Noto Sans", "Noto Sans KR";
             color: #333; }
         #footer .innerBt .footerBox .leftBox .cs {
           width: 85%;
@@ -1032,7 +1076,7 @@ fieldset {
           #footer .innerBt .footerBox .leftBox .cs .csBox {
             float: left;
             padding-left: 15px;
-            font: 14px/20px "Noto Sans";
+            font: 14px/20px "Noto Sans", "Noto Sans KR";
             color: #555; }
             #footer .innerBt .footerBox .leftBox .cs .csBox strong {
               display: block;
@@ -1042,14 +1086,14 @@ fieldset {
           #footer .innerBt .footerBox .leftBox .cs .csTime {
             float: left;
             padding-left: 30px;
-            font: 14px/20px "Noto Sans";
+            font: 14px/20px "Noto Sans", "Noto Sans KR";
             color: #888;
             margin-top: 3px; }
         #footer .innerBt .footerBox .leftBox address {
           width: 100%;
           float: left;
           margin-top: 50px;
-          font: 12px/20px "Noto Sans";
+          font: 12px/20px "Noto Sans", "Noto Sans KR";
           color: #777; }
           #footer .innerBt .footerBox .leftBox address p {
             margin-top: 20px;
@@ -1062,7 +1106,7 @@ fieldset {
           height: 45px;
           border: none;
           border-bottom: 2px solid #555;
-          font: 16px/45px "Noto Sans";
+          font: 16px/45px "Noto Sans", "Noto Sans KR";
           color: #666; }
         #footer .innerBt .footerBox .rightBox .service {
           width: 100%;
@@ -1070,7 +1114,7 @@ fieldset {
           margin-top: 40px;
           padding: 10px 20px; }
           #footer .innerBt .footerBox .rightBox .service p {
-            font: 12px/18px "Noto Sans";
+            font: 12px/18px "Noto Sans", "Noto Sans KR";
             color: #999; }
 
 #popup {
@@ -1091,10 +1135,10 @@ fieldset {
     text-align: center;
     margin-top: 20px; }
     #popup .content p {
-      font: 48px/1 "Noto Sans";
+      font: 48px/1 "Noto Sans", "Noto Sans KR";
       color: #fff; }
     #popup .content span {
-      font: 12px/1 "Noto Sans";
+      font: 12px/1 "Noto Sans", "Noto Sans KR";
       color: #ccc; }
   #popup .wrap {
     float: left;

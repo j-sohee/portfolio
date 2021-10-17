@@ -1,27 +1,66 @@
 /*location---------------------------------*/
 .location{
     .sub_visual{
-        background:#ddd;
+        background:url(../img/location/bg3.jpg) no-repeat bottom/cover;
+        filter:saturate(50%);
     }
     .inner{
-        #map{
-            width:100%; height:500px;
-        }
         .branch{
-            float:right; margin-top:20px;
+            width:100%; margin-bottom:40px;
+            &::after{ content:''; display:block; clear:both; }
             li{
-                float:left; margin-left:10px;
+                width:295px; height:40px;
+                float:left;
                 a{
-                    display:block; width:200px; height:40px;
-                    background:#555;
-                    font:bold 12px/40px "맑은 고딕"; color:#fff; text-align:center;
+                    display:block; width:100%; height:100%;
+                    border-bottom:1px solid #ddd;
+                    font:bold 13px/40px $font; color:#666; text-align:center; transition:0.5s;
                 }
                 &.on{
                     a{
-                        background:#aaa; color:#333;
+                        border-bottom:1px solid orangered;
+                        color:orangered;
+                    }
+                }
+            
+            }
+        }
+        #map{
+            width:100%; height:500px;
+            margin-bottom:40px;
+        }
+        .shop_infor{
+            width:100%;
+            &::after{
+                content:''; display:block; clear:both;
+            }
+            article{
+                width:580px; height: 200px;
+                float:left; margin-right:20px;
+                &:last-child{ margin-right:0px; }
+                h2{
+                    font:bold 20px/1 $font; color:#000;
+                    border-bottom:1px solid #000;
+                    padding-bottom:15px;
+                }
+                ul{
+                    width:100%;
+                    li{
+                        width:100%; height:40px;
+                        span{
+                            display:inline-block;
+                            width:10%; height:100%;
+                            font:bold 14px/40px $font; color:#111;
+                            margin-right:10px; vertical-align: top;
+                        }
+                        p{
+                            display:inline-block;
+                            font:14px/40px $font; color:#111;
+                        }
                     }
                 }
             }
         }
+        
     }
 }
