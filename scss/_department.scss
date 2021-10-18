@@ -55,9 +55,19 @@
             }
             .right{
                 width:50%; float:left;
-                .pic{
+                position:relative; overflow: hidden;
+                .swiper-wrapper{
                     width:100%; height:280px;
-                    img{ width:100%; height:100%; object-fit:cover; }
+                    .swiper-slide{
+                        width:100%; height:100%;
+                    }
+                    .box1{ background: url(../img/department/about1.jpg) no-repeat center/cover; }
+                    .box2{  background: url(../img/department/about2.jpg) no-repeat center/cover;}
+                    .box3{ background: url(../img/department/about3.jpg) no-repeat center/cover;}
+                }
+                .swiper-pagination{
+                    width:100%; height:100px;
+                    position:absolute; bottom:0; left:0;
                 }
             }
         }
@@ -72,7 +82,7 @@
                 }
                 article{
                     width:380px; height:150px;
-                    margin-right:20px; margin-top:40px;
+                    margin-right:20px; margin-top:20px;
                     float:left; text-align:center;
                     &:nth-of-type(3n){
                         margin-right:0;
