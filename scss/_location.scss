@@ -13,13 +13,13 @@
                 float:left;
                 a{
                     display:block; width:100%; height:100%;
-                    border-bottom:1px solid #ddd;
-                    font:bold 13px/40px $font; color:#666; text-align:center; transition:0.5s;
+                    border-bottom:2px solid #ddd;
+                    font:bold 13px/40px $font; color:#999; text-align:center; transition:0.5s;
                 }
                 &.on{
                     a{
-                        border-bottom:1px solid orangered;
-                        color:orangered;
+                        border-bottom:2px solid #F88F01;
+                        color:#000;
                     }
                 }
             
@@ -40,7 +40,7 @@
                 &:last-child{ margin-right:0px; }
                 h2{
                     font:bold 20px/1 $font; color:#000;
-                    border-bottom:1px solid #000;
+                    border-bottom:1px solid #F88F01;
                     padding-bottom:15px;
                 }
                 ul{
