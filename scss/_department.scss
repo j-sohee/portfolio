@@ -39,11 +39,11 @@
             &::after{ content:''; display:block; clear:both; }
             
             .left{
-                width:50%;
+                width:50%; height:320px;
                 float:left; padding:20px 10px;
                 p{
                     font:16px/1.5 $font; color:#555;
-                    margin-bottom:60px;
+                    margin-bottom:76px;
                     padding-right:20px;
                 }
                 a{
@@ -51,10 +51,14 @@
                     font:12px/40px $font; color:#666;
                     border:1px solid #aaa; text-align:center;
                     transition:0.5s;
+                    &:hover{
+                        color:#F88F01;
+                        border-color:#F88F01;
+                    }
                 }
             }
             .right{
-                width:50%; float:left;
+                width:50%; height:320px; float:left;
                 position:relative; overflow: hidden;
                 .swiper-wrapper{
                     width:100%; height:280px;
@@ -66,8 +70,11 @@
                     .box3{ background: url(../img/department/about3.jpg) no-repeat center/cover;}
                 }
                 .swiper-pagination{
-                    width:100%; height:100px;
+                    width:100%; 
                     position:absolute; bottom:0; left:0;
+                    .swiper-pagination-bullet-active{
+                        background:#f9b835;
+                    }
                 }
             }
         }
@@ -184,6 +191,53 @@
                     }
                 }
                 
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1179px){
+    .department{
+        .inner{
+           
+            .mainTit{
+                width:100%;   padding:0 20px;
+            }
+
+            .dpt1{
+                width:100%;  padding:0 20px;
+                .left{
+                     padding:0px;
+                    p{
+                        font-size:14px;
+                        margin-bottom:30px;
+                    }
+                }
+            }
+            .dpt2{
+                width:100%; margin-bottom:100px;
+                padding:40px 0 100px 0;
+                background:#eeeeee;
+                .wrap{
+                    width:100%;  padding:0 20px;
+                    &::after{
+                        content:''; display:block; clear:both;
+                    }
+                    article{
+                        width:49%;
+                        margin-right:2%; margin-top:0;
+                        margin-bottom:60px;
+                        &:nth-of-type(2n){ margin-right:0; }
+                        h3{ margin-top:10px; }
+                    }
+                }
+            }
+            .dpt3{
+                width:100%; padding:0 20px;
+                >article{
+                    width:50%; height:300px; position:relative;
+                    float:left; transition:0.5s;
+                }
             }
         }
     }

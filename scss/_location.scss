@@ -16,13 +16,16 @@
                     border-bottom:2px solid #ddd;
                     font:bold 13px/40px $font; color:#999; text-align:center; transition:0.5s;
                 }
+                .shop_infor{
+                    width:100%; position:absolute;
+                    bottom:0; left:0;
+                }
                 &.on{
                     a{
                         border-bottom:2px solid #F88F01;
                         color:#000;
                     }
                 }
-            
             }
         }
         #map{
