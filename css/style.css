@@ -1173,13 +1173,25 @@ fieldset {
           width: 100%;
           height: 100%; }
 
-#section {
+#visual {
   width: 100%;
+  height: calc(100vh - 136px);
   background: #efefef; }
-  #section .inner {
-    width: 1180px;
-    height: calc(100vh - 136px);
-    margin: 0 auto; }
+
+#product {
+  width: 100%;
+  height: 100vh;
+  background: #ddd; }
+
+#brand {
+  width: 100%;
+  height: 100vh;
+  background: #999; }
+
+#banner {
+  width: 100%;
+  height: 100vh;
+  background: #666; }
 
 #footer {
   width: 100%;
@@ -1289,6 +1301,24 @@ fieldset {
           #footer .innerBt .footerBox .rightBox .service p {
             font: 12px/18px "Noto Sans", "Noto Sans KR";
             color: #999; }
+
+#navi {
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%); }
+  #navi li {
+    margin: 20px 0; }
+    #navi li a {
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background: #888;
+      transition: 0.5s; }
+      #navi li a.on {
+        background: #111;
+        height: 60px; }
 
 #popup {
   width: 100%;
