@@ -1,3 +1,21 @@
+//header 2depth menu
+$("#gnb>li").on("mouseenter", function(){
+    $(this).find(".sub").show();
+})
+$("#gnb>li").on("mouseleave", function(){
+    $(this).find(".sub").hide();
+})
+
+$("#gnb>li").each(function(index){
+    $("#gnb>li").eq(index).find("a").on("focusin", function(){
+        $("#gnb>li").eq(index).find(".sub").show();     
+    });
+
+    $("#gnb>li").eq(index).find("a").last().on("focusout", function(){
+        $("#gnb>li").eq(index).find(".sub").hide();
+    });
+});
+
 //main scroll
 const $boxs = $(".myScroll");
 const $btns = $("#navi li");
@@ -56,6 +74,6 @@ function setCookie(time){
     let date = today.getDate();
     today.setDate(date + time);
 
-    var dueDate = today.toGMTString();
+    let dueDate = today.toGMTString();
     document.cookie = "popup=done; expires="+dueDate;
 }
