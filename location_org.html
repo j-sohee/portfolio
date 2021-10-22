@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO</title>
+    <title>Location</title>
     <script src="https://kit.fontawesome.com/6ce8152991.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a2d3458fdaea61a640a9844474f83c67"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/main.js"></script>
+    <script defer src="js/map.js"></script>
 </head>
 <body>
-    <header id="header" class="myScroll">
+    <header id="header_sub">
         <div class="inner">
             <h1><a href="index.html">DECODLAB</a></h1>
             <div class="util">
@@ -25,56 +25,66 @@
             </div>
             <nav class="menuWeb">
                 <ul id="gnb">
-                    <li>
-                        <a href="department.html">DEPARTMENT</a>
-                        <div class="sub">
-                            DEPARTMENT SUB
-                        </div>
-                    </li>
-                    <li>
-                        <a href="youtube.html">YOUTUBE</a>
-                        <div class="sub">
-                            YOUTUBE SUB
-                        </div>
-                    </li>
-                    <li>
-                        <a href="community.html">COMMUNITY</a>
-                        <div class="sub">
-                            COMUUNITY SUB
-                        </div>
-                    </li>
-                    <li>
-                        <a href="gallery.html">GALLERY</a>
-                        <div class="sub">
-                            GALLERY SUB
-                        </div>
-                    </li>
-                    <li>
-                        <a href="location.html">LOCATION</a>
-                        <div class="sub">
-                            LOCATION SUB
-                        </div>
-                    </li>
+                    <li><a href="department.html">DEPARTMENT</a></li>
+                    <li><a href="youtube.html">YOUTUBE</a></li>
+                    <li><a href="community.html">COMMUNITY</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="location.html">LOCATION</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <figure id="visual">
-        
-    </figure>
-    <section id="product" class="myScroll">
+    <section class="content location">
+        <div class="sub_visual"></div>
         <div class="inner">
+            <h1>LOCATION</h1>
+            <ul class="branch">
+                <li data-index="0" class="on"><a href="#">타임빌라스 롯데프리미엄아울렛</a></li>
+                <li data-index="1"><a href="#">시흥 프리미엄아울렛</a></li>
+                <li data-index="2"><a href="#">영등포 타임스퀘어</a></li>
+                <li data-index="3"><a href="#">송도 현대프리미엄아울렛</a></li>
+            </ul>
+            <div id="map"></div>
+            <div class="shop_infor">
+                <article class="leftInfor">
+                    <h2>쇼핑안내</h2>
+                    <ul>
+                        <li>
+                            <span>대표번호</span>
+                            <p>02.2283.2203</p>
+                        </li>
+                        <li>
+                            <span>영업시간</span>
+                            <p>평일 : 10:30 ~ 21:00 / 금토일 : 10:30 ~ 21:30
+                            </p>
+                        </li>
+                    </ul>
+                </article>
+                <article class="rightInfor">
+                    <h2>교통안내</h2>
+                    <ul>
+                        <li>
+                            <span>주소</span>
+                            <p>서울특별시 중구 장충단로 13길 20 동대문 현대시티아울렛</p>
+                        </li>
+                        <li>
+                            <span>주차</span>
+                            <p>현대시티아울렛 주차장</p>
+                        </li>
+                        <li>
+                            <span>지하철</span>
+                            <p>2/4호선 동대문역사공원 14번출구, 1/4호선 동대문역 8번출구</p>
+                        </li>
+                        <li>
+                            <span>버스</span>
+                            <p>동대문역사공원</p>
+                        </li>
+                    </ul>
+                </article>
+            </div>
         </div>
     </section>
-    <section id="brand" class="myScroll">
-        <div class="inner">
-        </div>
-    </section>
-    <section id="banner" class="myScroll">
-        <div class="inner">
-        </div>
-    </section>
-    <footer id="footer">
+    <footer id="footer_sub">
         <div class="inner">
             <ul class="linkCompany">
                 <li><a href="#">회사소개</a></li>
@@ -127,25 +137,5 @@
             </div>
         </div>
     </footer>
-    <ul id="navi">
-        <li><a href="#header" class="on"></a></li>
-        <li><a href="#product"></a></li>
-        <li><a href="#brand"></a></li>
-        <li><a href="#banner"></a></li>
-    </ul>
-    <aside id="popup">
-        <div class="content">
-           <p>WELCOME:)</p>
-           <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore tenetur aperiam amet vero ab impedit minus debitis!</span>
-           <div class="bottom">
-               <div class="wrap">
-                    <input type="checkbox" name="ck" id="ck">
-                    <label for="ck">오늘 하루 그만보기</label>
-               </div>
-                <a href="#" class="close">CLOSE</a>
-           </div>
-        </div>
-        
-    </aside>
 </body>
 </html>

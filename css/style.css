@@ -542,7 +542,6 @@ fieldset {
       float: left;
       border: 1px solid #ccc;
       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
       padding: 40px;
       margin-right: 20px;
       text-align: center;
@@ -711,7 +710,6 @@ fieldset {
       padding: 30px 0;
       text-align: center;
       border: 1px solid #ccc;
-      border-radius: 10px;
       transition: 0.5s; }
       .community .inner .cs_contact ul li:last-child {
         margin-right: 0px; }
@@ -1067,18 +1065,116 @@ fieldset {
 .location .sub_visual {
   background: url(../img/location/bg3.jpg) no-repeat bottom/cover;
   filter: saturate(50%); }
-.location .inner .branch {
+.location .inner .wrap {
   width: 100%;
-  margin-bottom: 40px; }
-  .location .inner .branch::after {
+  margin-bottom: 80px; }
+  .location .inner .wrap::after {
     content: '';
     display: block;
     clear: both; }
-  .location .inner .branch li {
-    width: 295px;
+  .location .inner .wrap .comments {
+    width: 580px;
+    float: left;
+    margin-right: 20px; }
+    .location .inner .wrap .comments form legend {
+      font: 24px/1 "Noto Sans", "Noto Sans KR";
+      color: #333;
+      margin-bottom: 40px;
+      position: relative;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #F88F01; }
+    .location .inner .wrap .comments form label > p {
+      font: 14px/1 "Noto Sans", "Noto Sans KR";
+      color: #888;
+      letter-spacing: 1px;
+      margin-bottom: 10px; }
+    .location .inner .wrap .comments form input[type=text] {
+      width: 100%;
+      height: 40px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      padding: 10px;
+      font: 12px/40px "Noto Sans", "Noto Sans KR";
+      color: #333; }
+    .location .inner .wrap .comments form textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      resize: none;
+      font: 13px/1 "Noto Sans", "Noto Sans KR";
+      color: #333;
+      border: 1px solid #ccc;
+      text-align: top; }
+    .location .inner .wrap .comments form .name {
+      width: 49%;
+      float: left;
+      margin-right: 2%; }
+    .location .inner .wrap .comments form .email {
+      width: 49%;
+      float: left;
+      margin-right: 0; }
+    .location .inner .wrap .comments form .message {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 10px; }
+    .location .inner .wrap .comments form .btns {
+      width: 100%;
+      float: left; }
+      .location .inner .wrap .comments form .btns input[type=submit] {
+        width: 100%;
+        height: 40px;
+        border: 1px solid #999;
+        background: #fff;
+        font: 14px/40px "Noto Sans", "Noto Sans KR";
+        color: #333;
+        letter-spacing: 2px;
+        cursor: pointer; }
+  .location .inner .wrap .contact {
+    width: 580px;
+    float: left;
+    margin-right: 0; }
+    .location .inner .wrap .contact h2 {
+      font: 24px/1 "Noto Sans", "Noto Sans KR";
+      color: #333;
+      margin-bottom: 40px;
+      position: relative;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #F88F01; }
+    .location .inner .wrap .contact article {
+      width: 50%;
+      float: left;
+      margin-bottom: 40px;
+      padding: 0 20px; }
+      .location .inner .wrap .contact article:nth-of-type(even) {
+        padding-left: 40px; }
+      .location .inner .wrap .contact article > h3 {
+        font: 14px/1 "Noto Sans", "Noto Sans KR";
+        color: #555;
+        margin-bottom: 15px;
+        letter-spacing: 1px; }
+      .location .inner .wrap .contact article p {
+        font: 13px/1.5 "Noto Sans", "Noto Sans KR";
+        color: #888;
+        letter-spacing: 0.8px; }
+.location .inner .wrap2 .branch {
+  width: 100%;
+  height: 830px;
+  position: relative; }
+  .location .inner .wrap2 .branch dt {
+    width: 25%;
     height: 40px;
-    float: left; }
-    .location .inner .branch li a {
+    position: absolute;
+    top: 0;
+    text-align: center; }
+    .location .inner .wrap2 .branch dt:nth-of-type(1) {
+      left: 0; }
+    .location .inner .wrap2 .branch dt:nth-of-type(2) {
+      left: 25%; }
+    .location .inner .wrap2 .branch dt:nth-of-type(3) {
+      left: 50%; }
+    .location .inner .wrap2 .branch dt:nth-of-type(4) {
+      left: 75%; }
+    .location .inner .wrap2 .branch dt a {
       display: block;
       width: 100%;
       height: 100%;
@@ -1087,53 +1183,58 @@ fieldset {
       color: #999;
       text-align: center;
       transition: 0.5s; }
-    .location .inner .branch li .shop_infor {
+    .location .inner .wrap2 .branch dt.on a {
+      border-bottom: 2px solid #F88F01;
+      color: #000; }
+  .location .inner .wrap2 .branch dd {
+    width: 100%;
+    display: none; }
+    .location .inner .wrap2 .branch dd#shop1 {
+      display: block; }
+    .location .inner .wrap2 .branch dd #map {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      height: 500px; }
+    .location .inner .wrap2 .branch dd .shop_infor {
       width: 100%;
       position: absolute;
       bottom: 0;
       left: 0; }
-    .location .inner .branch li.on a {
-      border-bottom: 2px solid #F88F01;
-      color: #000; }
-.location .inner #map {
-  width: 100%;
-  height: 500px;
-  margin-bottom: 40px; }
-.location .inner .shop_infor {
-  width: 100%; }
-  .location .inner .shop_infor::after {
-    content: '';
-    display: block;
-    clear: both; }
-  .location .inner .shop_infor article {
-    width: 580px;
-    height: 200px;
-    float: left;
-    margin-right: 20px; }
-    .location .inner .shop_infor article:last-child {
-      margin-right: 0px; }
-    .location .inner .shop_infor article h2 {
-      font: bold 20px/1 "Noto Sans", "Noto Sans KR";
-      color: #000;
-      border-bottom: 1px solid #F88F01;
-      padding-bottom: 15px; }
-    .location .inner .shop_infor article ul {
-      width: 100%; }
-      .location .inner .shop_infor article ul li {
-        width: 100%;
-        height: 40px; }
-        .location .inner .shop_infor article ul li span {
-          display: inline-block;
-          width: 10%;
-          height: 100%;
-          font: bold 14px/40px "Noto Sans", "Noto Sans KR";
-          color: #111;
-          margin-right: 10px;
-          vertical-align: top; }
-        .location .inner .shop_infor article ul li p {
-          display: inline-block;
-          font: 14px/40px "Noto Sans", "Noto Sans KR";
-          color: #111; }
+      .location .inner .wrap2 .branch dd .shop_infor::after {
+        content: '';
+        display: block;
+        clear: both; }
+      .location .inner .wrap2 .branch dd .shop_infor article {
+        width: 580px;
+        height: 200px;
+        float: left;
+        margin-right: 20px; }
+        .location .inner .wrap2 .branch dd .shop_infor article:last-child {
+          margin-right: 0px; }
+        .location .inner .wrap2 .branch dd .shop_infor article h2 {
+          font: bold 20px/1 "Noto Sans", "Noto Sans KR";
+          color: #000;
+          border-bottom: 1px solid #F88F01;
+          padding-bottom: 15px; }
+        .location .inner .wrap2 .branch dd .shop_infor article ul {
+          width: 100%; }
+          .location .inner .wrap2 .branch dd .shop_infor article ul li {
+            width: 100%;
+            height: 40px; }
+            .location .inner .wrap2 .branch dd .shop_infor article ul li span {
+              display: inline-block;
+              width: 10%;
+              height: 100%;
+              font: bold 14px/40px "Noto Sans", "Noto Sans KR";
+              color: #111;
+              margin-right: 10px;
+              vertical-align: top; }
+            .location .inner .wrap2 .branch dd .shop_infor article ul li p {
+              display: inline-block;
+              font: 14px/40px "Noto Sans", "Noto Sans KR";
+              color: #111; }
 
 #header {
   width: 100%;

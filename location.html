@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Location</title>
     <script src="https://kit.fontawesome.com/6ce8152991.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a2d3458fdaea61a640a9844474f83c67"></script>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a2d3458fdaea61a640a9844474f83c67"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/map.js"></script>
 </head>
@@ -37,50 +39,226 @@
     <section class="content location">
         <div class="sub_visual"></div>
         <div class="inner">
-            <h1>LOCATION</h1>
-            <ul class="branch">
-                <li data-index="0" class="on"><a href="#">타임빌라스 롯데프리미엄아울렛</a></li>
-                <li data-index="1"><a href="#">시흥 프리미엄아울렛</a></li>
-                <li data-index="2"><a href="#">영등포 타임스퀘어</a></li>
-                <li data-index="3"><a href="#">송도 현대프리미엄아울렛</a></li>
-            </ul>
-            <div id="map"></div>
-            <div class="shop_infor">
-                <article class="leftInfor">
-                    <h2>쇼핑안내</h2>
-                    <ul>
-                        <li>
-                            <span>대표번호</span>
-                            <p>02.2283.2203</p>
-                        </li>
-                        <li>
-                            <span>영업시간</span>
-                            <p>평일 : 10:30 ~ 21:00 / 금토일 : 10:30 ~ 21:30
-                            </p>
-                        </li>
-                    </ul>
-                </article>
-                <article class="rightInfor">
-                    <h2>교통안내</h2>
-                    <ul>
-                        <li>
-                            <span>주소</span>
-                            <p>서울특별시 중구 장충단로 13길 20 동대문 현대시티아울렛</p>
-                        </li>
-                        <li>
-                            <span>주차</span>
-                            <p>현대시티아울렛 주차장</p>
-                        </li>
-                        <li>
-                            <span>지하철</span>
-                            <p>2/4호선 동대문역사공원 14번출구, 1/4호선 동대문역 8번출구</p>
-                        </li>
-                        <li>
-                            <span>버스</span>
-                            <p>동대문역사공원</p>
-                        </li>
-                    </ul>
-                </article>
+            <div class="wrap">
+                <h1>CONTACT</h1>
+                <div class="comments">
+                    <fieldset>
+                        <form action="/" method="get">
+                            <legend>Send us a message</legend>
+                            <article class="name">
+                                <label for="name"><p>COMPANY NAME</p></label>
+                                <input type="text" name="name" id="name" placeholder="Google,Apple">
+                            </article>
+                            <article class="email">
+                                <label for="email"><p>COMPANY EMAIL</p></label>
+                                <input type="text" name="email" id="eamil" placeholder="jason@company.com">
+                            </article>
+                            <article class="message">
+                                <label for="message"><p>MESSAGE</p></label>
+                                <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Hi Filli, we would like to create some awesomeness with you..."></textarea>
+                            </article>
+                            <article class="btns">
+                                <input type="submit" value="Send Email">
+                            </article>
+                        </form>
+                    </fieldset>
+                </div>
+                <div class="contact">
+                    <h2>Contac Us</h2>
+                    <article>
+                        <h3>ADDERSS</h3>
+                        <p>43, Songnae-daero 265beon-gil,<br> Bucheon-si, Gyeonggi-do,<br>Republic of Korea</p>
+                    </article>
+                    <article>
+                        <h3>OPEN HOURS</h3>
+                        <p>Thurs - Sat : 10am - 6pm</p>
+                        <p>sun : Closed</p>
+                        <p>Mon - Wed : 10am - 8pm</p>
+                    </article>
+                    <article>
+                        <h3>CONTAC US</h3>
+                        <p>(235) 462-4623</p>
+                        <p>info@company.com</p>
+                    </article>
+                    <article>
+                        <h3>FOLLOW US</h3>
+                        <a href="#"><i class="fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-twitter"></i></a>
+                        <a href="#"><i class="fa-instagram-square"></i></a>
+                    </article>
+                </div>
+            </div>
+            <div class="wrap2">
+                <h1>LOCATION</h1>
+                <div class="branch">
+                    <dl>
+                        <dt data-index="0" class="on"><a href="#shop1" >타임빌라스 롯데프리미엄아울렛</a></dt>
+                        <dd id="shop1">
+                            <div id="map"></div>
+                            <div class="shop_infor">
+                                <article class="leftInfor">
+                                    <h2>쇼핑안내1</h2>
+                                    <ul>
+                                        <li>
+                                            <span>대표번호</span>
+                                            <p>02.2283.2203</p>
+                                        </li>
+                                        <li>
+                                            <span>영업시간</span>
+                                            <p>평일 : 10:30 ~ 21:00 / 금토일 : 10:30 ~ 21:30
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </article>
+                                <article class="rightInfor">
+                                    <h2>교통안내</h2>
+                                    <ul>
+                                        <li>
+                                            <span>주소</span>
+                                            <p>서울특별시 중구 장충단로 13길 20 동대문 현대시티아울렛</p>
+                                        </li>
+                                        <li>
+                                            <span>주차</span>
+                                            <p>현대시티아울렛 주차장</p>
+                                        </li>
+                                        <li>
+                                            <span>지하철</span>
+                                            <p>2/4호선 동대문역사공원 14번출구, 1/4호선 동대문역 8번출구</p>
+                                        </li>
+                                        <li>
+                                            <span>버스</span>
+                                            <p>동대문역사공원</p>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </dd>
+                
+                        <dt data-index="1"><a href="#shop2">시흥 프리미엄아울렛</a></dt>
+                        <dd id="shop2">
+                            <div id="map"></div>
+                            <div class="shop_infor">
+                                <article class="leftInfor">
+                                    <h2>쇼핑안내2</h2>
+                                    <ul>
+                                        <li>
+                                            <span>대표번호</span>
+                                            <p>02.2283.2203</p>
+                                        </li>
+                                        <li>
+                                            <span>영업시간</span>
+                                            <p>평일 : 10:30 ~ 21:00 / 금토일 : 10:30 ~ 21:30
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </article>
+                                <article class="rightInfor">
+                                    <h2>교통안내</h2>
+                                    <ul>
+                                        <li>
+                                            <span>주소</span>
+                                            <p>서울특별시 중구 장충단로 13길 20 동대문 현대시티아울렛</p>
+                                        </li>
+                                        <li>
+                                            <span>주차</span>
+                                            <p>현대시티아울렛 주차장</p>
+                                        </li>
+                                        <li>
+                                            <span>지하철</span>
+                                            <p>2/4호선 동대문역사공원 14번출구, 1/4호선 동대문역 8번출구</p>
+                                        </li>
+                                        <li>
+                                            <span>버스</span>
+                                            <p>동대문역사공원</p>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </dd>
+                        <dt data-index="2"><a href="#shop3">영등포 타임스퀘어</a></dt>
+                        <dd id="shop3">
+                            <div id="map"></div>
+                            <div class="shop_infor">
+                                <article class="leftInfor">
+                                    <h2>쇼핑안내3</h2>
+                                    <ul>
+                                        <li>
+                                            <span>대표번호</span>
+                                            <p>02.2283.2203</p>
+                                        </li>
+                                        <li>
+                                            <span>영업시간</span>
+                                            <p>평일 : 10:30 ~ 21:00 / 금토일 : 10:30 ~ 21:30
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </article>
+                                <article class="rightInfor">
+                                    <h2>교통안내</h2>
+                                    <ul>
+                                        <li>
+                                            <span>주소</span>
+                                            <p>서울특별시 중구 장충단로 13길 20 동대문 현대시티아울렛</p>
+                                        </li>
+                                        <li>
+                                            <span>주차</span>
+                                            <p>현대시티아울렛 주차장</p>
+                                        </li>
+                                        <li>
+                                            <span>지하철</span>
+                                            <p>2/4호선 동대문역사공원 14번출구, 1/4호선 동대문역 8번출구</p>
+                                        </li>
+                                        <li>
+                                            <span>버스</span>
+                                            <p>동대문역사공원</p>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </dd>
+                        <dt data-index="3"><a href="#shop4">송도 현대프리미엄아울렛</a></dt>
+                        <dd id="shop4">
+                            <div id="map"></div>
+                            <div class="shop_infor">
+                                <article class="leftInfor">
+                                    <h2>쇼핑안내4</h2>
+                                    <ul>
+                                        <li>
+                                            <span>대표번호</span>
+                                            <p>02.2283.2203</p>
+                                        </li>
+                                        <li>
+                                            <span>영업시간</span>
+                                            <p>평일 : 10:30 ~ 21:00 / 금토일 : 10:30 ~ 21:30
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </article>
+                                <article class="rightInfor">
+                                    <h2>교통안내</h2>
+                                    <ul>
+                                        <li>
+                                            <span>주소</span>
+                                            <p>서울특별시 중구 장충단로 13길 20 동대문 현대시티아울렛</p>
+                                        </li>
+                                        <li>
+                                            <span>주차</span>
+                                            <p>현대시티아울렛 주차장</p>
+                                        </li>
+                                        <li>
+                                            <span>지하철</span>
+                                            <p>2/4호선 동대문역사공원 14번출구, 1/4호선 동대문역 8번출구</p>
+                                        </li>
+                                        <li>
+                                            <span>버스</span>
+                                            <p>동대문역사공원</p>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
             </div>
         </div>
     </section>
@@ -96,9 +274,9 @@
             </ul>
             <ul class="linkSns">
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                 <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                 <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
-                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
             </ul>
         </div>
         <div class="innerBt">
@@ -131,11 +309,13 @@
                         <option value="Brand2">Brand2 site</option>
                     </select>
                     <div class="service">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nulla modi corrupti mollitia, alias maiores reiciendis iste aut sequi magnam</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nulla modi corrupti mollitia,
+                            alias maiores reiciendis iste aut sequi magnam</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 </body>
+
 </html>

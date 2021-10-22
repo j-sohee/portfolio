@@ -13,10 +13,10 @@ $.ajax({
     dataType : "json",
     data : {
         api_key : "c28561608d1c0e9f7db60ecfda79bf27",
-        per_page : 16,
+        per_page : 20,
         format: "json",
         nojsoncallback:1,
-        privacy_filter:5,
+        privacy_filter:1,
         tags : "moonlit"
     }
 })
@@ -53,6 +53,26 @@ $.ajax({
                 )
             )
     })
+
+    let imgNum = 0;
+
+    $(".myImg article img").each(function(index,data){
+        data.onload = function(){
+            imgNum++;
+            console.log(imgNum);
+
+            if(imgNum === 20){
+                new Isotope(".myImg", {
+                    itemSelector : ".myImg article",
+                    columnWidth : ".myImg article",
+                    percentPosition : true,
+                    transitionDuration : "0.5s"
+                })
+            }
+        }
+    })
+
+    
 })
 
 .error(function(err){
