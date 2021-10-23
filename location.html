@@ -12,11 +12,11 @@
     <script defer src="js/map.js"></script>
 </head>
 <body>
-    <header id="header_sub">
+    <header id="header_sub" class="myScroll">
         <div class="inner">
             <h1><a href="index.html">DECODLAB</a></h1>
+            <a href="#" class="btnCall"><span>전체메뉴</span></a>
             <div class="util">
-                <a href="#" class="btnCall"><span>전체메뉴</span></a>
                 <a href="#"><img src="img/icon_location.jpg"></a>
                 <a href="#"><img src="img/icon_search.jpg"></a>
             </div>
@@ -26,11 +26,36 @@
             </div>
             <nav class="menuWeb">
                 <ul id="gnb">
-                    <li><a href="department.html">DEPARTMENT</a></li>
-                    <li><a href="youtube.html">YOUTUBE</a></li>
-                    <li><a href="community.html">COMMUNITY</a></li>
-                    <li><a href="gallery.html">GALLERY</a></li>
-                    <li><a href="location.html">LOCATION</a></li>
+                    <li>
+                        <a href="department.html">DEPARTMENT</a>
+                        <div class="sub">
+                            DEPARTMENT SUB
+                        </div>
+                    </li>
+                    <li>
+                        <a href="youtube.html">YOUTUBE</a>
+                        <div class="sub">
+                            YOUTUBE SUB
+                        </div>
+                    </li>
+                    <li>
+                        <a href="community.html">COMMUNITY</a>
+                        <div class="sub">
+                            COMUUNITY SUB
+                        </div>
+                    </li>
+                    <li>
+                        <a href="gallery.html">GALLERY</a>
+                        <div class="sub">
+                            GALLERY SUB
+                        </div>
+                    </li>
+                    <li>
+                        <a href="location.html">LOCATION</a>
+                        <div class="sub">
+                            LOCATION SUB
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -40,28 +65,6 @@
         <div class="inner">
             <div class="wrap">
                 <h1>CONTACT</h1>
-                <div class="comments">
-                    <fieldset>
-                        <form action="/" method="get">
-                            <legend>Send us a message</legend>
-                            <article class="name">
-                                <label for="name"><p>COMPANY NAME</p></label>
-                                <input type="text" name="name" id="name" placeholder="Google,Apple">
-                            </article>
-                            <article class="email">
-                                <label for="email"><p>COMPANY EMAIL</p></label>
-                                <input type="text" name="email" id="eamil" placeholder="jason@company.com">
-                            </article>
-                            <article class="message">
-                                <label for="message"><p>MESSAGE</p></label>
-                                <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Hi Filli, we would like to create some awesomeness with you..."></textarea>
-                            </article>
-                            <article class="btns">
-                                <input type="submit" value="Send Email">
-                            </article>
-                        </form>
-                    </fieldset>
-                </div>
                 <div class="contact">
                     <!-- <h2>Contac Us</h2> -->
                     <div class="tit">
@@ -89,6 +92,29 @@
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </article>
                 </div>
+                <div class="comments">
+                    <fieldset>
+                        <form action="/" method="get">
+                            <legend>Send us a message</legend>
+                            <article class="name">
+                                <label for="name"><p>COMPANY NAME</p></label>
+                                <input type="text" name="name" id="name" placeholder="Google,Apple">
+                            </article>
+                            <article class="email">
+                                <label for="email"><p>COMPANY EMAIL</p></label>
+                                <input type="text" name="email" id="eamil" placeholder="jason@company.com">
+                            </article>
+                            <article class="message">
+                                <label for="message"><p>MESSAGE</p></label>
+                                <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Hi Filli, we would like to create some awesomeness with you..."></textarea>
+                            </article>
+                            <article class="btns">
+                                <input type="submit" value="Send Email">
+                            </article>
+                        </form>
+                    </fieldset>
+                </div>
+                
             </div>
             <div class="wrap2">
                 <h1>LOCATION</h1>
