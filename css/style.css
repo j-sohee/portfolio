@@ -1075,7 +1075,7 @@ fieldset {
   .location .inner .wrap .comments {
     width: 580px;
     float: left;
-    margin-right: 20px; }
+    margin-right: 30px; }
     .location .inner .wrap .comments form legend {
       font: 24px/1 "Noto Sans", "Noto Sans KR";
       color: #333;
@@ -1130,16 +1130,26 @@ fieldset {
         letter-spacing: 2px;
         cursor: pointer; }
   .location .inner .wrap .contact {
-    width: 580px;
+    width: 570px;
     float: left;
     margin-right: 0; }
-    .location .inner .wrap .contact h2 {
-      font: 24px/1 "Noto Sans", "Noto Sans KR";
-      color: #333;
-      margin-bottom: 40px;
-      position: relative;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #F88F01; }
+    .location .inner .wrap .contact .tit {
+      width: 100%;
+      position: relative; }
+      .location .inner .wrap .contact .tit h2 {
+        font: 34px/1.2 "Noto Sans", "Noto Sans KR";
+        color: #333;
+        margin-left: 10px;
+        margin-bottom: 40px; }
+        .location .inner .wrap .contact .tit h2::after {
+          content: '';
+          display: block;
+          width: 280px;
+          height: 1px;
+          background: #F88F01;
+          position: absolute;
+          top: 50%;
+          right: 0; }
     .location .inner .wrap .contact article {
       width: 50%;
       float: left;
@@ -1152,10 +1162,17 @@ fieldset {
         color: #555;
         margin-bottom: 15px;
         letter-spacing: 1px; }
-      .location .inner .wrap .contact article p {
+      .location .inner .wrap .contact article > p {
         font: 13px/1.5 "Noto Sans", "Noto Sans KR";
         color: #888;
         letter-spacing: 0.8px; }
+      .location .inner .wrap .contact article > a {
+        display: inline-block;
+        width: 30px;
+        height: 30px; }
+        .location .inner .wrap .contact article > a i {
+          font-size: 16px;
+          color: #999; }
 .location .inner .wrap2 .branch {
   width: 100%;
   height: 830px;
