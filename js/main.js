@@ -21,7 +21,7 @@ const $boxs = $(".myScroll");
 const $btns = $("#navi li");
 let posArr = [];
 let len = $btns.length;
-let baseLine = -350;
+let baseLine = -300;
 
 for(let i=0; i<len; i++){
     posArr.push($boxs.eq(i).offset().top);

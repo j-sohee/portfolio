@@ -196,7 +196,7 @@
     }
 }
 
-@media screen and (max-width:1179px){
+@media screen and (max-width:$tablet){
     .department{
         .inner{
            
@@ -237,7 +237,57 @@
                 >article{
                     width:50%; height:300px; position:relative;
                     float:left; transition:0.5s;
+                    &:nth-of-type(7){
+                        p{
+                            margin-top:20px;
+                        }
+                    }
+                }  
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$mobile){
+    .department{
+        .inner{
+           
+            .mainTit{
+                h1{font-size:26px;}
+            }
+            .sub_tit{
+                h2{ font-size:20px; }
+                p{ font-size:12px; }
+            }
+
+            .dpt1{
+                margin-bottom:60px;
+                .left{
+                    width:100%; height:300px;
+                    p{
+                        font-size:14px; text-align:center;
+                        margin-bottom:30px; padding-right:0;
+                    }
+                    a{ width:100%; }
                 }
+                .right{
+                    width:100%;
+                }
+            }
+            .dpt2{
+                .wrap{
+                    article{
+                        width:100%;
+                        h3{
+                            font-size:14px;
+                        }
+                    }
+                }
+            }
+            .dpt3{
+                >article{
+                    width:100%; 
+                }  
             }
         }
     }

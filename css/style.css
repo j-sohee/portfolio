@@ -652,7 +652,36 @@ fieldset {
       height: 300px;
       position: relative;
       float: left;
-      transition: 0.5s; } }
+      transition: 0.5s; }
+      .department .inner .dpt3 > article:nth-of-type(7) p {
+        margin-top: 20px; } }
+@media screen and (max-width: 539px) {
+  .department .inner .mainTit h1 {
+    font-size: 26px; }
+  .department .inner .sub_tit h2 {
+    font-size: 20px; }
+  .department .inner .sub_tit p {
+    font-size: 12px; }
+  .department .inner .dpt1 {
+    margin-bottom: 60px; }
+    .department .inner .dpt1 .left {
+      width: 100%;
+      height: 300px; }
+      .department .inner .dpt1 .left p {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 30px;
+        padding-right: 0; }
+      .department .inner .dpt1 .left a {
+        width: 100%; }
+    .department .inner .dpt1 .right {
+      width: 100%; }
+  .department .inner .dpt2 .wrap article {
+    width: 100%; }
+    .department .inner .dpt2 .wrap article h3 {
+      font-size: 14px; }
+  .department .inner .dpt3 > article {
+    width: 100%; } }
 /*community---------------------------------*/
 .community .sub_visual {
   background: url(../img/community/bg2.jpg) no-repeat center/cover; }
@@ -876,6 +905,229 @@ fieldset {
       .community .inner .cs_contact ul li:hover a span {
         color: #666; }
 
+@media screen and (max-width: 1179px) {
+  /*community---------------------------------*/
+  .community .inner {
+    padding: 0 20px; }
+    .community .inner .cs_guide {
+      width: 100%;
+      margin: 60px 0 80px 0; }
+      .community .inner .cs_guide h2 {
+        font: 26px/1 "Noto Sans", "Noto Sans KR";
+        color: #000;
+        text-align: center;
+        margin-bottom: 10px; }
+      .community .inner .cs_guide p {
+        font: 14px/1 "Noto Sans", "Noto Sans KR";
+        color: #999;
+        text-align: center;
+        margin-bottom: 50px; }
+      .community .inner .cs_guide .cs {
+        width: 100%;
+        margin: 0 auto; }
+        .community .inner .cs_guide .cs::after {
+          content: '';
+          display: block;
+          clear: both; }
+        .community .inner .cs_guide .cs li {
+          width: 280px;
+          height: 280px;
+          float: left;
+          border: 1px solid #ccc;
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+          padding: 40px;
+          margin-right: 20px;
+          text-align: center;
+          transition: 0.5s; }
+          .community .inner .cs_guide .cs li:last-child {
+            margin-right: 0px; }
+          .community .inner .cs_guide .cs li a {
+            display: block;
+            transition: 0.5s; }
+            .community .inner .cs_guide .cs li a img {
+              width: 50px;
+              height: 50px; }
+            .community .inner .cs_guide .cs li a h3 {
+              margin-top: 20px;
+              font: 24px/1 "Noto Sans", "Noto Sans KR";
+              color: #333;
+              transition: 0.5s; }
+            .community .inner .cs_guide .cs li a p {
+              margin-top: 10px;
+              font: 14px/1.3 "Noto Sans", "Noto Sans KR";
+              color: #666;
+              letter-spacing: 0.5px; }
+          .community .inner .cs_guide .cs li:hover h3 {
+            color: #F88F01; }
+    .community .inner table {
+      width: 100%;
+      border-top: 1px solid #dfdfdf;
+      border-collapse: collapse;
+      margin-bottom: 40px; }
+      .community .inner table tr th {
+        border-bottom: 1px solid #dfdfdf;
+        padding: 10px;
+        background: #fff;
+        font: bold 14px/1 "Noto Sans", "Noto Sans KR";
+        color: #333; }
+        .community .inner table tr th:nth-of-type(1) {
+          width: 10%; }
+        .community .inner table tr th:nth-of-type(2) {
+          width: 80%; }
+        .community .inner table tr th:nth-of-type(3) {
+          width: 10%; }
+      .community .inner table tr td {
+        padding: 20px 10px;
+        border-bottom: 1px solid #dfdfdf;
+        text-align: center;
+        transition: all 0.5s; }
+        .community .inner table tr td:nth-of-type(1), .community .inner table tr td:nth-of-type(3) {
+          font: normal 15px/1 "Noto Sans", "Noto Sans KR";
+          color: #333; }
+        .community .inner table tr td:nth-of-type(2) {
+          text-align: left;
+          transition: 0.5s; }
+          .community .inner table tr td:nth-of-type(2) span {
+            font: 15px/1 "Noto Sans", "Noto Sans KR";
+            color: #666; }
+          .community .inner table tr td:nth-of-type(2) a {
+            font: 15px/1 "Noto Sans", "Noto Sans KR";
+            color: #333;
+            transition: 0.5s; }
+        .community .inner table tr td:nth-of-type(2):hover a {
+          color: #000; }
+    .community .inner .pagination {
+      width: 100%;
+      margin-bottom: 80px;
+      text-align: center; }
+      .community .inner .pagination .prev {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        font: 14px/10px "Noto Sans", "Noto Sans KR";
+        color: #aaa;
+        position: relative;
+        text-indent: -9999px; }
+        .community .inner .pagination .prev::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #666;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform-origin: left center;
+          transform: rotate(-30deg); }
+        .community .inner .pagination .prev::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #666;
+          position: absolute;
+          bottom: 50%;
+          left: 0;
+          transform-origin: left center;
+          transform: rotate(30deg); }
+      .community .inner .pagination .next {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        font: 14px/10px "Noto Sans", "Noto Sans KR";
+        color: #aaa;
+        position: relative;
+        text-indent: -9999px; }
+        .community .inner .pagination .next::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #666;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform-origin: right center;
+          transform: rotate(-30deg); }
+        .community .inner .pagination .next::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #666;
+          position: absolute;
+          bottom: 50%;
+          right: 0;
+          transform-origin: right center;
+          transform: rotate(30deg); }
+      .community .inner .pagination .numbers {
+        display: inline-block;
+        font-size: 0; }
+        .community .inner .pagination .numbers a {
+          display: inline-block;
+          width: 30px;
+          height: 20px;
+          font: 14px/20px "Noto Sans", "Noto Sans KR";
+          color: #666;
+          margin: 0 5px;
+          transition: 0.5s; }
+          .community .inner .pagination .numbers a:hover {
+            font-weight: bold;
+            color: #333; }
+    .community .inner .cs_contact {
+      width: 100%;
+      margin: 0 auto;
+      position: relative; }
+      .community .inner .cs_contact h4 {
+        font: 26px/1 "Noto Sans", "Noto Sans KR";
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px; }
+      .community .inner .cs_contact p {
+        font: 16px/1.6 "Noto Sans", "Noto Sans KR";
+        color: #888;
+        text-align: center;
+        margin-bottom: 40px; }
+      .community .inner .cs_contact ul {
+        width: 100%;
+        text-align: center; }
+        .community .inner .cs_contact ul::after {
+          content: '';
+          display: block;
+          clear: both; }
+        .community .inner .cs_contact ul li {
+          float: left;
+          width: 580px;
+          height: 180px;
+          margin-right: 20px;
+          padding: 30px 0;
+          text-align: center;
+          border: 1px solid #ccc;
+          transition: 0.5s; }
+          .community .inner .cs_contact ul li:last-child {
+            margin-right: 0px; }
+          .community .inner .cs_contact ul li a {
+            display: block;
+            transition: 0.5s; }
+            .community .inner .cs_contact ul li a i {
+              font-size: 36px;
+              color: #555;
+              margin-bottom: 15px;
+              transition: 0.5s; }
+            .community .inner .cs_contact ul li a p {
+              font: 18px/1 "Noto Sans", "Noto Sans KR";
+              color: #666;
+              margin-bottom: 15px;
+              transition: 0.5s; }
+            .community .inner .cs_contact ul li a span {
+              font: 14px/1 "Noto Sans", "Noto Sans KR";
+              color: #999;
+              letter-spacing: 1px;
+              transition: 0.5s; }
+          .community .inner .cs_contact ul li:hover a p, .community .inner .cs_contact ul li:hover a i {
+            color: #F88F01; }
+          .community .inner .cs_contact ul li:hover a span {
+            color: #666; } }
 /*join---------------------------------*/
 .join .sub_visual {
   background: url(../img/department/bg3.jpg) no-repeat center/cover; }
@@ -1201,6 +1453,60 @@ fieldset {
     color: #fff;
     cursor: pointer; }
 
+@media screen and (max-width: 1179px) {
+  /*youtube---------------------------------*/
+  .youtube .inner {
+    width: 100%;
+    padding: 0 20px; }
+    .youtube .inner #vidGallery {
+      width: 100%;
+      position: relative; }
+      .youtube .inner #vidGallery article {
+        width: 49%;
+        margin-right: 2%; }
+        .youtube .inner #vidGallery article:nth-of-type(2n) {
+          margin-right: 0px; }
+        .youtube .inner #vidGallery article:last-child {
+          display: none; }
+        .youtube .inner #vidGallery article a {
+          display: block;
+          width: 100%;
+          height: 250px;
+          overflow: hidden;
+          filter: saturate(100%);
+          margin-bottom: 20px;
+          transition: 0.5s; }
+          .youtube .inner #vidGallery article a img {
+            width: 100%;
+            transform: scale(1);
+            transition: 0.5s; }
+        .youtube .inner #vidGallery article .con {
+          width: 100%;
+          height: 150px;
+          position: absolute;
+          bottom: 0px;
+          left: 0;
+          transform: translateX(0);
+          padding: 20px 10px; }
+          .youtube .inner #vidGallery article .con h2 {
+            font: 700 16px/1.2 "Noto Sans", "Noto Sans KR";
+            color: #000;
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: 0.8px;
+            transition: 0.5s; }
+          .youtube .inner #vidGallery article .con p {
+            font: 13px/1.4 "Noto Sans", "Noto Sans KR";
+            color: #666;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: 0.5s; }
+          .youtube .inner #vidGallery article .con span {
+            display: block;
+            font: 13px/1 "Noto Sans", "Noto Sans KR";
+            color: #999;
+            text-align: center;
+            transition: 0.5s; } }
 /*location---------------------------------*/
 .location .sub_visual {
   background: url(../img/location/bg3.jpg) no-repeat bottom/cover;
@@ -1519,20 +1825,172 @@ fieldset {
   height: calc(100vh - 136px);
   background: #efefef; }
 
-#product {
-  width: 100%;
-  height: 100vh;
-  background: #ddd; }
-
 #brand {
+  width: 100%;
+  padding: 120px 0 200px 0;
+  background: #fff; }
+  #brand .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative; }
+    #brand .inner h1 {
+      font: 700 32px/1 "Noto Sans", "Noto Sans KR";
+      color: #C05C7E;
+      margin-bottom: 60px; }
+    #brand .inner .wrap {
+      width: 100%;
+      position: relative;
+      transition: 0.5s; }
+      #brand .inner .wrap::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #brand .inner .wrap article {
+        width: 590px;
+        float: left;
+        opacity: 0;
+        transition: 0.5s; }
+        #brand .inner .wrap article:nth-of-type(1) {
+          transform: translateY(-100px); }
+        #brand .inner .wrap article:last-child {
+          transform: translateY(100px); }
+        #brand .inner .wrap article a {
+          display: block;
+          width: 100%;
+          height: 580px; }
+          #brand .inner .wrap article a > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
+          #brand .inner .wrap article a .txt {
+            position: absolute;
+            left: 60px;
+            top: 380px; }
+            #brand .inner .wrap article a .txt h2 {
+              font: 700 26px/1.6 "Noto Sans", "Noto Sans KR";
+              color: #fff;
+              margin-bottom: 20px; }
+            #brand .inner .wrap article a .txt span {
+              display: block;
+              position: relative;
+              width: 200px;
+              height: 50px;
+              font: 18px/50px "Noto Sans", "Noto Sans KR";
+              color: #fff;
+              padding: 0 10px;
+              background: #907FA4; }
+              #brand .inner .wrap article a .txt span::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                width: 9px;
+                height: 9px;
+                border-top: 1px solid #fff;
+                border-left: 1px solid #fff;
+                transform: rotate(135deg);
+                margin-top: -4px; }
+  #brand.on .inner .wrap article {
+    opacity: 1; }
+    #brand.on .inner .wrap article:nth-of-type(1) {
+      transform: translateY(0); }
+    #brand.on .inner .wrap article:last-child {
+      transform: translateY(30px); }
+
+#product {
   width: 100%;
   height: 100vh;
   background: #999; }
 
 #banner {
   width: 100%;
-  height: 100vh;
-  background: #666; }
+  padding: 100px 0;
+  background: url(../img/main/banner1.jpg) no-repeat center/cover fixed; }
+  #banner .inner {
+    width: 1180px;
+    margin: 0 auto; }
+    #banner .inner h1 {
+      font: bold 26px/1 "Noto Sans", "Noto Sans KR";
+      color: #333;
+      margin-bottom: 10px;
+      text-align: center; }
+    #banner .inner p {
+      font: 16px/1.3 "Noto Sans", "Noto Sans KR";
+      color: #666;
+      text-align: center; }
+
+#comment {
+  width: 100%;
+  padding: 200px 0;
+  background: #fff; }
+  #comment .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative; }
+    #comment .inner::after {
+      content: '';
+      display: block;
+      clear: both; }
+    #comment .inner .tit_wrap {
+      width: 100%;
+      margin-bottom: 20px; }
+      #comment .inner .tit_wrap h3 {
+        display: inline-block;
+        font: 700 32px/1 "Noto Sans", "Noto Sans KR";
+        color: #C05C7E; }
+      #comment .inner .tit_wrap .viewbtn {
+        font: 15px/2.8 "Noto Sans", "Noto Sans KR";
+        color: #999;
+        float: right; }
+    #comment .inner .magazine_wrap {
+      width: 580px;
+      float: left;
+      margin-right: 10px;
+      padding: 0 20px; }
+      #comment .inner .magazine_wrap .magazine {
+        width: 100%;
+        height: 400px;
+        overflow: hidden; }
+        #comment .inner .magazine_wrap .magazine img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+    #comment .inner .news_wrap {
+      width: 580px;
+      float: left;
+      margin-right: 0; }
+      #comment .inner .news_wrap ul {
+        width: 100%;
+        border-top: 1px solid #999;
+        border-bottom: 1px solid #999; }
+        #comment .inner .news_wrap ul::after {
+          content: '';
+          display: block;
+          clear: both; }
+        #comment .inner .news_wrap ul li {
+          width: 100%;
+          position: relative;
+          border-bottom: 1px solid #ddd;
+          float: left;
+          padding: 29px 0px; }
+          #comment .inner .news_wrap ul li:last-child {
+            border-bottom: none; }
+          #comment .inner .news_wrap ul li a {
+            display: block; }
+            #comment .inner .news_wrap ul li a .tit {
+              font: 16px/1 "Noto Sans", "Noto Sans KR";
+              color: #555;
+              float: left; }
+            #comment .inner .news_wrap ul li a .data {
+              font: 14px/1.2 "Noto Sans", "Noto Sans KR";
+              color: #999;
+              float: right; }
+            #comment .inner .news_wrap ul li a .day {
+              font: 20px/1 "Noto Sans", "Noto Sans KR";
+              color: #999;
+              float: right;
+              margin-left: 5px; }
 
 #footer {
   width: 100%;
