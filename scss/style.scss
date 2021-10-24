@@ -129,17 +129,17 @@ $mobile : 539px;
 
 #visual{
     width:100%; height:calc(100vh - 136px);
-    background:#efefef;
+    background:#aaa;
 }
 
 #brand{
-    width:100%; padding:120px 0 200px 0; background:#fff;
+    width:100%; padding:120px 0 200px 0; background:#eee;
     .inner{
         width:1180px; margin:0 auto;
         position:relative;
         h1{
-            font:700 32px/1 $font; color:#C05C7E;
-            margin-bottom:60px;
+            font:32px/1 $font; color:#C05C7E;
+            margin-bottom:60px; text-align:center;
         }
         .wrap{
             width:100%; position:relative; transition:0.5s;
@@ -161,14 +161,14 @@ $mobile : 539px;
                         position:absolute;
                         left:60px; top:380px;
                         h2{
-                            font:700 26px/1.6 $font; color:#fff;
+                            font:700 26px/1.4 $font; color:#fff;
                             margin-bottom:20px;
                         }
                         span{
                             display:block; position:relative;
                             width:200px; height:50px;
                             font:18px/50px $font; color:#fff;
-                            padding:0 10px;
+                            padding:0 15px;
                             background:#907FA4; 
                             &::after{
                                 content:''; display:block;
@@ -203,13 +203,47 @@ $mobile : 539px;
 }
      
 #product{
-    width:100%; height:100vh;
-    background:#999;
+    width:100%; height:100vh; overflow:hidden;
+    padding:120px 0 200px 0;
+    background:#ddd; position: relative;
+    .product_tit{
+        width:1180px; margin:0 auto;
+        >h1{
+            font:32px/1 $font; color:#C05C7E;
+            margin-bottom:60px; text-align:center;
+        }
+    }
+    .inner{
+        width:100%; height:100%; margin:0 auto; 
+        .swiper-wrapper{
+            width:100%; height:100%; transition:0.5s;
+            .swiper-slide{
+                width:500px; height:480px;
+                background:#fff; padding:30px; 
+                position:relative; top:50%; margin-top:-260px;
+                .pic{
+                    width:100%; height:280px; margin-bottom:10px;
+                    img{width:100%; height:100%; object-fit: cover;}
+                }
+                h2{
+                    font:40px/1.3 $font; color:#333;
+                    margin-bottom:10px;
+                }
+                p{
+                    font:13px/1.3 $font; color:#aaa;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+    .swiper-button-next, .swiper-button-prev{
+        filter: grayscale(100%) brightness(3);
+    }
 }
 #banner{
     width:100%;
     padding:100px 0;
-    background:url(../img/main/banner1.jpg) no-repeat center/cover fixed;
+    background:url(../img/main/banner.jpg) no-repeat center/cover fixed;
 
     .inner{
         width:1180px;
@@ -217,14 +251,14 @@ $mobile : 539px;
 
         h1{
             font:bold 26px/1 $font;
-            color:#333;
+            color:#eee;
             margin-bottom:10px;
             text-align:center;
         }
 
         p{
             font:16px/1.3 $font;
-            color:#666;
+            color:#ddd;
             text-align:center;
         }
     }
@@ -241,9 +275,9 @@ $mobile : 539px;
         //공통타이틀
         .tit_wrap{
             width:100%; margin-bottom:20px;
-            h3{
+            h1{
                 display:inline-block;
-                font:700 32px/1 $font; color:#C05C7E;
+                font:32px/1 $font; color:#C05C7E;
             }
             .viewbtn{
                 font:15px/2.8 $font; color:#999;
@@ -251,18 +285,28 @@ $mobile : 539px;
             }
         }
         .magazine_wrap{
-            width:580px; float:left; margin-right:10px;
-            padding:0 20px;
+            width:580px; float:left; margin-right:20px;
+            padding-right:10px; position:relative;
             .magazine{
-                width:100%; height:400px;
-                overflow:hidden;
+                width:100%; height:398px;
                 img{ width:100%; height:100%; object-fit: cover; }
+                .txt_box{
+                    position:absolute;
+                    top:320px; left:60px;
+                    >p{
+                        font:16px/1 $font; color:#fff;
+                        margin-bottom:10px;
+                    }
+                    >h2{
+                        font:22px/1.3 $font; color:#fff;
+                    }
+                }
             }
         }
 
         .news_wrap{
             width:580px; float:left; margin-right:0;
-            
+            padding-left:10px;
             ul{
                 width:100%; border-top:1px solid #999;
                 border-bottom:1px solid #999;
@@ -276,9 +320,9 @@ $mobile : 539px;
                     float:left; padding:29px 0px;
                     &:last-child{ border-bottom:none; }
                     a{
-                        display:block; 
+                        display:block; padding:0 15px;
                         .tit{
-                            font:16px/1 $font; color:#555;
+                            font:16px/1 $font; color:#888;
                             float:left;
                         }
                         .data{

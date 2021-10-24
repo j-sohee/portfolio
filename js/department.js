@@ -19,8 +19,6 @@ const swiper = new Swiper('.inner .dpt1 .right', {
     }
 });
 
-var btnStart = document.querySelector(".btnStart");
-var btnStop = document.querySelector('.btnStop');
 
 swiper.autoplay.stop();
 
