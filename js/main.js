@@ -43,8 +43,8 @@ const swiper = new Swiper('#product .inner', {
     effect: "coverflow",
      coverflowEffect : {
          rotate : 50, //슬라이드 회전 각도
-         stretch : -100, //슬라이드간의 거리,클수록 많이 겹침
-         depth : 300, //깊이효과값
+         stretch : -150, //슬라이드간의 거리,클수록 많이 겹침
+         depth : 250, //깊이효과값
          modifier : 1, //효과배수 2로적으면 rotate 50 x 2 = 100이 됨
          slideShadows : false //슬라이더 그림자
      }

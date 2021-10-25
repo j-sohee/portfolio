@@ -45,3 +45,15 @@
     span { display:block; position:absolute; top:20px; right:20px;
     font: bold 14px/1 $font; color:#fff; cursor:pointer; }
 }
+
+@media screen and (max-width:1179px){
+    .gallery{
+        .inner{
+            .myImg{
+                article{
+                    width:33.333%;
+                }
+            }
+        }
+    }
+}

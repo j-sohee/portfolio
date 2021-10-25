@@ -24,7 +24,7 @@
                 position:relative;  padding-bottom:15px;
                 &::after{
                     content:''; display:block;
-                    width:50px; height:1px; background:#f9b835;
+                    width:50px; height:1px; background:#C05C7E;
                    
                     position:absolute; left:50%; bottom:0;
                     transform:translateX(-50%);
@@ -52,8 +52,8 @@
                     border:1px solid #aaa; text-align:center;
                     transition:0.5s;
                     &:hover{
-                        color:#F88F01;
-                        border-color:#F88F01;
+                        color:#C05C7E;
+                        border-color:#C05C7E;;
                     }
                 }
             }
@@ -73,7 +73,7 @@
                     width:100%; 
                     position:absolute; bottom:0; left:0;
                     .swiper-pagination-bullet-active{
-                        background:#f9b835;
+                        background:#C05C7E;
                     }
                 }
             }
@@ -162,7 +162,7 @@
                     p{
                         &::before{
                                 content:''; display:inline-block;
-                                width:1px; height:23px; background:#F88F01;
+                                width:1px; height:23px; background:#C05C7E;;
                                 transform:rotate(55deg); margin-right:15px;
                         }
                         text-align:left; padding:0 0 0 10px;
@@ -185,8 +185,8 @@
                         text-align:center; margin-top:40px;
                         transition:0.5s;
                         &:hover{
-                            border:1px solid #F88F01;
-                            color:#F88F01;
+                            border:1px solid #C05C7E;;
+                            color:#C05C7E;;
                         }
                     }
                 }

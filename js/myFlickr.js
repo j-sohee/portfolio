@@ -13,7 +13,7 @@ $.ajax({
     dataType : "json",
     data : {
         api_key : "c28561608d1c0e9f7db60ecfda79bf27",
-        per_page : 20,
+        per_page : 16,
         format: "json",
         nojsoncallback:1,
         privacy_filter:1,
@@ -61,7 +61,7 @@ $.ajax({
             imgNum++;
             console.log(imgNum);
 
-            if(imgNum === 20){
+            if(imgNum == 16){
                 new Isotope(".myImg", {
                     itemSelector : ".myImg article",
                     columnWidth : ".myImg article",
