@@ -1409,8 +1409,8 @@ fieldset {
     width: 100%; } }
 /*youtube---------------------------------*/
 .youtube .sub_visual {
-  background: url(../img/youtube/bg1.jpg) no-repeat center/cover;
-  filter: saturate(60%); }
+  background: url(../img/youtube/bg3.jpg) no-repeat center/cover;
+  filter: saturate(50%); }
 .youtube .inner #vidGallery {
   width: 100%; }
   .youtube .inner #vidGallery::after {
