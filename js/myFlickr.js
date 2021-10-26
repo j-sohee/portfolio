@@ -13,7 +13,7 @@ $.ajax({
     dataType : "json",
     data : {
         api_key : "c28561608d1c0e9f7db60ecfda79bf27",
-        per_page : 16,
+        per_page : 20,
         format: "json",
         nojsoncallback:1,
         privacy_filter:1,
@@ -35,26 +35,28 @@ $.ajax({
         $("#gallery").append(
             $("<article>")
                 .append(
-                    $("<div class='item'>")
+                    $("<div class='list'>")
                         .append(
-                            $("<a>").attr({
-                                href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
-                            })
-                                .append(
-                                    $("<img>").attr({ src : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg" })
-                                )
-                        )
+                            $("<div class='txt'>")
                         .append(
-                            $("<span>").text("Lorem, ipsum dolor")
-                        )
-                        .append(
+                            $("<p>").text("CATEGORY"),
+                            $("<span>").text(data.owner),
                             $("<h2>").text(text)
-                        )
+                        ),
+                        $("<a>").attr({
+                            href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
+                            })
+                            .append(
+                                $("<img>").attr({ src : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg" })
+                            )
+                   )
+                    
                 )
-            )
-    })
+        )
+ });
 
     let imgNum = 0;
+    let photo = $("#gallery article").length;
 
     $("#gallery article img").each(function(index,data){
        
@@ -63,7 +65,7 @@ $.ajax({
             imgNum++;
             console.log(imgNum);
 
-            if(imgNum === 16){
+            if(imgNum === photo){
 
                 $(".loading").addClass("off");
 
@@ -86,10 +88,10 @@ $.ajax({
     console.err("데이터를 호출하는데 실패했습니다");
 })
 
-$("body").on("click", "#gallery article .item", function(e){
+$("body").on("click", "#gallery article a", function(e){
     e.preventDefault();
 
-    let imgSrc = $(this).children("a").attr("href");
+    let imgSrc = $(this).attr("href");
 
     $("body").append(
         $("<div class='pop'>")

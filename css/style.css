@@ -39,10 +39,10 @@ fieldset {
         font: 26px/1 "Noto Sans", "Noto Sans KR";
         color: #111; }
     #header_sub .inner .btnCall {
-      width: 24px;
-      height: 20px;
+      width: 20px;
+      height: 18px;
       position: absolute;
-      top: 27px;
+      top: 32px;
       left: 0; }
       #header_sub .inner .btnCall::before {
         content: '';
@@ -74,11 +74,16 @@ fieldset {
         text-indent: -9999px; }
     #header_sub .inner .util {
       position: absolute;
-      top: 25px;
-      left: 38px; }
+      top: 31px;
+      left: 31px; }
       #header_sub .inner .util a {
         display: inline-block;
-        margin-right: 10px; }
+        width: 20px;
+        height: 20px;
+        margin-right: 5px; }
+        #header_sub .inner .util a img {
+          width: 100%;
+          height: 100%; }
     #header_sub .inner .menuWeb {
       width: 100%; }
       #header_sub .inner .menuWeb #gnb {
@@ -131,11 +136,11 @@ fieldset {
     #header_sub .inner .user {
       position: absolute;
       right: 0;
-      top: 28px; }
+      top: 35px; }
       #header_sub .inner .user a {
         display: inline-block;
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
         margin-left: 5px; }
         #header_sub .inner .user a img {
           width: 100%;
@@ -1302,13 +1307,15 @@ fieldset {
 /*gallery---------------------------------*/
 .gallery .sub_visual {
   background: url(../img/gallery/bg01.jpg) no-repeat center/cover; }
+.gallery .inner h1 {
+  border-bottom: none; }
 .gallery .inner #gallery {
   width: 100%;
   min-height: 500px;
   position: relative; }
   .gallery .inner #gallery .loading {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     position: absolute;
     top: 100px;
     left: 50%;
@@ -1330,28 +1337,43 @@ fieldset {
     .gallery .inner #gallery article.on {
       opacity: 1;
       transform: translateY(0); }
-    .gallery .inner #gallery article .item {
-      display: grid;
+    .gallery .inner #gallery article .list {
       width: 100%;
-      height: 100%;
-      background: #fff;
-      border-radius: 4px;
-      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-      padding: 14px; }
-      .gallery .inner #gallery article .item a {
-        display: block;
+      border-top: 1px solid #ccc; }
+      .gallery .inner #gallery article .list .txt {
         width: 100%;
-        margin-bottom: 20px; }
-        .gallery .inner #gallery article .item a img {
+        padding: 10px 0 20px; }
+        .gallery .inner #gallery article .list .txt p {
+          display: inline-block;
+          width: 40%;
+          font: 12px/1 "Noto Sans", "Noto Sans KR";
+          color: #C05C7E; }
+          .gallery .inner #gallery article .list .txt p::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #C05C7E;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-top: -4px;
+            margin-right: 4px; }
+        .gallery .inner #gallery article .list .txt span {
+          display: inline-block;
+          width: 60%;
+          text-align: right;
+          font: 12px/1 "Noto Sans", "Noto Sans KR";
+          color: #666; }
+        .gallery .inner #gallery article .list .txt h2 {
+          font: 700 20px/1.3 "Noto Sans", "Noto Sans KR";
+          color: #333;
+          margin-top: 10px; }
+      .gallery .inner #gallery article .list a {
+        display: block;
+        width: 100%; }
+        .gallery .inner #gallery article .list a img {
           width: 100%;
-          height: 100%; }
-      .gallery .inner #gallery article .item span {
-        font: 12px/1 "Noto Sans", "Noto Sans KR";
-        color: #666;
-        margin-bottom: 5px; }
-      .gallery .inner #gallery article .item h2 {
-        font: bold 16px/1.3 "Noto Sans", "Noto Sans KR";
-        color: #333; }
+          margin-bottom: 20px; }
 
 .pop {
   width: 100%;
@@ -1375,6 +1397,15 @@ fieldset {
 
 @media screen and (max-width: 1179px) {
   .gallery .inner {
+    width: 100%;
+    padding: 0 20px; }
+    .gallery .inner #gallery article {
+      width: 33.333%; } }
+@media screen and (max-width: 699px) {
+  .gallery .inner #gallery article {
+    width: 50%; } }
+@media screen and (max-width: 539px) {
+  .gallery .inner #gallery article {
     width: 100%; } }
 /*youtube---------------------------------*/
 .youtube .sub_visual {
@@ -1455,7 +1486,7 @@ fieldset {
         color: #aaa;
         position: absolute;
         left: 50%;
-        bottom: 20px;
+        bottom: 30px;
         transform: translateX(-50%); }
 
 .vidpop {
@@ -1490,11 +1521,12 @@ fieldset {
     .youtube .inner #vidGallery article {
       width: 49%;
       margin-right: 2%; }
+      .youtube .inner #vidGallery article .btns > a {
+        font-size: 16px; }
       .youtube .inner #vidGallery article .con h2 {
         font-size: 14px; }
       .youtube .inner #vidGallery article .con p {
-        width: 95%;
-        bottom: 30px; } }
+        width: 95%; } }
 @media screen and (max-width: 539px) {
   /*youtube---------------------------------*/
   .youtube .inner {
@@ -1503,8 +1535,8 @@ fieldset {
     .youtube .inner #vidGallery article {
       width: 100%;
       margin-right: 0%; }
-      .youtube .inner #vidGallery article .con p {
-        width: 50%; } }
+      .youtube .inner #vidGallery article .con h2 {
+        width: 90%; } }
 /*location---------------------------------*/
 .location .sub_visual {
   background: url(../img/location/bg3.jpg) no-repeat bottom/cover;
@@ -1591,8 +1623,7 @@ fieldset {
       resize: none;
       font: 13px/1 "Noto Sans", "Noto Sans KR";
       color: #333;
-      border: 1px solid #ccc;
-      text-align: top; }
+      border: 1px solid #ccc; }
     .location .inner .wrap .comments form .name {
       width: 49%;
       float: left;
@@ -1611,10 +1642,10 @@ fieldset {
       .location .inner .wrap .comments form .btns input[type=submit] {
         width: 100%;
         height: 40px;
-        border: 1px solid #999;
+        border: 1px solid #ccc;
         background: #fff;
         font: 14px/40px "Noto Sans", "Noto Sans KR";
-        color: #333;
+        color: #666;
         letter-spacing: 2px;
         cursor: pointer; }
 .location .inner .wrap2 .branch {
@@ -1751,8 +1782,8 @@ fieldset {
         text-indent: -9999px; }
     #header .inner .util {
       position: absolute;
-      top: 30px;
-      left: 32px; }
+      top: 31px;
+      left: 31px; }
       #header .inner .util a {
         display: inline-block;
         width: 20px;
@@ -1813,7 +1844,7 @@ fieldset {
     #header .inner .user {
       position: absolute;
       right: 0;
-      top: 28px; }
+      top: 35px; }
       #header .inner .user a {
         display: inline-block;
         width: 15px;
