@@ -24,7 +24,7 @@ $.ajax({
         date = date.split("T")[0];
 
         if( len >  70){
-            txt = txt.substr(0, 70) + "...";
+            txt = txt.substr(0, 55) + "...";
         }
         if( titLen > 50){
             tit = tit.substr(0, 40) + "...";

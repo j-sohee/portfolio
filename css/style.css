@@ -1405,7 +1405,8 @@ fieldset {
       display: block;
       width: 100%;
       height: 300px;
-      padding: 20px 20px 0 20px; }
+      padding: 20px 20px 0 20px;
+      overflow: hidden; }
       .youtube .inner #vidGallery article > a img {
         width: 100%;
         height: 100%;
@@ -1486,55 +1487,24 @@ fieldset {
   .youtube .inner {
     width: 100%;
     padding: 0 20px; }
-    .youtube .inner #vidGallery {
+    .youtube .inner #vidGallery article {
+      width: 49%;
+      margin-right: 2%; }
+      .youtube .inner #vidGallery article .con h2 {
+        font-size: 14px; }
+      .youtube .inner #vidGallery article .con p {
+        width: 95%;
+        bottom: 30px; } }
+@media screen and (max-width: 539px) {
+  /*youtube---------------------------------*/
+  .youtube .inner {
+    width: 100%;
+    padding: 0 20px; }
+    .youtube .inner #vidGallery article {
       width: 100%;
-      position: relative; }
-      .youtube .inner #vidGallery article {
-        width: 49%;
-        margin-right: 2%; }
-        .youtube .inner #vidGallery article:nth-of-type(2n) {
-          margin-right: 0px; }
-        .youtube .inner #vidGallery article:last-child {
-          display: none; }
-        .youtube .inner #vidGallery article a {
-          display: block;
-          width: 100%;
-          height: 250px;
-          overflow: hidden;
-          filter: saturate(100%);
-          margin-bottom: 20px;
-          transition: 0.5s; }
-          .youtube .inner #vidGallery article a img {
-            width: 100%;
-            transform: scale(1);
-            transition: 0.5s; }
-        .youtube .inner #vidGallery article .con {
-          width: 100%;
-          height: 150px;
-          position: absolute;
-          bottom: 0px;
-          left: 0;
-          transform: translateX(0);
-          padding: 20px 10px; }
-          .youtube .inner #vidGallery article .con h2 {
-            font: 700 16px/1.2 "Noto Sans", "Noto Sans KR";
-            color: #000;
-            text-align: center;
-            margin-bottom: 10px;
-            letter-spacing: 0.8px;
-            transition: 0.5s; }
-          .youtube .inner #vidGallery article .con p {
-            font: 13px/1.4 "Noto Sans", "Noto Sans KR";
-            color: #666;
-            text-align: center;
-            margin-bottom: 20px;
-            transition: 0.5s; }
-          .youtube .inner #vidGallery article .con span {
-            display: block;
-            font: 13px/1 "Noto Sans", "Noto Sans KR";
-            color: #999;
-            text-align: center;
-            transition: 0.5s; } }
+      margin-right: 0%; }
+      .youtube .inner #vidGallery article .con p {
+        width: 50%; } }
 /*location---------------------------------*/
 .location .sub_visual {
   background: url(../img/location/bg3.jpg) no-repeat bottom/cover;
