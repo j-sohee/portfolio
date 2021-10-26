@@ -269,6 +269,7 @@ $mobile : 539px;
         }
     }
 }
+
 #banner{
     width:100%;
     padding:100px 0;
@@ -833,7 +834,7 @@ $mobile : 539px;
                 li{
                     padding:20px 0;
                     a{
-                        .tit{ width:100%; font:13px/1.2 $font; margin-bottom:5px; }
+                        .tit{ width:100%; font:13px/1.2 $font; margin-bottom:10px; }
                         .day { font-size: 14px; }
                         .data { font-size: 10px; }
                     }
