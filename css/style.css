@@ -1963,7 +1963,9 @@ fieldset {
           font: 13px/1.3 "Noto Sans", "Noto Sans KR";
           color: #aaa;
           letter-spacing: 1px; }
-  #product .swiper-button-next, #product .swiper-button-prev {
+  #product .swiper-button-next {
+    filter: grayscale(100%) brightness(3); }
+  #product .swiper-button-prev {
     filter: grayscale(100%) brightness(3); }
   #product.on .product_tit > h1 {
     opacity: 1;
@@ -2274,6 +2276,54 @@ fieldset {
       right: 20px;
       transform: translateY(-50%); }
 
+  #brand {
+    padding: 100px 0 150px 0; }
+    #brand .inner {
+      width: 100%; }
+      #brand .inner .wrap {
+        padding: 0 30px; }
+        #brand .inner .wrap article {
+          width: 100%; }
+          #brand .inner .wrap article:nth-of-type(1) {
+            transform: translateY(-100px);
+            transition-delay: 0.4s; }
+          #brand .inner .wrap article:last-child {
+            transform: translateY(100px);
+            transition-delay: 0.6s; }
+
+  #product {
+    padding: 100px 0 50px 0; }
+    #product .product_tit {
+      width: 100%; }
+    #product .inner .swiper-wrapper {
+      width: 100%;
+      height: 100%; }
+
+  #banner {
+    padding: 80px 0; }
+    #banner .inner {
+      width: 100%; }
+      #banner .inner p {
+        font-size: 14px; }
+
+  #comment {
+    width: 100%;
+    padding: 150px 0px;
+    background: #fff; }
+    #comment .inner {
+      width: 100%;
+      padding: 0 30px; }
+      #comment .inner .magazine_wrap {
+        width: 100%;
+        padding-right: 0px;
+        margin-bottom: 30px; }
+        #comment .inner .magazine_wrap .magazine {
+          width: 100%;
+          height: 400px; }
+      #comment .inner .news_wrap {
+        width: 100%;
+        padding-left: 0px; }
+
   /*footer----------------------------------*/
   #footer .inner {
     width: 100%;
@@ -2315,7 +2365,12 @@ fieldset {
           font-size: 14px;
           margin-top: 20px; }
         #footer .innerBt .footerBox .rightBox .service {
-          margin-top: 20px; } }
+          margin-top: 20px; }
+
+  #navi {
+    right: 10px; }
+    #navi li {
+      margin: 15px 0; } }
 @media screen and (max-width: 539px) {
   /*header----------------------------------*/
   #header .inner {
@@ -2330,6 +2385,102 @@ fieldset {
       display: none; }
     #header .inner .user {
       display: none; }
+
+  #brand .inner {
+    width: 100%; }
+    #brand .inner h1 {
+      font-size: 26px; }
+    #brand .inner .wrap {
+      padding: 0 30px; }
+      #brand .inner .wrap article {
+        width: 100%; }
+        #brand .inner .wrap article:nth-of-type(1) {
+          transform: translateY(-100px);
+          transition-delay: 0.4s; }
+        #brand .inner .wrap article:last-child {
+          transform: translateY(100px);
+          transition-delay: 0.6s; }
+        #brand .inner .wrap article a {
+          height: 500px; }
+          #brand .inner .wrap article a > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
+          #brand .inner .wrap article a .txt {
+            left: 15px;
+            top: 330px; }
+            #brand .inner .wrap article a .txt h2 {
+              font-size: 20px; }
+            #brand .inner .wrap article a .txt span {
+              width: 100%;
+              height: 40px;
+              font: 14px/40px "Noto Sans", "Noto Sans KR"; }
+              #brand .inner .wrap article a .txt span::after {
+                width: 7px;
+                height: 7px; }
+
+  #product {
+    padding: 100px 0 50px 0; }
+    #product .product_tit h1 {
+      font-size: 26px; }
+    #product .inner .swiper-wrapper .swiper-slide {
+      width: 300px;
+      height: 450px;
+      padding: 20px; }
+      #product .inner .swiper-wrapper .swiper-slide .pic {
+        height: 250px; }
+      #product .inner .swiper-wrapper .swiper-slide h2 {
+        font: 26px/1.3 "Noto Sans", "Noto Sans KR"; }
+    #product .inner .swiper-button-next {
+      left: auto;
+      right: 20px;
+      top: auto;
+      bottom: 300px;
+      transform: scale(0.5); }
+    #product .inner .swiper-button-prev {
+      left: auto;
+      right: 60px;
+      top: auto;
+      bottom: 300px;
+      transform: scale(0.5); }
+
+  #banner .inner {
+    width: 100%; }
+    #banner .inner h1 {
+      font-size: 20px;
+      line-height: 1.2; }
+    #banner .inner p {
+      font-size: 12px; }
+
+  #comment {
+    padding: 80px 0px; }
+    #comment .inner .tit_wrap h1 {
+      font-size: 26px; }
+    #comment .inner .tit_wrap .viewbtn {
+      font-size: 12px; }
+    #comment .inner .magazine_wrap {
+      width: 100%;
+      padding-right: 0px;
+      margin-bottom: 30px; }
+      #comment .inner .magazine_wrap .magazine {
+        width: 100%;
+        height: 400px; }
+        #comment .inner .magazine_wrap .magazine .txt_box {
+          left: 20px; }
+          #comment .inner .magazine_wrap .magazine .txt_box p {
+            font-size: 14px; }
+          #comment .inner .magazine_wrap .magazine .txt_box h2 {
+            font-size: 18px; }
+    #comment .inner .news_wrap ul li {
+      padding: 20px 0; }
+      #comment .inner .news_wrap ul li a .tit {
+        width: 100%;
+        font: 13px/1.2 "Noto Sans", "Noto Sans KR";
+        margin-bottom: 5px; }
+      #comment .inner .news_wrap ul li a .day {
+        font-size: 14px; }
+      #comment .inner .news_wrap ul li a .data {
+        font-size: 10px; }
 
   /*footer----------------------------------*/
   #footer .inner {
