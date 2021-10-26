@@ -4,13 +4,28 @@
         background:url(../img/gallery/bg01.jpg) no-repeat center/cover;
     }
     .inner{
-        .myImg{
-            width:100%;
+        #gallery{
+            width:100%; min-height:500px; position:relative;
+            .loading{
+                width:100px; height:100px;
+                position:absolute; top:100px; left:50%;
+                transform:translateX(-50%);
+                transition:0.5s;
+
+                &.off{
+                    opacity:0; 
+                }
+            }
             &::after{
                 content:''; display:block; clear:both;
             }
             article{
                 width:25%; float:left; padding:12px;
+                opacity:0; transition:1s;
+                transform:translateY(100px);
+                &.on{
+                    opacity:1; transform:translateY(0);
+                }
                 .item{
                     display:grid;
                     width:100%; height:100%;

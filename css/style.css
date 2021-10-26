@@ -1302,17 +1302,35 @@ fieldset {
 /*gallery---------------------------------*/
 .gallery .sub_visual {
   background: url(../img/gallery/bg01.jpg) no-repeat center/cover; }
-.gallery .inner .myImg {
-  width: 100%; }
-  .gallery .inner .myImg::after {
+.gallery .inner #gallery {
+  width: 100%;
+  min-height: 500px;
+  position: relative; }
+  .gallery .inner #gallery .loading {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s; }
+    .gallery .inner #gallery .loading.off {
+      opacity: 0; }
+  .gallery .inner #gallery::after {
     content: '';
     display: block;
     clear: both; }
-  .gallery .inner .myImg article {
+  .gallery .inner #gallery article {
     width: 25%;
     float: left;
-    padding: 12px; }
-    .gallery .inner .myImg article .item {
+    padding: 12px;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(100px); }
+    .gallery .inner #gallery article.on {
+      opacity: 1;
+      transform: translateY(0); }
+    .gallery .inner #gallery article .item {
       display: grid;
       width: 100%;
       height: 100%;
@@ -1320,18 +1338,18 @@ fieldset {
       border-radius: 4px;
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
       padding: 14px; }
-      .gallery .inner .myImg article .item a {
+      .gallery .inner #gallery article .item a {
         display: block;
         width: 100%;
         margin-bottom: 20px; }
-        .gallery .inner .myImg article .item a img {
+        .gallery .inner #gallery article .item a img {
           width: 100%;
           height: 100%; }
-      .gallery .inner .myImg article .item span {
+      .gallery .inner #gallery article .item span {
         font: 12px/1 "Noto Sans", "Noto Sans KR";
         color: #666;
         margin-bottom: 5px; }
-      .gallery .inner .myImg article .item h2 {
+      .gallery .inner #gallery article .item h2 {
         font: bold 16px/1.3 "Noto Sans", "Noto Sans KR";
         color: #333; }
 
@@ -1551,7 +1569,7 @@ fieldset {
         padding-left: 40px; }
       .location .inner .wrap .contact article > h3 {
         font: 14px/1 "Noto Sans", "Noto Sans KR";
-        color: #555;
+        color: #494949;
         margin-bottom: 15px;
         letter-spacing: 1px; }
       .location .inner .wrap .contact article > p {
@@ -1578,7 +1596,7 @@ fieldset {
       border-bottom: 1px solid #C05C7E; }
     .location .inner .wrap .comments form label > p {
       font: 14px/1 "Noto Sans", "Noto Sans KR";
-      color: #888;
+      color: #494949;
       letter-spacing: 1px;
       margin-bottom: 10px; }
     .location .inner .wrap .comments form input[type=text] {

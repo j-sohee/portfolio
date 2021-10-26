@@ -32,7 +32,7 @@ $.ajax({
             text = "No description in this photo";
         }
 
-        $(".myImg").append(
+        $("#gallery").append(
             $("<article>")
                 .append(
                     $("<div class='item'>")
@@ -56,18 +56,25 @@ $.ajax({
 
     let imgNum = 0;
 
-    $(".myImg article img").each(function(index,data){
+    $("#gallery article img").each(function(index,data){
+       
+
         data.onload = function(){
             imgNum++;
             console.log(imgNum);
 
-            if(imgNum == 16){
-                new Isotope(".myImg", {
-                    itemSelector : ".myImg article",
-                    columnWidth : ".myImg article",
+            if(imgNum === 16){
+
+                $(".loading").addClass("off");
+
+                new Isotope("#gallery", {
+                    itemSelector : "#gallery article",
+                    columnWidth : "#gallery article",
                     percentPosition : true,
                     transitionDuration : "0.5s"
-                })
+                });
+
+                $("#gallery article").addClass("on");
             }
         }
     })
@@ -79,7 +86,7 @@ $.ajax({
     console.err("데이터를 호출하는데 실패했습니다");
 })
 
-$("body").on("click", ".myImg article .item", function(e){
+$("body").on("click", "#gallery article .item", function(e){
     e.preventDefault();
 
     let imgSrc = $(this).children("a").attr("href");
