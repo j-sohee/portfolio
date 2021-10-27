@@ -1331,12 +1331,7 @@ fieldset {
     width: 25%;
     float: left;
     padding: 12px;
-    opacity: 0;
-    transition: 1s;
-    transform: translateY(100px); }
-    .gallery .inner #gallery article.on {
-      opacity: 1;
-      transform: translateY(0); }
+    opacity: 0; }
     .gallery .inner #gallery article .list {
       width: 100%;
       border-top: 1px solid #ccc; }
@@ -1385,7 +1380,8 @@ fieldset {
   padding: 80px; }
   .pop img {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    object-fit: contain; }
   .pop span {
     display: block;
     position: absolute;
@@ -1814,33 +1810,81 @@ fieldset {
             height: 100%;
             font: 14px/60px "Noto Sans", "Noto Sans KR";
             color: #555;
-            text-align: center; }
-          #header .inner .menuWeb #gnb > li .sub {
+            text-align: center;
+            transition: 0.5s; }
+            #header .inner .menuWeb #gnb > li > a:hover {
+              font-weight: bold; }
+          #header .inner .menuWeb #gnb > li .gnb_2depth {
             width: 1180px;
-            height: 180px;
+            height: 220px;
+            padding-top: 20px;
             position: absolute;
             top: 60px;
             right: 0;
+            font-size: 0;
             background: #fff;
             display: none; }
-            #header .inner .menuWeb #gnb > li .sub::before {
+            #header .inner .menuWeb #gnb > li .gnb_2depth::before {
               content: '';
               display: block;
               width: 100%;
-              height: 180px;
+              height: inherit;
               background: #fff;
               position: absolute;
               top: 0;
               left: -100%; }
-            #header .inner .menuWeb #gnb > li .sub::after {
+            #header .inner .menuWeb #gnb > li .gnb_2depth::after {
               content: '';
               display: block;
               width: 100%;
-              height: 180px;
+              height: inherit;
               background: #fff;
               position: absolute;
               top: 0;
               right: -100%; }
+            #header .inner .menuWeb #gnb > li .gnb_2depth > .dpe1 {
+              width: 180px;
+              text-align: center;
+              float: left;
+              font-size: 0; }
+              #header .inner .menuWeb #gnb > li .gnb_2depth > .dpe1 > li {
+                width: 100%;
+                padding: 0 0 15px 0; }
+                #header .inner .menuWeb #gnb > li .gnb_2depth > .dpe1 > li a {
+                  font: 14px/1 "Noto Sans", "Noto Sans KR";
+                  color: #333; }
+            #header .inner .menuWeb #gnb > li .gnb_2depth > .dep2 {
+              width: 180px;
+              float: left; }
+              #header .inner .menuWeb #gnb > li .gnb_2depth > .dep2 > li {
+                width: 100%;
+                padding: 0 0 15px 40px;
+                border-left: 1px solid #ddd; }
+                #header .inner .menuWeb #gnb > li .gnb_2depth > .dep2 > li strong {
+                  font: 700 14px/1 "Noto Sans", "Noto Sans KR";
+                  color: #333; }
+                #header .inner .menuWeb #gnb > li .gnb_2depth > .dep2 > li a {
+                  font: 13px/1 "Noto Sans", "Noto Sans KR";
+                  color: #333; }
+            #header .inner .menuWeb #gnb > li .gnb_2depth > .dep3 {
+              width: 250px;
+              float: left; }
+              #header .inner .menuWeb #gnb > li .gnb_2depth > .dep3 > li {
+                width: 100%;
+                padding: 0 0 15px 40px; }
+                #header .inner .menuWeb #gnb > li .gnb_2depth > .dep3 > li strong {
+                  font: 700 14px/1 "Noto Sans", "Noto Sans KR";
+                  color: #333; }
+                #header .inner .menuWeb #gnb > li .gnb_2depth > .dep3 > li a {
+                  font: 13px/1 "Noto Sans", "Noto Sans KR";
+                  color: #333; }
+            #header .inner .menuWeb #gnb > li .gnb_2depth .pic {
+              width: 500px;
+              float: left; }
+              #header .inner .menuWeb #gnb > li .gnb_2depth .pic img {
+                width: 100%;
+                height: 150px;
+                object-fit: cover; }
     #header .inner .user {
       position: absolute;
       right: 0;
