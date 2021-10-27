@@ -1,5 +1,4 @@
 //header 2depth menu
-
 $("#gnb>li").on("mouseenter", function(){
     $(this).find(".gnb_2depth").show();
 })
