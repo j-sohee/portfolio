@@ -13,6 +13,33 @@ getList({
     user_id:"194106842@N02"
 })
 
+$("#searchBox button").on("click", function(){
+
+    $("#gallery").removeClass("on");
+    $(".loading").removeClass("off");
+
+    let inputs = $("#searchBox input").val();
+    $("#searchBox input").val("");
+    getList({
+        type:"search",
+        tag : inputs
+    });
+});
+
+$(window).on("keypress", function(e){
+    if(e.keyCode == 13){
+        $("#gallery").removeClass("on");
+        $(".loading").removeClass("off");
+
+        let inputs = $("#searchBox input").val();
+        $("#searchBox input").val("");
+        getList({
+            type:"search",
+            tag : inputs
+        });
+    }
+})
+
 $("body").on("click", "#gallery article a", function(e){
     e.preventDefault();
 
@@ -81,8 +108,11 @@ function getList(opt){
     $.ajax(result_opt)
 
     .success(function(data){
-        console.log(data.photos.photo);
+
         let items = data.photos.photo;
+        console.log(items);
+
+        $("#gallery").empty();
     
         $(items).each(function(index,data){
     
@@ -118,8 +148,6 @@ function getList(opt){
         let photo = $("#gallery article").length;
     
         $("#gallery article img").each(function(index,data){
-           
-    
             data.onload = function(){
                 imgNum++;
                 console.log(imgNum);

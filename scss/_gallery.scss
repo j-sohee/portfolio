@@ -6,14 +6,34 @@
     .inner{
         h1{
             border-bottom: none;
+            margin-bottom:20px;
         }
         .loading{
-            width:50px; height:50px;
-            position:absolute; top:100px; left:50%;
+            width:80px; height:80px;
+            position:absolute; top:200px; left:50%;
             transform:translateX(-50%);
             transition:0.5s;
             &.off{
                 opacity:0; 
+            }
+        }
+
+        #searchBox{
+            width:100%; text-align:right;
+            margin-bottom:20px; position:relative;
+            padding-right:12px;
+
+            input[type=text]{
+                width:188px; height:30px; 
+                font:13px/30px $font; color:#000;
+                border:1px solid #ccc;
+            }
+            button{
+                width:78px; height:30px;
+                border:1px solid #ccc;
+                background:#fff;
+                font:12px/30px $font; color:#888;
+                vertical-align:top;
             }
         }
         #gallery{

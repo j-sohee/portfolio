@@ -33,9 +33,7 @@ const zoomControl = new kakao.maps.ZoomControl();
 map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
 //마커 표시하기--------------------------------------------
-const tab = document.querySelector(".branch");
 const branch_btns = document.querySelectorAll(".branch dt");
-const boxs = tab.querySelectorAll("dd");
 
  const imageSrc = 'img/location/marker1.png',
 	   imageSize = new kakao.maps.Size(64,64),
@@ -63,10 +61,7 @@ const markerOptions = [
 		button: branch_btns[3]
 	 }
  ];
- 
- const $tab = $(".branch");
- const $btns = $tab.find("dt a")
- const $boxs = $tab.find("dd");
+
 
  for(let i=0; i<markerOptions.length; i++){
 	new kakao.maps.Marker({
@@ -91,15 +86,14 @@ const markerOptions = [
 		$('#'+targetId).addClass('on');
 	}
  }
-screen
+
+
  //지도이동----------------------------------
 function moveTo(target) {            
     let moveLatLon = target;
     
     map.setCenter(moveLatLon);
 }
-
-
 
 window.onresize = function(){
     //활성화된 버튼의 data-index값 구하기
