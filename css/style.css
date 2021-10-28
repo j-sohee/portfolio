@@ -1975,21 +1975,28 @@ fieldset {
 
 #brand {
   width: 100%;
-  padding: 120px 0 200px 0;
+  padding: 120px 0;
   background: #fff; }
   #brand .inner {
     width: 1180px;
     margin: 0 auto;
     position: relative; }
     #brand .inner h1 {
-      font: 32px/1 "Noto Sans", "Noto Sans KR";
-      color: #C05C7E;
-      margin-bottom: 60px;
-      text-align: center;
-      transform: translateY(50px);
-      opacity: 0;
-      transition: 0.5s;
-      transition-delay: 0.2s; }
+      font: 16px/1 "Noto Sans", "Noto Sans KR";
+      color: #333;
+      letter-spacing: 2px;
+      position: relative;
+      padding-bottom: 30px;
+      margin-bottom: 40px; }
+      #brand .inner h1::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 1px;
+        background: #000;
+        position: absolute;
+        bottom: 0;
+        left: 0; }
     #brand .inner .wrap {
       width: 100%;
       position: relative; }
@@ -1998,130 +2005,90 @@ fieldset {
         display: block;
         clear: both; }
       #brand .inner .wrap article {
-        width: 590px;
+        width: 580px;
+        margin-right: 20px;
         float: left;
-        opacity: 0;
-        transition: 1s;
-        transition-delay: 0.4s; }
-        #brand .inner .wrap article:nth-of-type(1) {
-          transform: translateY(-100px); }
+        position: relative; }
         #brand .inner .wrap article:last-child {
-          transform: translateY(100px); }
+          margin-right: 0; }
+        #brand .inner .wrap article h2 {
+          font: 42px/1.4 "Noto Sans", "Noto Sans KR";
+          color: #333;
+          margin-bottom: 30px; }
+        #brand .inner .wrap article p {
+          font: 16px/2 "Noto Sans", "Noto Sans KR";
+          color: #999;
+          margin-bottom: 40px; }
         #brand .inner .wrap article a {
-          display: block;
-          width: 100%;
-          height: 580px; }
-          #brand .inner .wrap article a > img {
+          display: inline-block;
+          position: absolute;
+          bottom: 0;
+          right: 70px;
+          font: 14px/1 "Noto Sans", "Noto Sans KR";
+          color: #555;
+          text-align: right;
+          letter-spacing: 2px;
+          border-bottom: 1px solid #333; }
+        #brand .inner .wrap article div {
+          width: 49%;
+          margin-right: 2%;
+          float: left; }
+          #brand .inner .wrap article div img {
             width: 100%;
             height: 100%;
             object-fit: cover; }
-          #brand .inner .wrap article a .txt {
-            position: absolute;
-            left: 60px;
-            top: 380px; }
-            #brand .inner .wrap article a .txt h2 {
-              font: 700 26px/1.4 "Noto Sans", "Noto Sans KR";
-              color: #fff;
-              margin-bottom: 20px; }
-            #brand .inner .wrap article a .txt span {
-              display: block;
-              position: relative;
-              width: 200px;
-              height: 50px;
-              font: 18px/50px "Noto Sans", "Noto Sans KR";
-              color: #fff;
-              padding: 0 15px;
-              background: #907FA4; }
-              #brand .inner .wrap article a .txt span::after {
-                content: '';
-                display: block;
-                position: absolute;
-                top: 50%;
-                right: 20px;
-                width: 9px;
-                height: 9px;
-                border-top: 1px solid #fff;
-                border-left: 1px solid #fff;
-                transform: rotate(135deg);
-                margin-top: -4px; }
-  #brand.on .inner h1 {
-    opacity: 1;
-    transform: translateY(0); }
-  #brand.on .inner .wrap article {
-    opacity: 1; }
-    #brand.on .inner .wrap article:nth-of-type(1) {
-      transform: translateY(0); }
-    #brand.on .inner .wrap article:last-child {
-      transform: translateY(30px); }
+          #brand .inner .wrap article div:last-child {
+            margin-right: 0; }
 
 #product {
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  padding: 120px 0;
-  background: #ddd;
-  position: relative; }
-  #product .product_tit {
-    width: 1180px;
-    margin: 0 auto; }
-    #product .product_tit > h1 {
-      font: 32px/1 "Noto Sans", "Noto Sans KR";
-      color: #C05C7E;
-      margin-bottom: 60px;
-      text-align: center;
-      transform: translateY(50px);
-      opacity: 0;
-      transition: 0.5s;
-      transition-delay: 0.2s; }
+  padding: 120px 0 200px 0;
+  background: #eeeeee; }
   #product .inner {
-    width: 100%;
-    height: 100%;
+    width: 1180px;
     margin: 0 auto;
-    padding: 50px 0;
-    position: relative;
-    top: 50%;
-    transform: translateY(-25%);
-    opacity: 0;
-    transition: 1s;
-    transition-delay: 0.4s; }
-    #product .inner .swiper-wrapper {
-      width: 100%;
-      height: 100%; }
-      #product .inner .swiper-wrapper .swiper-slide {
-        width: 400px;
-        height: 450px;
-        background: #fff;
-        padding: 30px; }
-        #product .inner .swiper-wrapper .swiper-slide .pic {
+    position: relative; }
+    #product .inner::after {
+      content: '';
+      display: block;
+      clear: both; }
+    #product .inner article {
+      width: 380px;
+      margin-right: 20px;
+      float: left; }
+      #product .inner article:last-child {
+        margin-right: 0; }
+      #product .inner article h1 {
+        font: 14px/1 "Noto Sans", "Noto Sans KR";
+        color: #333;
+        letter-spacing: 2px;
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 20px; }
+        #product .inner article h1::after {
+          content: '';
+          display: block;
+          width: 40px;
+          height: 1px;
+          background: #000;
+          position: absolute;
+          bottom: 0;
+          left: 0; }
+      #product .inner article h2 {
+        font: 30px/1 "Noto Sans", "Noto Sans KR";
+        color: #333;
+        margin-bottom: 20px; }
+      #product .inner article p {
+        font: 14px/1.5 "Noto Sans", "Noto Sans KR";
+        color: #888;
+        margin-bottom: 20px; }
+      #product .inner article .pic {
+        width: 100%;
+        height: 300px; }
+        #product .inner article .pic img {
           width: 100%;
-          height: 280px;
-          margin-bottom: 10px; }
-          #product .inner .swiper-wrapper .swiper-slide .pic img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; }
-        #product .inner .swiper-wrapper .swiper-slide h2 {
-          font: 32px/1 "Noto Sans", "Noto Sans KR";
-          color: #333;
-          margin-bottom: 10px; }
-        #product .inner .swiper-wrapper .swiper-slide p {
-          font: 13px/1.3 "Noto Sans", "Noto Sans KR";
-          color: #aaa;
-          letter-spacing: 1px; }
-  #product .swiper-button-next {
-    filter: grayscale(100%) brightness(3); }
-  #product .swiper-button-prev {
-    filter: grayscale(100%) brightness(3); }
-  #product.on .product_tit > h1 {
-    opacity: 1;
-    transform: translateY(0); }
-  #product.on .inner {
-    opacity: 1;
-    transform: translateY(-50%); }
-    #product.on .inner .swiper-wrapper .swiper-slide {
-      opacity: 0.7; }
-      #product.on .inner .swiper-wrapper .swiper-slide-active {
-        opacity: 1; }
+          height: 100%;
+          object-fit: cover; }
 
 #banner {
   width: 100%;
@@ -2131,18 +2098,18 @@ fieldset {
     width: 1180px;
     margin: 0 auto; }
     #banner .inner h1 {
-      font: bold 26px/1 "Noto Sans", "Noto Sans KR";
+      font: 700 26px/1 "Noto Sans", "Noto Sans KR";
       color: #eee;
       margin-bottom: 10px;
       text-align: center; }
     #banner .inner p {
-      font: 16px/1.3 "Noto Sans", "Noto Sans KR";
+      font: 16px/1.6 "Noto Sans", "Noto Sans KR";
       color: #ddd;
       text-align: center; }
 
 #comment {
   width: 100%;
-  padding: 200px 0;
+  padding: 120px 0 200px 0;
   background: #fff; }
   #comment .inner {
     width: 1180px;
@@ -2154,15 +2121,35 @@ fieldset {
       clear: both; }
     #comment .inner .tit_wrap {
       width: 100%;
-      margin-bottom: 20px; }
+      position: relative; }
       #comment .inner .tit_wrap h1 {
-        display: inline-block;
-        font: 32px/1 "Noto Sans", "Noto Sans KR";
-        color: #C05C7E; }
+        font: 14px/1 "Noto Sans", "Noto Sans KR";
+        color: #333;
+        letter-spacing: 2px;
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 20px; }
+        #comment .inner .tit_wrap h1::after {
+          content: '';
+          display: block;
+          width: 40px;
+          height: 1px;
+          background: #000;
+          position: absolute;
+          bottom: 0;
+          left: 0; }
+      #comment .inner .tit_wrap h2 {
+        font: 30px/1 "Noto Sans", "Noto Sans KR";
+        color: #333;
+        margin-bottom: 20px; }
       #comment .inner .tit_wrap .viewbtn {
-        font: 15px/2.8 "Noto Sans", "Noto Sans KR";
+        font: 12px/2 "Noto Sans", "Noto Sans KR";
         color: #999;
-        float: right; }
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        border-bottom: 1px solid #ddd;
+        letter-spacing: 2px; }
     #comment .inner .magazine_wrap {
       width: 580px;
       float: left;
@@ -2171,22 +2158,25 @@ fieldset {
       position: relative; }
       #comment .inner .magazine_wrap .magazine {
         width: 100%;
-        height: 398px; }
+        height: 400px; }
         #comment .inner .magazine_wrap .magazine img {
           width: 100%;
-          height: 100%;
-          object-fit: cover; }
+          height: 250px;
+          object-fit: cover;
+          margin-bottom: 20px; }
         #comment .inner .magazine_wrap .magazine .txt_box {
-          position: absolute;
-          top: 320px;
-          left: 60px; }
+          width: 100%;
+          height: 150px;
+          overflow: hidden; }
+          #comment .inner .magazine_wrap .magazine .txt_box > h3 {
+            font: 700 26px/1 "Noto Sans", "Noto Sans KR";
+            color: #000;
+            margin-bottom: 20px;
+            letter-spacing: 1px; }
           #comment .inner .magazine_wrap .magazine .txt_box > p {
-            font: 16px/1 "Noto Sans", "Noto Sans KR";
-            color: #fff;
+            font: 16px/1.5 "Noto Sans", "Noto Sans KR";
+            color: #999;
             margin-bottom: 10px; }
-          #comment .inner .magazine_wrap .magazine .txt_box > h2 {
-            font: 22px/1.3 "Noto Sans", "Noto Sans KR";
-            color: #fff; }
     #comment .inner .news_wrap {
       width: 580px;
       float: left;
@@ -2213,15 +2203,15 @@ fieldset {
             padding: 0 15px; }
             #comment .inner .news_wrap ul li a .tit {
               font: 16px/1 "Noto Sans", "Noto Sans KR";
-              color: #888;
+              color: #555;
               float: left; }
             #comment .inner .news_wrap ul li a .data {
               font: 14px/1.2 "Noto Sans", "Noto Sans KR";
-              color: #907FA4;
+              color: #555;
               float: right; }
             #comment .inner .news_wrap ul li a .day {
               font: 20px/1 "Noto Sans", "Noto Sans KR";
-              color: #907FA4;
+              color: #555;
               float: right;
               margin-left: 5px; }
 

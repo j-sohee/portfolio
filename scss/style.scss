@@ -171,72 +171,53 @@ $mobile : 539px;
 }
 
 #brand{
-    width:100%; padding:120px 0 200px 0; background:#fff;
+    width:100%; padding:120px 0; background:#fff;
     .inner{
         width:1180px; margin:0 auto;
         position:relative;
         h1{
-            font:32px/1 $font; color:$titColor;
-            margin-bottom:60px; text-align:center;
-            transform:translateY(50px);
-            opacity:0; transition:0.5s; transition-delay: 0.2s;
-        }
-        .wrap{
-            width:100%; position:relative;
-            &::after{content:''; display:block; clear:both; }
-            article{
-                width:590px; float:left;
-                opacity:0;  transition:1s; transition-delay: 0.4s;
-                &:nth-of-type(1){
-                    transform:translateY(-100px);
-                }
-                &:last-child{
-                    transform:translateY(100px);
-                }
-                a{
-                    display:block;
-                    width:100%; height:580px;
-                    >img{width:100%; height:100%; object-fit: cover;}
-                    .txt{
-                        position:absolute;
-                        left:60px; top:380px;
-                        h2{
-                            font:700 26px/1.4 $font; color:#fff;
-                            margin-bottom:20px;
-                        }
-                        span{
-                            display:block; position:relative;
-                            width:200px; height:50px;
-                            font:18px/50px $font; color:#fff;
-                            padding:0 15px;
-                            background:#907FA4; 
-                            &::after{
-                                content:''; display:block;
-                                position:absolute; top:50%; right:20px;
-                                width:9px; height:9px;
-                                border-top:1px solid #fff;
-                                border-left:1px solid #fff;
-                                transform:rotate(135deg);
-                                margin-top:-4px;
-                            }
-                        }
-                    }
-                }
+            font:16px/1 $font; color:#333;
+            letter-spacing: 2px; position:relative;
+            padding-bottom:30px; margin-bottom:40px;
+            &::after{
+                content:''; display:block;
+                width:80px; height:1px;
+                background:#000;
+                position:absolute; bottom:0; left:0;
             }
         }
-    }
-    &.on{
-        .inner{
-            h1{ opacity:1; transform:translateY(0); }
-            .wrap{
-                article{
-                    opacity:1;
-                    &:nth-of-type(1){
-                        transform:translateY(0);
-                    }
-                    &:last-child{
-                        transform:translateY(30px);
-                    }
+
+        .wrap{
+            width:100%; position:relative;
+            &::after{
+                content:''; display:block; clear:both;
+            }
+            article{
+                width:580px; margin-right:20px;
+                float:left; position:relative;
+
+                &:last-child{ margin-right:0;}
+
+                h2{
+                    font:42px/1.4  $font; color:#333;
+                    margin-bottom:30px;
+                }
+                p{
+                    font:16px/2 $font; color:#999;
+                    margin-bottom:40px;
+                }
+                a{
+                    display:inline-block;
+                    position:absolute; bottom:0; right:70px;
+                    font:14px/1 $font; color:#555;
+                    text-align:right; letter-spacing: 2px;
+                    border-bottom:1px solid #333;
+                }
+
+                div{
+                    width:49%; margin-right:2%; float:left;
+                    img{ width:100%; height:100%; object-fit: cover;}
+                    &:last-child{ margin-right:0;}
                 }
             }
         }
@@ -244,65 +225,41 @@ $mobile : 539px;
 }
      
 #product{
-    width:100%; height:100vh; overflow:hidden;
-    padding:120px 0;
-    background:#ddd; position: relative;
-    .product_tit{
-        width:1180px; margin:0 auto;
-        >h1{
-            font:32px/1 $font; color:$titColor;
-            margin-bottom:60px; text-align:center;
-            transform:translateY(50px);
-            opacity:0; transition:0.5s; transition-delay: 0.2s;
-        }
-    }
+    width:100%;  padding:120px 0 200px 0;
+    background:#eeeeee;
     .inner{
-        width:100%;  height:100%; margin:0 auto;
-        padding:50px 0; position:relative; top:50%;
-        transform:translateY(-25%);
-         opacity:0; transition: 1s; transition-delay: 0.4s;
-        .swiper-wrapper{
-            width:100%; height:100%; 
-            .swiper-slide{
-                width:400px; height:450px;
-                background:#fff; padding:30px; 
-                .pic{
-                    width:100%; height:280px; margin-bottom:10px;
-                    img{width:100%; height:100%; object-fit: cover;}
-                }
-                h2{
-                    font:32px/1 $font; color:#333;
-                    margin-bottom:10px;
-                }
-                p{
-                    font:13px/1.3 $font; color:#aaa;
-                    letter-spacing: 1px;
-                }
-                
-            }
+        width:1180px; margin:0 auto; position:relative;
+        &::after{
+            content:''; display:block; clear:both;
         }
-    }
-    .swiper-button-next{
-        filter: grayscale(100%) brightness(3);
-    }
-    .swiper-button-prev{
-        filter: grayscale(100%) brightness(3);
-    }
+        article{
+            width:380px; margin-right:20px;
+            float:left;
+            &:last-child{margin-right:0;}
 
-    &.on{
-        .product_tit{
-            >h1{ opacity:1; transform:translateY(0); }
-        }
-        .inner{
-            opacity:1; transform:translateY(-50%);
-            .swiper-wrapper{
-                .swiper-slide{
-                    opacity:0.7; 
-                    &-active{ opacity:1; }   
+            h1{
+                font:14px/1 $font; color:#333;
+                letter-spacing: 2px; position:relative;
+                padding-bottom:20px; margin-bottom:20px;
+                &::after{
+                content:''; display:block;
+                width:40px; height:1px;
+                background:#000;
+                position:absolute; bottom:0; left:0;
                 }
-                
             }
-            
+            h2{
+                font:30px/1 $font; color:#333;
+                margin-bottom:20px;
+            }
+            p{
+                font:14px/1.5 $font; color:#888;
+                margin-bottom:20px;
+            }
+            .pic{
+                width:100%; height:300px;
+                img{ width:100%; height:100%; object-fit: cover;}
+            }
         }
     }
 }
@@ -317,22 +274,20 @@ $mobile : 539px;
         margin:0 auto;
 
         h1{
-            font:bold 26px/1 $font;
-            color:#eee;
+            font:700 26px/1 $font; color:#eee;
             margin-bottom:10px;
             text-align:center;
         }
 
         p{
-            font:16px/1.3 $font;
-            color:#ddd;
+            font:16px/1.6 $font; color:#ddd;
             text-align:center;
         }
     }
 }
 
 #comment{
-    width:100%; padding:200px 0; background:#fff;
+    width:100%; padding:120px 0 200px 0; background:#fff;
     .inner{
         width:1180px; margin:0 auto; position:relative;
         &::after{
@@ -341,32 +296,49 @@ $mobile : 539px;
 
         //공통타이틀
         .tit_wrap{
-            width:100%; margin-bottom:20px;
+            width:100%; position:relative;
             h1{
-                display:inline-block;
-                font:32px/1 $font; color:$titColor;
+                font:14px/1 $font; color:#333;
+                letter-spacing: 2px; position:relative;
+                padding-bottom:20px; margin-bottom:20px;
+                &::after{
+                content:''; display:block;
+                width:40px; height:1px;
+                background:#000;
+                position:absolute; bottom:0; left:0;
+                }
+            }
+            h2{
+                font:30px/1 $font; color:#333;
+                margin-bottom:20px;
             }
             .viewbtn{
-                font:15px/2.8 $font; color:#999;
-                float:right;
+                font:12px/2 $font; color:#999;
+                position:absolute; bottom:0px; right:0;
+                border-bottom:1px solid #ddd;
+                letter-spacing: 2px;
             }
         }
         .magazine_wrap{
             width:580px; float:left; margin-right:20px;
             padding-right:10px; position:relative;
             .magazine{
-                width:100%; height:398px;
-                img{ width:100%; height:100%; object-fit: cover; }
+                width:100%; height:400px;
+                img{ 
+                    width:100%; height:250px; object-fit: cover; 
+                    margin-bottom:20px;
+                }
                 .txt_box{
-                    position:absolute;
-                    top:320px; left:60px;
+                    width:100%; height:150px; overflow: hidden;
+                    >h3{
+                        font:700 26px/1 $font; color:#000;
+                        margin-bottom:20px; letter-spacing: 1px;
+                    }
                     >p{
-                        font:16px/1 $font; color:#fff;
+                        font:16px/1.5 $font; color:#999;
                         margin-bottom:10px;
                     }
-                    >h2{
-                        font:22px/1.3 $font; color:#fff;
-                    }
+                   
                 }
             }
         }
@@ -389,15 +361,15 @@ $mobile : 539px;
                     a{
                         display:block; padding:0 15px;
                         .tit{
-                            font:16px/1 $font; color:#888;
+                            font:16px/1 $font; color:#555;
                             float:left;
                         }
                         .data{
-                            font:14px/1.2 $font; color:#907FA4;
+                            font:14px/1.2 $font; color:#555;
                             float:right;
                         }
                         .day{
-                            font: 20px/1 $font; color:#907FA4;
+                            font: 20px/1 $font; color:#555;
                             float:right; margin-left:5px;
                         }
                     }
