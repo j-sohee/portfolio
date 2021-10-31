@@ -1718,23 +1718,16 @@ fieldset {
         cursor: pointer; }
 .location .inner .wrap2 .branch {
   width: 100%;
-  height: 830px;
-  position: relative; }
-  .location .inner .wrap2 .branch dt {
-    width: 25%;
+  margin-bottom: 40px; }
+  .location .inner .wrap2 .branch::after {
+    content: '';
+    display: block;
+    clear: both; }
+  .location .inner .wrap2 .branch li {
+    width: 295px;
     height: 40px;
-    position: absolute;
-    top: 0;
-    text-align: center; }
-    .location .inner .wrap2 .branch dt:nth-of-type(1) {
-      left: 0; }
-    .location .inner .wrap2 .branch dt:nth-of-type(2) {
-      left: 25%; }
-    .location .inner .wrap2 .branch dt:nth-of-type(3) {
-      left: 50%; }
-    .location .inner .wrap2 .branch dt:nth-of-type(4) {
-      left: 75%; }
-    .location .inner .wrap2 .branch dt a {
+    float: left; }
+    .location .inner .wrap2 .branch li a {
       display: block;
       width: 100%;
       height: 100%;
@@ -1743,58 +1736,53 @@ fieldset {
       color: #999;
       text-align: center;
       transition: 0.5s; }
-    .location .inner .wrap2 .branch dt.on a {
+    .location .inner .wrap2 .branch li.on a {
       border-bottom: 2px solid #C05C7E;
       color: #000; }
-  .location .inner .wrap2 .branch dd {
+.location .inner .wrap2 #map {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 40px; }
+.location .inner .wrap2 .shop {
+  width: 100%; }
+  .location .inner .wrap2 .shop > #shop1 {
+    display: block; }
+  .location .inner .wrap2 .shop .shop_info {
     width: 100%;
     display: none; }
-    .location .inner .wrap2 .branch dd#shop1 {
-      display: block; }
-    .location .inner .wrap2 .branch dd #map {
-      position: absolute;
-      top: 80px;
-      left: 0;
-      width: 100%;
-      height: 500px; }
-    .location .inner .wrap2 .branch dd .shop_infor {
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      left: 0; }
-      .location .inner .wrap2 .branch dd .shop_infor::after {
-        content: '';
-        display: block;
-        clear: both; }
-      .location .inner .wrap2 .branch dd .shop_infor article {
-        width: 580px;
-        height: 200px;
-        float: left;
-        margin-right: 20px; }
-        .location .inner .wrap2 .branch dd .shop_infor article:last-child {
-          margin-right: 0px; }
-        .location .inner .wrap2 .branch dd .shop_infor article h2 {
-          font: bold 20px/1 "Noto Sans", "Noto Sans KR";
-          color: #000;
-          border-bottom: 1px solid #C05C7E;
-          padding-bottom: 15px; }
-        .location .inner .wrap2 .branch dd .shop_infor article ul {
-          width: 100%; }
-          .location .inner .wrap2 .branch dd .shop_infor article ul li {
-            width: 100%;
-            height: 40px; }
-            .location .inner .wrap2 .branch dd .shop_infor article ul li span {
-              display: inline-block;
-              width: 10%;
-              height: 100%;
-              font: bold 14px/40px "Noto Sans", "Noto Sans KR";
-              color: #111;
-              margin-right: 10px;
-              vertical-align: top; }
-            .location .inner .wrap2 .branch dd .shop_infor article ul li p {
-              display: inline-block;
-              font: 14px/40px "Noto Sans", "Noto Sans KR";
-              color: #111; }
+    .location .inner .wrap2 .shop .shop_info::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .location .inner .wrap2 .shop .shop_info article {
+      width: 580px;
+      height: 200px;
+      float: left;
+      margin-right: 20px; }
+      .location .inner .wrap2 .shop .shop_info article:last-child {
+        margin-right: 0px; }
+      .location .inner .wrap2 .shop .shop_info article h2 {
+        font: bold 20px/1 "Noto Sans", "Noto Sans KR";
+        color: #000;
+        border-bottom: 1px solid #C05C7E;
+        padding-bottom: 15px; }
+      .location .inner .wrap2 .shop .shop_info article ul {
+        width: 100%; }
+        .location .inner .wrap2 .shop .shop_info article ul li {
+          width: 100%;
+          height: 40px; }
+          .location .inner .wrap2 .shop .shop_info article ul li span {
+            display: inline-block;
+            width: 10%;
+            height: 100%;
+            font: bold 14px/40px "Noto Sans", "Noto Sans KR";
+            color: #111;
+            margin-right: 10px;
+            vertical-align: top; }
+          .location .inner .wrap2 .shop .shop_info article ul li p {
+            display: inline-block;
+            font: 14px/40px "Noto Sans", "Noto Sans KR";
+            color: #111; }
 
 #header {
   width: 100%;

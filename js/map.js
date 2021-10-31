@@ -33,7 +33,7 @@ const zoomControl = new kakao.maps.ZoomControl();
 map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
 //마커 표시하기--------------------------------------------
-const branch_btns = document.querySelectorAll(".branch dt");
+const branch_btns = document.querySelectorAll(".branch li");
 
  const imageSrc = 'img/location/marker1.png',
 	   imageSize = new kakao.maps.Size(64,64),
@@ -62,6 +62,7 @@ const markerOptions = [
 	 }
  ];
 
+const $boxs = $(".wrap2").find(".shop>div")
 
  for(let i=0; i<markerOptions.length; i++){
 	new kakao.maps.Marker({
@@ -71,8 +72,13 @@ const markerOptions = [
 		image:new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption)
 	});
 
+
 	markerOptions[i].button.onclick = function(e){
 		e.preventDefault();
+
+		let target = $(this).index()
+		$boxs.hide();
+		$boxs.eq(target).show();
 
 		moveTo(markerOptions[i].latlng); //해당지점으로 이동
 		
@@ -81,9 +87,7 @@ const markerOptions = [
         }
         markerOptions[i].button.classList.add("on");
 
-		let targetId = $(this).parent('li').data().target;
-		$('.shop_infor').remove('on');
-		$('#'+targetId).addClass('on');
+
 	}
  }
 
@@ -97,7 +101,7 @@ function moveTo(target) {
 
 window.onresize = function(){
     //활성화된 버튼의 data-index값 구하기
-    var active_btn = document.querySelector(".branch dt.on");
+    var active_btn = document.querySelector(".branch li.on");
     var active_index = active_btn.getAttribute("data-index");
     console.log(active_index);
     map.setCenter(markerOptions[active_index].latlng)
