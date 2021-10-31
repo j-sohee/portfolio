@@ -1213,6 +1213,7 @@ fieldset {
       position: absolute;
       top: 50%;
       right: 20px;
+      transform: translateY(-50%);
       width: 12px;
       height: 12px;
       text-indent: -9999px;
@@ -1350,6 +1351,81 @@ fieldset {
       text-align: left;
       margin-bottom: 0; }
 
+@media screen and (max-width: 1179px) {
+  .join .inner {
+    width: 100%;
+    padding: 0 20px; }
+    .join .inner .top_txt {
+      width: 100%; }
+    .join .inner table {
+      width: 100%;
+      margin-top: 20px; }
+      .join .inner table th {
+        width: 30%;
+        font-size: 14px;
+        padding: 0px 10px 20px 10px; }
+      .join .inner table td {
+        width: auto;
+        text-align: left;
+        padding: 0 10px 20px 10px; }
+        .join .inner table td input[type=text], .join .inner table td input[type=password], .join .inner table td input[type=number] {
+          font-size: 12px; }
+        .join .inner table td select {
+          width: 100%;
+          margin: 10px 0;
+          font-size: 13px; }
+        .join .inner table td .btn {
+          width: 100%;
+          font-size: 13px; }
+      .join .inner table tr:nth-of-type(5) td input[type=text] {
+        width: 100%; }
+      .join .inner table tr:nth-of-type(6) td input[type=number] {
+        width: 100%;
+        margin-bottom: 10px; }
+      .join .inner table input[type=reset] {
+        width: 48%;
+        margin-right: 2%;
+        font-size: 15px; }
+      .join .inner table input[type=submit] {
+        width: 48%;
+        font-size: 15px;
+        margin-right: 0; } }
+@media screen and (max-width: 539px) {
+  .join .inner {
+    width: 100%;
+    padding: 0 20px; }
+    .join .inner .top_txt {
+      width: 100%; }
+    .join .inner .all_agree label {
+      font-size: 16px; }
+    .join .inner .wrap dt > label {
+      font-size: 13px; }
+    .join .inner .wrap dt a {
+      width: 10px;
+      height: 10px; }
+    .join .inner .wrap dd .scroll_txt {
+      font-size: 13px; }
+    .join .inner table {
+      width: 100%;
+      margin-top: 20px; }
+      .join .inner table th {
+        width: 30%;
+        font-size: 14px;
+        padding: 0px 0px 20px 5px;
+        font-size: 12px; }
+      .join .inner table td {
+        width: auto;
+        text-align: left;
+        padding: 0 10px 20px 10px; }
+        .join .inner table td select {
+          font-size: 12px; }
+        .join .inner table td .btn {
+          width: 100%;
+          font-size: 12px; }
+      .join .inner table input[type=reset] {
+        font-size: 14px; }
+      .join .inner table input[type=submit] {
+        font-size: 14px; } }
 /*gallery---------------------------------*/
 .gallery .sub_visual {
   background: url(../img/gallery/bg01.jpg) no-repeat center/cover; }

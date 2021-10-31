@@ -32,7 +32,7 @@
                 position:relative;
                 a{
                     position:absolute;
-                    top:50%; right:20px;
+                    top:50%; right:20px; transform:translateY(-50%);
                     width:12px; height:12px; 
                     text-indent:-9999px; transition:0.5s;
 
@@ -154,5 +154,118 @@
             }
         }
         
+    }
+}
+
+@media screen and (max-width:$tablet){
+    .join{
+        .inner{
+            width:100%; padding:0 20px;
+            //약관동의,회원정보txt
+            .top_txt{
+                width:100%;
+            }
+    
+            //회원정보table
+            table{
+                width:100%; margin-top:20px;
+                th{
+                    width:30%; font-size:14px; padding:0px 10px 20px 10px;
+                }
+                td{
+                    width:auto;
+                    text-align:left; padding:0 10px 20px 10px;
+    
+                    //input입력창
+                    input[type=text], input[type=password], input[type=number]{
+                    font-size:12px;
+                    }
+                    select{
+                        width:100%; margin:10px 0;
+                        font-size:13px;
+                    }
+                    //인증번호요청btn
+                    .btn{
+                        width:100%; font-size:13px;
+                    }
+                }
+                //이메일,휴대폰번호 입력칸
+                & tr:nth-of-type(5) td input[type=text]{ width:100%; }
+                & tr:nth-of-type(6) td input[type=number]{
+                    width:100%; margin-bottom:10px; 
+                } 
+    
+                //취소,가입버튼
+                input[type=reset]{
+                    width:48%; margin-right:2%;
+                    font-size:15px;
+                }
+                input[type=submit]{
+                    width:48%; font-size:15px; margin-right:0;
+                }
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width:$mobile){
+    .join{
+        .inner{
+            width:100%; padding:0 20px;
+            //약관동의,회원정보txt
+            .top_txt{
+                width:100%;
+            }
+            .all_agree{
+               label{
+                   font-size:16px;
+               }
+            }
+
+            .wrap{
+                dt{
+                    >label{
+                        font-size:13px;
+                    }
+                    a{
+                        width:10px; height:10px;
+                    }
+                }
+                dd{
+                    .scroll_txt{
+                        font-size:13px;
+                    }
+                }
+            }
+    
+            //회원정보table
+            table{
+                width:100%; margin-top:20px;
+                th{
+                    width:30%; font-size:14px; padding:0px 0px 20px 5px;
+                    font-size:12px;
+                }
+                td{
+                    width:auto;
+                    text-align:left; padding:0 10px 20px 10px;
+                    select{
+                        font-size:12px;
+                    }
+                    //인증번호요청btn
+                    .btn{
+                        width:100%; font-size:12px;
+                    }
+                }
+                //취소,가입버튼
+                input[type=reset]{
+                   font-size:14px;
+                }
+                input[type=submit]{
+                    font-size:14px;
+                }
+            }
+            
+        }
     }
 }
