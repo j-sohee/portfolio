@@ -1791,11 +1791,22 @@ fieldset {
     .location .inner .wrap .contact {
       width: 100%;
       margin-right: 0; }
+      .location .inner .wrap .contact .tit h2::after {
+        content: '';
+        display: block;
+        width: 50%;
+        height: 1px;
+        background: #C05C7E;
+        position: absolute;
+        top: 49%;
+        right: 0px; }
       .location .inner .wrap .contact article {
         width: 50%;
         padding: 0 20px 0 10px; }
         .location .inner .wrap .contact article:nth-of-type(even) {
           padding-right: 0px; }
+    .location .inner .wrap .comments {
+      width: 100%; }
     .location .inner .wrap2 .branch li {
       width: 50%; }
     .location .inner .wrap2 .shop {

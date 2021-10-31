@@ -175,11 +175,22 @@
             .wrap{
                 .contact{
                     width:100%; margin-right:0; 
-
+                    .tit{
+                        h2{
+                            &::after{
+                                content:''; display:block;
+                                width:50%; height:1px; background:#C05C7E;
+                                position:absolute; top:49%; right:0px;
+                            } 
+                        }
+                    }
                     article{
                         width:50%; padding:0 20px 0 10px ;
                         &:nth-of-type(even){ padding-right:0px;}
                     }
+                }
+                .comments{
+                    width:100%;
                 }
             }
     
