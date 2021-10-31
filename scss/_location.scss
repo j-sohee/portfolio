@@ -167,3 +167,112 @@
             
     }
 }
+
+@media screen and (max-width:$tablet){
+    .location{
+        .inner{
+            width:100%; padding:0 20px;
+            .wrap{
+                .contact{
+                    width:100%; margin-right:0; 
+
+                    article{
+                        width:50%; padding:0 20px 0 10px ;
+                        &:nth-of-type(even){ padding-right:0px;}
+                    }
+                }
+            }
+    
+            .wrap2{
+                .branch{
+                    li{
+                        width:50%; 
+                    }
+                }
+                .shop{
+                    width:100%; 
+                    .shop_info{
+                        article{
+                            width:100%; margin-right:0px;
+                            &:last-child{ margin-right:0px; }
+                            ul{
+                                width:100%;
+                                li{
+                                    width:100%; height:40px;
+                                    span{
+                                        width:15%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:$mobile){
+    .location{
+        .inner{
+            .wrap{
+                .contact{
+                    width:100%; margin-right:0; 
+                    .tit{
+                        h2{
+                            font-size:30px;
+                            &::after{
+                                display:none;
+                            } 
+                        }
+                    }
+                    article{
+                        width:100%; 
+                        margin-bottom:40px; padding:0 10px 0 10px;
+                        &:nth-of-type(even){ padding-left:10px;}
+                    }
+                }
+                .comments{
+                    width:100%;
+                    form{
+                        .name{
+                            width:100%; float:none;
+                            margin-right:0%;
+                        }
+                        .email{
+                            width:100%; float:left;
+                        }
+                    }
+                }
+            }
+    
+            .wrap2{
+                .branch{
+                    li{
+                        width:100%; 
+                    }
+                }
+                .shop{
+                    width:100%; 
+                    .shop_info{
+                        article{
+                            width:100%; margin-right:0px;
+                            &:last-child{ margin-right:0px; }
+                            ul{
+                                width:100%;
+                                li{
+                                    width:100%; height:auto;
+                                    span{
+                                        width:100%; font-size:13px;
+                                    }
+                                    >p{ display:block; width:100%; font-size:12px; line-height:16px; }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
