@@ -52,7 +52,7 @@ $("#navi li a").on("click", function(e){
 });
 
 //visual swiper
-var swiper = new Swiper(".visual .inner .wrap .main3", {
+var swiper = new Swiper(".mySwiper", {
     pagination: {
         el: ".swiper-pagination",
         type: "progressbar",

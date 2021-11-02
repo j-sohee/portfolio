@@ -178,28 +178,28 @@ $mobile : 539px;
             }
             .main1{
                 width:25%; height:100%; float:left;
-                border-right:1px solid #ddd;
+                border-right:1px solid #ddd; position:relative;
                 h1{
-                    font:700 40px/1 $font; color:#333;
+                    font:700 34px/1.4 $font; color:#333;
                     padding-top:100px;
                     margin-bottom:50px;
                 }
                 p{
-                    font:16px/1.4 $font; color:#999;
-                    letter-spacing:1px;
+                    font:14px/1.6 $font; color:#999;
+                    letter-spacing:1px; 
                 }
                 .pic{
-                    width:100%; position:relative;
-                    margin-top:50px; overflow: hidden;
-                    img{width:100%; height:250px;}
+                    width:100%; height:200px; position:relative;
+                    margin-top:100px; overflow: hidden;
+                    img{width:100%; height:100%; object-fit: cover;}
                 }
                 .sns{
                     width:100%; text-align:center;
-                    margin-top:40px;
+                    margin-top:40px; position:absolute; bottom:100px;
                     a{
                         display:inline-block;
                         padding-right:40px;
-                        font:16px/1 $font; color:#555;
+                        font:700 15px/1 $font; color:#666;
                     }
                 }
             }
@@ -217,7 +217,7 @@ $mobile : 539px;
                     letter-spacing:2px;
                 }
             }
-            .main3{
+            .mySwiper{
                 width:62%; height:100%; float:left;
                 .swiper-wrapper{
                     width:100%; height:100%;
@@ -241,7 +241,7 @@ $mobile : 539px;
                         .main_tit{
                             width:100%; margin-bottom:100px;
                             h2{
-                                width:50%; padding-left:80px;
+                                width:50%; padding-left:60px;
                                 font:700 36px/1 $font;
                                 letter-spacing: 1px;
                             }
@@ -250,34 +250,42 @@ $mobile : 539px;
                             width:100%;
                             h3{
                                 font:700 24px/1 $font; color:#555;
-                                padding-left:80px;
-                                margin-bottom:20px;
+                                padding-left:60px;
+                                margin-bottom:30px;
                             }
                             .txt{
-                                width:50%; float:left; padding-left:80px;
+                                width:50%; float:left; padding-left:60px;
                                 p{
-                                    font:16px/2 $font; color:#999;
+                                    font:14px/2 $font; color:#999;
                                 }
                             }
                         }
-                     }
+                    }
                 }
-                .swiper-button-prev{
-                    left:auto; right:60px;
-                    top: 54.5%; bottom:150px;
-                    filter:grayscale(100%) brightness(1);
-                    transform: scale(0.4); transition:0.5s;
-                }
-                .swiper-button-next{
-                    left:auto;right:0px;
-                    top:54.5%; bottom:150px;
-                    filter:grayscale(100%) brightness(1);
-                    transform: scale(0.4); transition:0.5s;
-                }
+            }
+            .swiper-button-prev{
+                left:auto; right:60px;
+                top: 54.5%; bottom:150px;
+                filter:grayscale(100%) brightness(1);
+                transform: scale(0.4);
+            }
+            .swiper-button-next{
+                left:auto;right:15px;
+                top:54.5%; bottom:150px;
+                filter:grayscale(100%) brightness(1);
+                transform: scale(0.4);
+            }
+
+            .swiper-pagination-progressbar{
+                width:35%;
+                left:auto; right:130px;
+                top:54.5%; bottom:150px;
+                filter:brightness(0);
             }
         }
     }
 }
+
 
 #brand{
     width:100%; padding:120px 0; background:#fff;
