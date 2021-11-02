@@ -51,6 +51,17 @@ $("#navi li a").on("click", function(e){
     },1000);
 });
 
+//visual swiper
+var swiper = new Swiper(".visual .inner .wrap .main3", {
+    pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
 
 
 

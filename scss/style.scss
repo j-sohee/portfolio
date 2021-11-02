@@ -206,37 +206,73 @@ $mobile : 539px;
             .main2{
                 width:13%; height:100%; float:left;
                 border-right:1px solid #ddd;
+                text-align:center;
+                p{
+                    display:block;
+                    width:100%; height:50%; padding:40px;
+                    font:700 24px/1 $font; color:#555;
+                }
+                .num{
+                    padding:25px; color:#999;
+                    letter-spacing:2px;
+                }
             }
             .main3{
                 width:62%; height:100%; float:left;
-                .main_visual{
-                    width:100%; height:400px; position: relative; margin-bottom:40px;
-                    .pic{
+                .swiper-wrapper{
+                    width:100%; height:100%;
+                    .swiper-slide{
                         width:100%; height:100%;
-                        position:absolute; bottom:0; right:0;
-                        img{
-                            width:100%; height:100%; object-fit:cover;
+                        .visual1{
+                           width:100%; height:400px; position: relative; margin-bottom:40px;
+                            .pic{
+                                width:100%; height:100%;
+                                position:absolute; bottom:0; right:0;
+                                img{
+                                    width:100%; height:100%; object-fit:cover;
+                                }
+                            }
+                            &::before{
+                                content:''; display:block;
+                                width:100%; height:280px; background:#b6dbeb;
+                                position:absolute; right:0; bottom:0;
+                            }
                         }
-                    }
-                    &::before{
-                        content:''; display:block;
-                        width:100%; height:280px; background:#b6dbeb;
-                        position:absolute; right:0; bottom:0;
-                    }
+                        .main_tit{
+                            width:100%; margin-bottom:100px;
+                            h2{
+                                width:50%; padding-left:80px;
+                                font:700 36px/1 $font;
+                                letter-spacing: 1px;
+                            }
+                        }
+                        .main_subtit{
+                            width:100%;
+                            h3{
+                                font:700 24px/1 $font; color:#555;
+                                padding-left:80px;
+                                margin-bottom:20px;
+                            }
+                            .txt{
+                                width:50%; float:left; padding-left:80px;
+                                p{
+                                    font:16px/2 $font; color:#999;
+                                }
+                            }
+                        }
+                     }
                 }
-                .main_tit{
-                    width:100%;
-                    h2{
-                        width:50%; padding:0 40px;
-                        font:700 36px/1 $font;
-                        letter-spacing: 1px;
-                    }
-                    .btn{
-                        width:50%;
-                        .prev{
-                            
-                        }
-                    }
+                .swiper-button-prev{
+                    left:auto; right:60px;
+                    top: 54.5%; bottom:150px;
+                    filter:grayscale(100%) brightness(1);
+                    transform: scale(0.4); transition:0.5s;
+                }
+                .swiper-button-next{
+                    left:auto;right:0px;
+                    top:54.5%; bottom:150px;
+                    filter:grayscale(100%) brightness(1);
+                    transform: scale(0.4); transition:0.5s;
                 }
             }
         }
