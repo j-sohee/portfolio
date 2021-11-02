@@ -2012,6 +2012,7 @@ fieldset {
       width: 100%; }
       #header .inner .menuWeb #gnb {
         width: 100%;
+        font-size: 0;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -2023,7 +2024,8 @@ fieldset {
         #header .inner .menuWeb #gnb > li {
           width: 20%;
           height: 60px;
-          float: left; }
+          float: left;
+          font-size: 0; }
           #header .inner .menuWeb #gnb > li > a {
             display: block;
             width: 100%;
@@ -2119,7 +2121,92 @@ fieldset {
 #visual {
   width: 100%;
   height: calc(100vh - 136px);
-  background: #aaa; }
+  border-bottom: 1px solid #ddd; }
+  #visual .inner {
+    width: 1180px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative; }
+    #visual .inner .wrap {
+      width: 100%;
+      height: 100%; }
+      #visual .inner .wrap::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #visual .inner .wrap .main1 {
+        width: 25%;
+        height: 100%;
+        float: left;
+        border-right: 1px solid #ddd; }
+        #visual .inner .wrap .main1 h1 {
+          font: 700 40px/1 "Noto Sans", "Noto Sans KR";
+          color: #333;
+          padding-top: 100px;
+          margin-bottom: 50px; }
+        #visual .inner .wrap .main1 p {
+          font: 16px/1.4 "Noto Sans", "Noto Sans KR";
+          color: #999;
+          letter-spacing: 1px; }
+        #visual .inner .wrap .main1 .pic {
+          width: 100%;
+          position: relative;
+          margin-top: 50px;
+          overflow: hidden; }
+          #visual .inner .wrap .main1 .pic img {
+            width: 100%;
+            height: 250px; }
+        #visual .inner .wrap .main1 .sns {
+          width: 100%;
+          text-align: center;
+          margin-top: 40px; }
+          #visual .inner .wrap .main1 .sns a {
+            display: inline-block;
+            padding-right: 40px;
+            font: 16px/1 "Noto Sans", "Noto Sans KR";
+            color: #555; }
+      #visual .inner .wrap .main2 {
+        width: 13%;
+        height: 100%;
+        float: left;
+        border-right: 1px solid #ddd; }
+      #visual .inner .wrap .main3 {
+        width: 62%;
+        height: 100%;
+        float: left; }
+        #visual .inner .wrap .main3 .main_visual {
+          width: 100%;
+          height: 400px;
+          position: relative;
+          margin-bottom: 40px; }
+          #visual .inner .wrap .main3 .main_visual .pic {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 0; }
+            #visual .inner .wrap .main3 .main_visual .pic img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover; }
+          #visual .inner .wrap .main3 .main_visual::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 280px;
+            background: #b6dbeb;
+            position: absolute;
+            right: 0;
+            bottom: 0; }
+        #visual .inner .wrap .main3 .main_tit {
+          width: 100%; }
+          #visual .inner .wrap .main3 .main_tit h2 {
+            width: 50%;
+            padding: 0 40px;
+            font: 700 36px/1 "Noto Sans", "Noto Sans KR";
+            letter-spacing: 1px; }
+          #visual .inner .wrap .main3 .main_tit .btn {
+            width: 50%; }
 
 #brand {
   width: 100%;

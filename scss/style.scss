@@ -79,7 +79,7 @@ $mobile : 539px;
         .menuWeb{
             width:100%;
             #gnb{
-                width:100%;
+                width:100%; font-size:0;
                 position:absolute; bottom:0; left:0;
                 border-top:1px solid #ddd;
 
@@ -88,6 +88,7 @@ $mobile : 539px;
                 }
                 >li{
                     width:20%; height:60px; float:left;
+                    font-size:0;
                     >a{
                         display:block; width:100%; height:100%;
                         font:14px/60px $font; color:#555;
@@ -165,9 +166,81 @@ $mobile : 539px;
     }
 }
 
-#visual{
+#visual{ 
     width:100%; height:calc(100vh - 136px);
-    background:#aaa;
+    border-bottom:1px solid #ddd;
+    .inner{
+        width:1180px; height:100%; margin:0 auto; position:relative; 
+        .wrap{
+            width:100%; height:100%;
+            &::after{
+                content:''; display:block; clear:both;
+            }
+            .main1{
+                width:25%; height:100%; float:left;
+                border-right:1px solid #ddd;
+                h1{
+                    font:700 40px/1 $font; color:#333;
+                    padding-top:100px;
+                    margin-bottom:50px;
+                }
+                p{
+                    font:16px/1.4 $font; color:#999;
+                    letter-spacing:1px;
+                }
+                .pic{
+                    width:100%; position:relative;
+                    margin-top:50px; overflow: hidden;
+                    img{width:100%; height:250px;}
+                }
+                .sns{
+                    width:100%; text-align:center;
+                    margin-top:40px;
+                    a{
+                        display:inline-block;
+                        padding-right:40px;
+                        font:16px/1 $font; color:#555;
+                    }
+                }
+            }
+            .main2{
+                width:13%; height:100%; float:left;
+                border-right:1px solid #ddd;
+            }
+            .main3{
+                width:62%; height:100%; float:left;
+                .main_visual{
+                    width:100%; height:400px; position: relative; margin-bottom:40px;
+                    .pic{
+                        width:100%; height:100%;
+                        position:absolute; bottom:0; right:0;
+                        img{
+                            width:100%; height:100%; object-fit:cover;
+                        }
+                    }
+                    &::before{
+                        content:''; display:block;
+                        width:100%; height:280px; background:#b6dbeb;
+                        position:absolute; right:0; bottom:0;
+                    }
+                }
+                .main_tit{
+                    width:100%;
+                    h2{
+                        width:50%; padding:0 40px;
+                        font:700 36px/1 $font;
+                        letter-spacing: 1px;
+                    }
+                    .btn{
+                        width:50%;
+                        .prev{
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 #brand{
