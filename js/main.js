@@ -64,8 +64,11 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 //visual txtsliding
-slidingTxt(".tit1", 700, 0);
-slidingTxt(".tit2", 800, 700);
+const $sub_txt = $("#visual").find(".sub_txt");
+const $sub_pic = $("#visual .main1").find(".pic");
+
+slidingTxt(".tit1", 500);
+slidingTxt(".tit2", 800, 500);
 
 function slidingTxt(el, speed, delay){
     let bgColor = $(el).find("span").css("color");
@@ -85,6 +88,8 @@ function slidingTxt(el, speed, delay){
         $(this).prev("span").css({ opacity : 1});
         $(this).animate({ left:"100%"},speed, "easeInExpo", function(){
             $(this).remove;
+            $sub_txt.animate({ left:0, opacity:1}, speed)
+            $sub_pic.animate({ width:"100%", opacity:1}, speed*2)
         })
     })
 }
