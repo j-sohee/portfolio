@@ -63,8 +63,31 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
+//visual txtsliding
+slidingTxt(".tit1", 700, 0);
+slidingTxt(".tit2", 800, 700);
 
+function slidingTxt(el, speed, delay){
+    let bgColor = $(el).find("span").css("color");
+    $(el).append(
+        $("<em class='mask'>").css({
+            display: "block",
+            width: "100%",
+            height : "100%",
+            backgroundColor : bgColor,
+            position: "absolute",
+            top: 0,
+            left : "-100%"
+        })
+    )
 
+    $(el).find(".mask").stop().delay(delay).animate({ left : 0 },speed, "easeInExpo", function(){
+        $(this).prev("span").css({ opacity : 1});
+        $(this).animate({ left:"100%"},speed, "easeInExpo", function(){
+            $(this).remove;
+        })
+    })
+}
 
 //쿠키팝업----------------------------------------------
 let isCookie = document.cookie.indexOf("popup=done");

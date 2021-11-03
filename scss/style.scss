@@ -178,15 +178,22 @@ $mobile : 539px;
             }
             .main1{
                 width:25%; height:100%; float:left;
+                padding-top:100px;
                 border-right:1px solid #ddd; position:relative;
                 h1{
-                    font:700 34px/1.4 $font; color:#333;
-                    padding-top:100px;
-                    margin-bottom:50px;
+                    display:inline-block;
+                    position:relative;overflow:hidden;
+                    span{
+                        font:700 34px/1 $font;
+                        opacity:0; 
+                    }
+                    &.tit1{ color:#333; }
+                    &.tit2{ color:#C05C7E;; }
                 }
                 p{
                     font:14px/1.6 $font; color:#999;
                     letter-spacing:1px; 
+                    margin-top:50px;
                 }
                 .pic{
                     width:100%; height:200px; position:relative;
