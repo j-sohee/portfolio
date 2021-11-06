@@ -974,6 +974,52 @@ fieldset {
     .community .inner .cs_contact ul li {
       width: 49%;
       margin-right: 2%; } }
+@media screen and (max-width: 539px) {
+  .community {
+    padding: 100px 0; }
+    .community .inner h1 {
+      font-size: 28px; }
+    .community .inner .cs_guide h2 {
+      font-size: 24px; }
+    .community .inner .cs_guide p {
+      font-size: 12px; }
+    .community .inner .cs_guide .cs li {
+      width: 100%;
+      margin-right: 0%; }
+      .community .inner .cs_guide .cs li:nth-of-type(even) {
+        margin-right: 0; }
+      .community .inner .cs_guide .cs li h3 {
+        font-size: 22px; }
+      .community .inner .cs_guide .cs li p {
+        font-size: 13px; }
+    .community .inner table {
+      margin-bottom: 20px; }
+      .community .inner table tr th:nth-of-type(1) {
+        width: 14%; }
+      .community .inner table tr th:nth-of-type(3) {
+        width: 0%;
+        display: none; }
+    .community .inner .pagination {
+      margin-bottom: 100px; }
+      .community .inner .pagination .prev {
+        float: left; }
+      .community .inner .pagination .next {
+        float: right; }
+      .community .inner .pagination .numbers {
+        display: none; }
+    .community .inner .cs_contact h4 {
+      font-size: 22px; }
+    .community .inner .cs_contact p {
+      font-size: 12px; }
+    .community .inner .cs_contact ul li {
+      width: 100%;
+      margin-right: 0%;
+      margin-bottom: 20px; }
+      .community .inner .cs_contact ul li a p {
+        font-size: 16px;
+        margin-bottom: 10px; }
+      .community .inner .cs_contact ul li a span {
+        font-size: 12px; } }
 /*join---------------------------------*/
 .join .sub_visual {
   background: url(../img/department/bg3.jpg) no-repeat center/cover; }
