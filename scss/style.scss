@@ -37,36 +37,44 @@ $mobile : 539px;
         .btnCall{
             width:20px; height:18px;
             position:absolute; top:32px; left:0;
+             transition:0.5s;
             &::before{
                 content:''; display:block;
-                width:100%;
-                height:2px;
-                position:absolute;
-                top:0;
-                left:0;
-                background:#555;
+                width:100%; height:2px;
+                position:absolute; top:0; left:0;
+                background:#555;transition:0.5s;
             }
             &::after{
                 content:''; display:block;
-                width:100%;
-                height:2px;
-                position:absolute;
-                bottom:0;
-                left:0;
-                background:#555;
+                width:100%; height:2px;
+                position:absolute; bottom:0; left:0;
+                background:#555; transition:0.5s;
             }
             span{
-                display:block;
-                width:100%;
-                height:2px;
+                display:block; width:100%; height:2px;
                 background:#555;
-                position:absolute;
-                top:50%;
-                left:0;
+                position:absolute; top:50%; left:0;
                 transform:translateY(-50%);
-                text-indent:-9999px;
+                text-indent:-9999px; transition:0.5s;
             }
-         }
+            &.on{
+                left:-300px; z-index:11;
+                &::before{
+                    background:#999;
+                    transform:rotate(45deg); top:50%;
+                    margin-top:-1px
+                }
+                &::after{
+                    transform:rotate(-45deg);
+                    bottom:50%; margin-bottom:-1px;
+                    background:#999;
+                }
+                span{
+                    background:#999;
+                    transform:translateX(100%); opacity:0;
+                }
+            }
+        }
         .util{
             position:absolute; top:31px; left:31px;
             a{
@@ -165,22 +173,41 @@ $mobile : 539px;
         }
         .menuMo{
             width:100%; height:100vh; padding:100px 0;
-            background:#000; position:fixed; top:0; left:0;
-            z-index:10;
+            background:#111; position:fixed; top:-100%; left:0;
+            z-index:10; opacity:0; transition:0.5s;
             .inner{
                 width:1180px; height:100%;
-                margin:0 auto; 
+                margin:0 auto; text-align:center;
                 >h1{
-                    padding-bottom:30px;
-                    border-bottom:1px solid #ddd;
+                    display:block;
+                    padding-bottom:20px;
+                    border-bottom:1px solid #999;
                    a{
-                       display:block;
-                       font:36px/1 $font; color:#fff;
+                       display:block; 
+                       font:40px/1 $font; color:#fff;
+                   }
+                   span{
+                       font:14px/1 $font; color:#ddd;
                    }
                 }
+                #gnbMo{
+                    width:100%; height:100%; padding-top:150px;
+                    >li{
+                        width:100%;
+                        a{
+                            display:block;
+                            width:100%; padding:20px 0;
+                            font:bold 46px/1 $font; color:#fff;
+                        }
+                    }
+                }
+            }
+            &.on{
+               top:0; opacity:1;
             }
         }
     }
+    
 }
 
 #visual{ 

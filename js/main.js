@@ -16,7 +16,15 @@ $("#gnb>li").each(function(index){
     });
 });
 
+//gnbMo
+var btnCall = document.querySelector(".btnCall");
+var menuMo = document.querySelector(".menuMo");
 
+btnCall.onclick = function(e){
+    e.preventDefault();
+    btnCall.classList.toggle("on");
+    menuMo.classList.toggle("on");
+}
 //main scroll
 const $boxs = $(".myScroll");
 const $btns = $("#navi li");
