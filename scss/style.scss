@@ -163,6 +163,23 @@ $mobile : 539px;
                 img{width:100%; height:100%;}
             }
         }
+        .menuMo{
+            width:100%; height:100vh; padding:100px 0;
+            background:#000; position:fixed; top:0; left:0;
+            z-index:10;
+            .inner{
+                width:1180px; height:100%;
+                margin:0 auto; 
+                >h1{
+                    padding-bottom:30px;
+                    border-bottom:1px solid #ddd;
+                   a{
+                       display:block;
+                       font:36px/1 $font; color:#fff;
+                   }
+                }
+            }
+        }
     }
 }
 

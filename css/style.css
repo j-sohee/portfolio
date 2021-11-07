@@ -708,7 +708,7 @@ fieldset {
         margin-top: 20px; } }
 @media screen and (max-width: 539px) {
   .department .inner .mainTit h1 {
-    font-size: 26px; }
+    font-size: 28px; }
   .department .inner .sub_tit h2 {
     font-size: 20px; }
   .department .inner .sub_tit p {
@@ -1235,6 +1235,8 @@ fieldset {
   .join .inner {
     width: 100%;
     padding: 0 20px; }
+    .join .inner h1 {
+      font-size: 28px; }
     .join .inner .top_txt {
       width: 100%; }
     .join .inner .all_agree label {
@@ -1390,6 +1392,10 @@ fieldset {
   .gallery .inner #gallery article {
     width: 50%; } }
 @media screen and (max-width: 539px) {
+  .gallery .inner h1 {
+    font-size: 28px; }
+  .gallery .inner #searchBox {
+    text-align: center; }
   .gallery .inner #gallery article {
     width: 100%; } }
 /*youtube---------------------------------*/
@@ -1741,6 +1747,8 @@ fieldset {
             .location .inner .wrap2 .shop .shop_info article ul li span {
               width: 15%; } }
 @media screen and (max-width: 539px) {
+  .location .inner h1 {
+    font-size: 28px; }
   .location .inner .wrap .contact {
     width: 100%;
     margin-right: 0; }
@@ -1958,6 +1966,26 @@ fieldset {
         #header .inner .user a img {
           width: 100%;
           height: 100%; }
+    #header .inner .menuMo {
+      width: 100%;
+      height: 100vh;
+      padding: 100px 0;
+      background: #000;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10; }
+      #header .inner .menuMo .inner {
+        width: 1180px;
+        height: 100%;
+        margin: 0 auto; }
+        #header .inner .menuMo .inner > h1 {
+          padding-bottom: 30px;
+          border-bottom: 1px solid #ddd; }
+          #header .inner .menuMo .inner > h1 a {
+            display: block;
+            font: 36px/1 "Noto Sans", "Noto Sans KR";
+            color: #fff; }
 
 #visual {
   width: 100%;

@@ -212,6 +212,7 @@
 @media screen and (max-width:$mobile){
     .join{
         .inner{
+            h1{ font-size:28px; }
             width:100%; padding:0 20px;
             //약관동의,회원정보txt
             .top_txt{

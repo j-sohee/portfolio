@@ -126,6 +126,12 @@
 @media screen and (max-width:$mobile){
     .gallery{
         .inner{
+            h1{
+                font-size:28px;
+            }
+            #searchBox{
+                 text-align:center;
+            }
             #gallery{
                 article{
                     width:100%; 
