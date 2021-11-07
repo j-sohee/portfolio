@@ -25,7 +25,7 @@ $mobile : 539px;
     .inner{
         width:1180px; height:135px;
         margin:0 auto; position:relative;
-        h1{
+        >h1{
             position:absolute;
             top:10px; left:50%;
             transform:translateX(-50%);
@@ -58,7 +58,7 @@ $mobile : 539px;
                 text-indent:-9999px; transition:0.5s;
             }
             &.on{
-                left:-300px; z-index:11;
+                z-index:11;
                 &::before{
                     background:#999;
                     transform:rotate(45deg); top:50%;
@@ -173,35 +173,35 @@ $mobile : 539px;
         }
         .menuMo{
             width:100%; height:100vh; padding:100px 0;
-            background:#111; position:fixed; top:-100%; left:0;
-            z-index:10; opacity:0; transition:0.5s;
-            .inner{
-                width:1180px; height:100%;
-                margin:0 auto; text-align:center;
-                >h1{
+            background:#111; position:fixed; top:-100%; left:0; z-index:10; opacity:0; transition:0.5s;
+            margin:0 auto; text-align:center;
+            >h1{
+                padding-bottom:20px;
+                a{
                     display:block;
-                    padding-bottom:20px;
-                    border-bottom:1px solid #999;
-                   a{
-                       display:block; 
-                       font:40px/1 $font; color:#fff;
-                   }
-                   span{
-                       font:14px/1 $font; color:#ddd;
-                   }
+                    font:40px/1 $font; color:#fff;
                 }
-                #gnbMo{
-                    width:100%; height:100%; padding-top:150px;
-                    >li{
-                        width:100%;
-                        a{
-                            display:block;
-                            width:100%; padding:20px 0;
-                            font:bold 46px/1 $font; color:#fff;
+                span{
+                    font:14px/1 $font; color:$titColor;
+                    letter-spacing: 1px;
+                }
+            }
+            #gnbMo{
+                width:100%; height:100%;
+                >li{
+                    width:100%;
+                    a{
+                        display:block;
+                        width:100%; padding:20px 0;
+                        font:bold 46px/1 $font; color:#fff;
+                        transition:0.5s;
+                        &:hover{
+                            color:$titColor;
                         }
                     }
                 }
             }
+
             &.on{
                top:0; opacity:1;
             }
@@ -788,14 +788,13 @@ $mobile : 539px;
 #header{
     .inner{
         width:100%; height:80px; font-size:0;
-        h1{
+        >h1{
             top:50%; transform:translate(-50%,-50%);
         }
         .btnCall{
             position:absolute; top:50%; left:20px;
             transform:translateY(-50%);
-            }
-        
+        }
         .util{
             top:50%; left:55px; transform:translateY(-50%);
         }
@@ -805,6 +804,12 @@ $mobile : 539px;
         .user{
             top:50%; right:20px; transform:translateY(-50%);
         }
+        .menuMo{
+            h1{
+                a{ margin-bottom:10px;}
+            }
+        }
+
     }
 } 
 
@@ -845,7 +850,6 @@ $mobile : 539px;
         }
     }
 }
-
 #comment{
     .inner{
         width:100%; padding:0 20px;
@@ -968,7 +972,6 @@ $mobile : 539px;
                 font-size:24px;
             }
         }
-        
         .util{
             display:none;
         }
@@ -977,6 +980,27 @@ $mobile : 539px;
         }
         .user{
             display:none;
+        }
+        .menuMo{
+            >h1{
+                a{
+                    font-size:36px;
+                }
+                span{
+                    font-size:12px;
+                }
+            }
+            #gnbMo{
+                >li{
+                    a{
+                        font-size:34px;
+                    }
+                }
+            }
+
+            &.on{
+               top:0; opacity:1;
+            }
         }
     }
 } 

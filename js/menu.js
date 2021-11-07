@@ -15,3 +15,13 @@ $("#gnb>li").each(function(index){
         $("#gnb>li").eq(index).find(".gnb_2depth").hide();
     });
 });
+
+//gnbMo
+var btnCall = document.querySelector(".btnCall");
+var menuMo = document.querySelector(".menuMo");
+
+btnCall.onclick = function(e){
+    e.preventDefault();
+    btnCall.classList.toggle("on");
+    menuMo.classList.toggle("on");
+}
