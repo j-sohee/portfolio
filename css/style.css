@@ -1967,7 +1967,8 @@ fieldset {
           width: 20%;
           height: 60px;
           float: left;
-          font-size: 0; }
+          font-size: 0;
+          transition: 0.5s; }
           #header .inner .menuWeb #gnb > li > a {
             display: block;
             width: 100%;
@@ -1976,6 +1977,8 @@ fieldset {
             color: #555;
             text-align: center;
             transition: 0.5s; }
+            #header .inner .menuWeb #gnb > li > a:hover {
+              color: #000; }
           #header .inner .menuWeb #gnb > li .gnb_2depth {
             width: 1180px;
             height: 220px;
@@ -2103,163 +2106,87 @@ fieldset {
 #visual {
   width: 100%;
   height: calc(100vh - 136px);
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #111;
+  position: relative; }
   #visual .inner {
-    width: 1180px;
+    width: 100%;
     height: 100%;
-    margin: 0 auto;
     position: relative; }
     #visual .inner .wrap {
-      width: 100%;
-      height: 100%; }
+      width: 1180px;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1; }
       #visual .inner .wrap::after {
         content: '';
         display: block;
         clear: both; }
-      #visual .inner .wrap .main1 {
-        width: 25%;
-        height: 100%;
-        float: left;
-        padding-top: 100px;
-        border-right: 1px solid #ddd;
-        position: relative; }
-        #visual .inner .wrap .main1 h1 {
+      #visual .inner .wrap article {
+        float: left; }
+        #visual .inner .wrap article:first-child {
+          width: 45%;
+          margin-right: 2%; }
+        #visual .inner .wrap article:last-child {
+          width: 53%; }
+      #visual .inner .wrap .mainTxt {
+        padding: 200px 0px 0 50px; }
+        #visual .inner .wrap .mainTxt h1 {
+          font: 700 54px/1 "Noto Sans", "Noto Sans KR";
+          color: #333;
+          margin-bottom: 20px;
+          letter-spacing: 1px; }
+        #visual .inner .wrap .mainTxt .box1 {
           display: inline-block;
-          position: relative;
-          overflow: hidden; }
-          #visual .inner .wrap .main1 h1 span {
-            font: 700 34px/1 "Noto Sans", "Noto Sans KR";
-            opacity: 0; }
-          #visual .inner .wrap .main1 h1.tit1 {
-            color: #333; }
-          #visual .inner .wrap .main1 h1.tit2 {
-            color: #C05C7E; }
-        #visual .inner .wrap .main1 p {
-          font: 14px/1.6 "Noto Sans", "Noto Sans KR";
-          color: #999;
-          letter-spacing: 1px;
-          margin-top: 50px;
-          position: relative;
-          top: 0;
-          left: -30px;
-          opacity: 0; }
-        #visual .inner .wrap .main1 .pic {
-          width: 0%;
-          height: 200px;
-          position: relative;
-          margin-top: 100px;
-          overflow: hidden; }
-          #visual .inner .wrap .main1 .pic img {
+          width: 100px;
+          height: 30px;
+          margin-right: 10px;
+          background: #eee;
+          text-align: center;
+          font: 13px/30px "Noto Sans", "Noto Sans KR";
+          color: #333; }
+        #visual .inner .wrap .mainTxt .box2 {
+          display: inline-block;
+          width: 150px;
+          height: 30px;
+          background: #eee;
+          text-align: center;
+          font: 13px/30px "Noto Sans", "Noto Sans KR";
+          color: #333; }
+        #visual .inner .wrap .mainTxt p {
+          width: 70%;
+          margin-top: 20px;
+          font: 15px/2 "Noto Sans", "Noto Sans KR";
+          color: #555; }
+      #visual .inner .wrap .mainVisual {
+        padding-top: 80px; }
+        #visual .inner .wrap .mainVisual h2 {
+          display: inline-block;
+          margin-right: 20px;
+          font: 700 18px/1 "Noto Sans", "Noto Sans KR";
+          color: #333; }
+        #visual .inner .wrap .mainVisual p {
+          display: inline-block;
+          font: 13px/1.2 "Noto Sans", "Noto Sans KR";
+          color: #999; }
+        #visual .inner .wrap .mainVisual .pic {
+          width: 90%;
+          height: 600px;
+          margin-top: 30px; }
+          #visual .inner .wrap .mainVisual .pic img {
             width: 100%;
             height: 100%;
             object-fit: cover; }
-        #visual .inner .wrap .main1 .sns {
-          width: 100%;
-          text-align: center;
-          margin-top: 40px;
-          position: absolute;
-          bottom: 100px; }
-          #visual .inner .wrap .main1 .sns a {
-            display: inline-block;
-            padding-right: 40px;
-            font: 700 15px/1 "Noto Sans", "Noto Sans KR";
-            color: #666; }
-      #visual .inner .wrap .main2 {
-        width: 13%;
-        height: 100%;
-        float: left;
-        border-right: 1px solid #ddd;
-        text-align: center; }
-        #visual .inner .wrap .main2 p {
-          display: block;
-          width: 100%;
-          height: 50%;
-          padding: 40px;
-          font: 700 24px/1 "Noto Sans", "Noto Sans KR";
-          color: #555; }
-        #visual .inner .wrap .main2 .num {
-          padding: 25px;
-          color: #999;
-          letter-spacing: 2px; }
-      #visual .inner .wrap .mySwiper {
-        width: 62%;
-        height: 100%;
-        float: left; }
-        #visual .inner .wrap .mySwiper .swiper-wrapper {
-          width: 100%;
-          height: 100%; }
-          #visual .inner .wrap .mySwiper .swiper-wrapper .swiper-slide {
-            width: 100%;
-            height: 100%; }
-            #visual .inner .wrap .mySwiper .swiper-wrapper .swiper-slide .visual1 {
-              width: 100%;
-              height: 400px;
-              position: relative;
-              margin-bottom: 40px;
-              position: relative;
-              top: 0; }
-              #visual .inner .wrap .mySwiper .swiper-wrapper .swiper-slide .visual1 .pic {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                bottom: 0;
-                right: 0; }
-                #visual .inner .wrap .mySwiper .swiper-wrapper .swiper-slide .visual1 .pic img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover; }
-              #visual .inner .wrap .mySwiper .swiper-wrapper .swiper-slide .visual1::before {
-                content: '';
-                display: block;
-                width: 100%;
-                height: 280px;
-                background: #b6dbeb;
-                position: absolute;
-                right: 0;
-                bottom: 0; }
-            #visual .inner .wrap .mySwiper .swiper-wrapper .swiper-slide .main_tit {
-              width: 100%;
-              margin-bottom: 100px; }
-              #visual .inner .wrap .mySwiper .swiper-wrapper .swiper-slide .main_tit h2 {
-                width: 50%;
-                padding-left: 60px;
-                font: 700 36px/1 "Noto Sans", "Noto Sans KR";
-                letter-spacing: 1px; }
-            #visual .inner .wrap .mySwiper .swiper-wrapper .swiper-slide .main_subtit {
-              width: 100%; }
-              #visual .inner .wrap .mySwiper .swiper-wrapper .swiper-slide .main_subtit h3 {
-                font: 700 24px/1 "Noto Sans", "Noto Sans KR";
-                color: #555;
-                padding-left: 60px;
-                margin-bottom: 30px; }
-              #visual .inner .wrap .mySwiper .swiper-wrapper .swiper-slide .main_subtit .txt {
-                width: 50%;
-                float: left;
-                padding-left: 60px; }
-                #visual .inner .wrap .mySwiper .swiper-wrapper .swiper-slide .main_subtit .txt p {
-                  font: 14px/2 "Noto Sans", "Noto Sans KR";
-                  color: #999; }
-      #visual .inner .wrap .swiper-button-prev {
-        left: auto;
-        right: 60px;
-        top: 54.5%;
-        bottom: 150px;
-        filter: grayscale(100%) brightness(1);
-        transform: scale(0.4); }
-      #visual .inner .wrap .swiper-button-next {
-        left: auto;
-        right: 15px;
-        top: 54.5%;
-        bottom: 150px;
-        filter: grayscale(100%) brightness(1);
-        transform: scale(0.4); }
-      #visual .inner .wrap .swiper-pagination-progressbar {
-        width: 35%;
-        left: auto;
-        right: 130px;
-        top: 54.5%;
-        bottom: 150px;
-        filter: brightness(0); }
+    #visual .inner::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 200px;
+      background: #000;
+      z-index: 1;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
 
 #brand {
   width: 100%;
