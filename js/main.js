@@ -61,6 +61,7 @@ $("#navi li a").on("click", function(e){
 
 //visual swiper
 var swiper = new Swiper(".mySwiper", {
+    direction:"vertical",
     pagination: {
         el: ".swiper-pagination",
         type: "progressbar",
