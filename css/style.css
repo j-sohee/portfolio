@@ -234,7 +234,7 @@ fieldset {
           color: #fff; }
         #header_sub .inner .menuMo > h1 span {
           font: 14px/1 "Noto Sans", "Noto Sans KR";
-          color: #C05C7E;
+          color: #7588a0;
           letter-spacing: 1px; }
       #header_sub .inner .menuMo #gnbMo {
         width: 100%;
@@ -249,7 +249,7 @@ fieldset {
             color: #fff;
             transition: 0.5s; }
             #header_sub .inner .menuMo #gnbMo > li a:hover {
-              color: #C05C7E; }
+              color: #7588a0; }
       #header_sub .inner .menuMo.on {
         top: 0;
         opacity: 1; }
@@ -538,7 +538,7 @@ fieldset {
         display: block;
         width: 50px;
         height: 1px;
-        background: #C05C7E;
+        background: #93B5C6;
         position: absolute;
         left: 50%;
         bottom: 0;
@@ -600,7 +600,7 @@ fieldset {
         bottom: 0;
         left: 0; }
         .department .inner .dpt1 .right .swiper-pagination .swiper-pagination-bullet-active {
-          background: #C05C7E; }
+          background: #3D84B8; }
   .department .inner .dpt2 {
     width: 100%;
     margin-bottom: 100px;
@@ -712,7 +712,7 @@ fieldset {
             display: inline-block;
             width: 1px;
             height: 23px;
-            background: #C05C7E;
+            background: #93B5C6;
             transform: rotate(55deg);
             margin-right: 15px; }
         .department .inner .dpt3 > article:nth-of-type(7) span {
@@ -732,8 +732,8 @@ fieldset {
           margin-top: 40px;
           transition: 0.5s; }
           .department .inner .dpt3 > article:nth-of-type(7) a:hover {
-            border: 1px solid #C05C7E;
-            color: #C05C7E; }
+            border: 1px solid #93B5C6;
+            color: #93B5C6; }
 
 @media screen and (max-width: 1179px) {
   .department .inner .mainTit {
@@ -858,7 +858,7 @@ fieldset {
           color: #666;
           letter-spacing: 0.5px; }
       .community .inner .cs_guide .cs li:hover h3 {
-        color: #C05C7E; }
+        color: #93B5C6; }
 .community .inner table {
   width: 100%;
   border-top: 1px solid #dfdfdf;
@@ -1393,7 +1393,7 @@ fieldset {
     display: block;
     clear: both; }
   .gallery .inner #gallery article {
-    width: 25%;
+    width: 33.333%;
     float: left;
     padding: 12px; }
     .gallery .inner #gallery article .list {
@@ -1406,13 +1406,13 @@ fieldset {
           display: inline-block;
           width: 40%;
           font: 12px/1 "Noto Sans", "Noto Sans KR";
-          color: #C05C7E; }
+          color: #90AACB; }
           .gallery .inner #gallery article .list .txt p::before {
             content: '';
             display: inline-block;
             width: 6px;
             height: 6px;
-            background: #C05C7E;
+            background: #90AACB;
             border-radius: 50%;
             vertical-align: middle;
             margin-top: -4px;
@@ -1629,7 +1629,7 @@ fieldset {
           display: block;
           width: 280px;
           height: 1px;
-          background: #C05C7E;
+          background: #93B5C6;
           position: absolute;
           top: 49%;
           right: 0px; }
@@ -1666,7 +1666,7 @@ fieldset {
       margin-bottom: 40px;
       position: relative;
       padding-bottom: 15px;
-      border-bottom: 1px solid #C05C7E; }
+      border-bottom: 1px solid #93B5C6; }
     .location .inner .wrap .comments form label > p {
       font: 14px/1 "Noto Sans", "Noto Sans KR";
       color: #494949;
@@ -1733,7 +1733,7 @@ fieldset {
       text-align: center;
       transition: 0.5s; }
     .location .inner .wrap2 .branch li.on a {
-      border-bottom: 2px solid #C05C7E;
+      border-bottom: 2px solid #93B5C6;
       color: #000; }
 .location .inner .wrap2 #map {
   width: 100%;
@@ -1760,7 +1760,7 @@ fieldset {
       .location .inner .wrap2 .shop .shop_info article h2 {
         font: bold 20px/1 "Noto Sans", "Noto Sans KR";
         color: #000;
-        border-bottom: 1px solid #C05C7E;
+        border-bottom: 1px solid #93B5C6;
         padding-bottom: 15px; }
       .location .inner .wrap2 .shop .shop_info article ul {
         width: 100%; }
@@ -1788,14 +1788,7 @@ fieldset {
       width: 100%;
       margin-right: 0; }
       .location .inner .wrap .contact .tit h2::after {
-        content: '';
-        display: block;
-        width: 50%;
-        height: 1px;
-        background: #C05C7E;
-        position: absolute;
-        top: 49%;
-        right: 0px; }
+        width: 50%; }
       .location .inner .wrap .contact article {
         width: 50%;
         padding: 0 20px 0 10px; }
@@ -1868,7 +1861,7 @@ fieldset {
             line-height: 16px; } }
 #header {
   width: 100%;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #efefef;
   position: relative;
   z-index: 5; }
   #header .inner {
@@ -2083,7 +2076,7 @@ fieldset {
           color: #fff; }
         #header .inner .menuMo > h1 span {
           font: 14px/1 "Noto Sans", "Noto Sans KR";
-          color: #C05C7E;
+          color: #7588a0;
           letter-spacing: 1px; }
       #header .inner .menuMo #gnbMo {
         width: 100%;
@@ -2098,7 +2091,7 @@ fieldset {
             color: #fff;
             transition: 0.5s; }
             #header .inner .menuMo #gnbMo > li a:hover {
-              color: #C05C7E; }
+              color: #7588a0; }
       #header .inner .menuMo.on {
         top: 0;
         opacity: 1; }
@@ -2106,7 +2099,7 @@ fieldset {
 #visual {
   width: 100%;
   height: calc(100vh - 136px);
-  border-bottom: 1px solid #111;
+  background: #efefef;
   position: relative; }
   #visual .inner {
     width: 100%;
@@ -2130,7 +2123,7 @@ fieldset {
         #visual .inner .mySwiper .swiper-wrapper .swiper-slide article:last-child {
           width: 55%; }
       #visual .inner .mySwiper .swiper-wrapper .swiper-slide .mainTxt {
-        padding: 230px 0px 0 50px; }
+        padding: 250px 0px 0 50px; }
         #visual .inner .mySwiper .swiper-wrapper .swiper-slide .mainTxt h1 {
           font: 700 54px/1 "Noto Sans", "Noto Sans KR";
           color: #333;
@@ -2141,18 +2134,18 @@ fieldset {
           width: 100px;
           height: 30px;
           margin-right: 10px;
-          background: #eee;
+          background: #ddd;
           text-align: center;
           font: 13px/30px "Noto Sans", "Noto Sans KR";
-          color: #333; }
+          color: #555; }
         #visual .inner .mySwiper .swiper-wrapper .swiper-slide .mainTxt .box2 {
           display: inline-block;
           width: 150px;
           height: 30px;
-          background: #eee;
+          background: #ddd;
           text-align: center;
           font: 13px/30px "Noto Sans", "Noto Sans KR";
-          color: #333; }
+          color: #555; }
         #visual .inner .mySwiper .swiper-wrapper .swiper-slide .mainTxt p {
           width: 80%;
           margin-top: 20px;
@@ -2185,33 +2178,23 @@ fieldset {
         bottom: auto;
         transform: scale(0.7);
         filter: brightness(0); }
-    #visual .inner::before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 150px;
-      background: #111;
-      z-index: 1;
-      position: absolute;
-      bottom: 0;
-      left: 0; }
 
 #brand {
   width: 100%;
   padding: 150px 0;
-  background: #fff; }
+  background: #7588a0; }
   #brand .inner {
     width: 1180px;
     margin: 0 auto;
     position: relative; }
     #brand .inner h1 {
       font: 16px/1 "Noto Sans", "Noto Sans KR";
-      color: #333;
+      color: #fff;
       letter-spacing: 2px;
       position: relative;
       padding-bottom: 30px;
       margin-bottom: 40px;
-      transform: translateX(-50px);
+      transform: translateX(-20px);
       transition: 0.5s;
       opacity: 0; }
       #brand .inner h1::after {
@@ -2219,11 +2202,11 @@ fieldset {
         display: block;
         width: 0px;
         height: 1px;
-        background: #C05C7E;
+        background: #fff;
         position: absolute;
         bottom: 0;
         left: 0;
-        transition: 0.5s 0.2s;
+        transition: 0.5s;
         opacity: 0; }
     #brand .inner .wrap {
       width: 100%;
@@ -2241,14 +2224,14 @@ fieldset {
           margin-right: 0; }
         #brand .inner .wrap article h2 {
           font: 42px/1.4 "Noto Sans", "Noto Sans KR";
-          color: #333;
+          color: #fff;
           margin-bottom: 30px;
           transition: 0.5s 0.4s;
           opacity: 0;
           transform: translateY(50px); }
         #brand .inner .wrap article p {
           font: 16px/2 "Noto Sans", "Noto Sans KR";
-          color: #999;
+          color: #ddd;
           margin-bottom: 40px;
           transition: 0.5s 0.6s;
           transform: translateY(50px);
@@ -2259,10 +2242,10 @@ fieldset {
           bottom: 0;
           right: 70px;
           font: 14px/1 "Noto Sans", "Noto Sans KR";
-          color: #555;
+          color: #ddd;
           text-align: right;
           letter-spacing: 2px;
-          border-bottom: 1px solid #333;
+          border-bottom: 1px solid #ddd;
           transition: 0.5s 0.6s;
           opacity: 0; }
         #brand .inner .wrap article div {
@@ -2306,7 +2289,7 @@ fieldset {
 #service {
   width: 100%;
   padding: 200px 0;
-  background: #eeeeee; }
+  background: #efefef; }
   #service .inner {
     width: 1180px;
     margin: 0 auto;
@@ -2336,7 +2319,7 @@ fieldset {
           display: block;
           width: 40px;
           height: 1px;
-          background: #C05C7E;
+          background: #000;
           position: absolute;
           bottom: 0;
           left: 0; }

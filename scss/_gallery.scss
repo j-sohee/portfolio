@@ -48,7 +48,7 @@
                 content:''; display:block; clear:both;
             }
             article{
-                width:25%; float:left; padding:12px;
+                width:33.333%; float:left; padding:12px;
                 .list{
                     width:100%;
                     border-top:1px solid #ccc;
@@ -56,10 +56,10 @@
                         width:100%; padding:10px 0 20px;
                         p{
                             display:inline-block; width:40%;
-                            font:12px/1 $font; color:$titColor;
+                            font:12px/1 $font; color:#90AACB;
                             &::before{
                                 content:''; display:inline-block;
-                                width:6px; height:6px; background:$titColor;
+                                width:6px; height:6px; background:#90AACB;
                                 border-radius: 50%; vertical-align:middle;
                                 margin-top:-4px; margin-right:4px;
                             }
