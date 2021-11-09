@@ -2171,24 +2171,24 @@ fieldset {
             height: 100%;
             object-fit: cover; }
       #visual .inner .mySwiper .swiper-button-next {
-        left: 420px;
+        left: 440px;
         right: auto;
         top: 85%;
         bottom: auto;
         transform: scale(0.4);
         filter: grayscale(100%); }
       #visual .inner .mySwiper .swiper-button-prev {
-        left: 360px;
+        left: 390px;
         right: auto;
         top: 85%;
         bottom: auto;
         transform: scale(0.4);
         filter: grayscale(100%); }
       #visual .inner .mySwiper .swiper-pagination-progressbar {
-        height: 40%;
-        left: auto;
-        right: 0;
-        top: 26%;
+        width: 35%;
+        left: -10px;
+        right: auto;
+        top: 85%;
         bottom: auto;
         transform: scale(0.7);
         filter: brightness(0); }
