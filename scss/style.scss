@@ -279,6 +279,18 @@ $mobile : 539px;
                     }
                 }
             }
+            .swiper-button-next{
+                left:420px; right:auto;
+                top:85%; bottom:auto;
+                transform:scale(0.4);
+                filter:grayscale(100%);
+            }
+            .swiper-button-prev{
+                left:360px; right:auto;
+                top:85%; bottom:auto;
+                transform:scale(0.4);
+                filter:grayscale(100%);
+            }
             .swiper-pagination-progressbar{
                 height:40%;
                 left:auto; right:0;
@@ -693,7 +705,7 @@ $mobile : 539px;
         a{
             display:block; width:10px; height:10px;
             border-radius: 5px;
-            background:#888;
+            background:#ddd;
                 transition:0.5s; 
                 &.on{
                     background:#111;
