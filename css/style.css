@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -2099,12 +2100,13 @@ fieldset {
 #visual {
   width: 100%;
   height: calc(100vh - 136px);
-  background: #efefef;
-  position: relative; }
+  position: relative;
+  background: #efefef; }
   #visual .inner {
     width: 100%;
     height: 100%;
-    position: relative; }
+    position: relative;
+    padding: 80px 0 50px 0; }
     #visual .inner .mySwiper {
       width: 1180px;
       height: 100%;
@@ -2118,77 +2120,88 @@ fieldset {
       #visual .inner .mySwiper .swiper-wrapper .swiper-slide article {
         float: left; }
         #visual .inner .mySwiper .swiper-wrapper .swiper-slide article:first-child {
-          width: 43%;
+          width: 55%;
           margin-right: 2%; }
         #visual .inner .mySwiper .swiper-wrapper .swiper-slide article:last-child {
-          width: 55%; }
-      #visual .inner .mySwiper .swiper-wrapper .swiper-slide .mainTxt {
-        padding: 250px 0px 0 50px; }
-        #visual .inner .mySwiper .swiper-wrapper .swiper-slide .mainTxt h1 {
-          font: 700 54px/1 "Noto Sans", "Noto Sans KR";
+          width: 43%; }
+      #visual .inner .mySwiper .swiper-wrapper .swiper-slide .newTxt h1 {
+        font: 100px/1 "Roboto";
+        color: #111; }
+      #visual .inner .mySwiper .swiper-wrapper .swiper-slide .newTxt h2 {
+        font: 100px/1 "Roboto";
+        color: #111;
+        margin-bottom: 40px; }
+      #visual .inner .mySwiper .swiper-wrapper .swiper-slide .newTxt .left {
+        width: 58%;
+        margin-right: 2%;
+        float: left;
+        position: relative; }
+        #visual .inner .mySwiper .swiper-wrapper .swiper-slide .newTxt .left h3 {
+          position: relative;
+          font: 24px/1 "Roboto";
           color: #333;
-          margin-bottom: 20px;
-          letter-spacing: 1px; }
-        #visual .inner .mySwiper .swiper-wrapper .swiper-slide .mainTxt .box1 {
-          display: inline-block;
-          width: 100px;
-          height: 30px;
-          margin-right: 10px;
-          background: #ddd;
-          text-align: center;
-          font: 13px/30px "Noto Sans", "Noto Sans KR";
-          color: #555; }
-        #visual .inner .mySwiper .swiper-wrapper .swiper-slide .mainTxt .box2 {
-          display: inline-block;
-          width: 150px;
-          height: 30px;
-          background: #ddd;
-          text-align: center;
-          font: 13px/30px "Noto Sans", "Noto Sans KR";
-          color: #555; }
-        #visual .inner .mySwiper .swiper-wrapper .swiper-slide .mainTxt p {
-          width: 80%;
-          margin-top: 20px;
-          font: 15px/2 "Noto Sans", "Noto Sans KR";
-          color: #555; }
-      #visual .inner .mySwiper .swiper-wrapper .swiper-slide .mainVisual {
-        padding-top: 60px; }
-        #visual .inner .mySwiper .swiper-wrapper .swiper-slide .mainVisual h2 {
-          display: inline-block;
-          margin-right: 20px;
-          font: 700 18px/1 "Noto Sans", "Noto Sans KR";
-          color: #333; }
-        #visual .inner .mySwiper .swiper-wrapper .swiper-slide .mainVisual p {
-          display: inline-block;
-          font: 13px/1.2 "Noto Sans", "Noto Sans KR";
-          color: #999; }
-        #visual .inner .mySwiper .swiper-wrapper .swiper-slide .mainVisual .pic {
-          width: 90%;
-          height: 620px;
-          margin-top: 50px; }
-          #visual .inner .mySwiper .swiper-wrapper .swiper-slide .mainVisual .pic img {
+          margin-left: 80px; }
+          #visual .inner .mySwiper .swiper-wrapper .swiper-slide .newTxt .left h3::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 1px;
+            background: #999;
+            position: absolute;
+            top: 50%;
+            left: -80px; }
+        #visual .inner .mySwiper .swiper-wrapper .swiper-slide .newTxt .left .leftTxt {
+          width: 100%;
+          padding-top: 200px; }
+          #visual .inner .mySwiper .swiper-wrapper .swiper-slide .newTxt .left .leftTxt .txt {
+            width: 100%;
+            margin-bottom: 20px; }
+            #visual .inner .mySwiper .swiper-wrapper .swiper-slide .newTxt .left .leftTxt .txt p {
+              font: 14px/1 "Roboto";
+              color: #555; }
+            #visual .inner .mySwiper .swiper-wrapper .swiper-slide .newTxt .left .leftTxt .txt span {
+              font: 12px/1 "Noto Sans", "Noto Sans KR";
+              color: #999; }
+      #visual .inner .mySwiper .swiper-wrapper .swiper-slide .newTxt .right {
+        width: 40%;
+        float: left;
+        margin-top: 20px;
+        border-left: 1px solid #ddd;
+        padding: 0 20px; }
+        #visual .inner .mySwiper .swiper-wrapper .swiper-slide .newTxt .right .pic {
+          width: 100%;
+          height: 200px;
+          margin-bottom: 20px; }
+          #visual .inner .mySwiper .swiper-wrapper .swiper-slide .newTxt .right .pic img {
             width: 100%;
             height: 100%;
             object-fit: cover; }
+        #visual .inner .mySwiper .swiper-wrapper .swiper-slide .newTxt .right h4 {
+          font: 700 16px/1 "Noto Sans", "Noto Sans KR";
+          color: #333;
+          margin-bottom: 10px; }
+        #visual .inner .mySwiper .swiper-wrapper .swiper-slide .newTxt .right p {
+          font: 14px/1.5 "Noto Sans", "Noto Sans KR";
+          color: #666; }
       #visual .inner .mySwiper .swiper-button-next {
-        left: 440px;
+        left: 40px;
         right: auto;
-        top: 85%;
+        top: 93%;
         bottom: auto;
         transform: scale(0.4);
         filter: grayscale(100%); }
       #visual .inner .mySwiper .swiper-button-prev {
-        left: 390px;
+        left: -10px;
         right: auto;
-        top: 85%;
+        top: 93%;
         bottom: auto;
         transform: scale(0.4);
         filter: grayscale(100%); }
       #visual .inner .mySwiper .swiper-pagination-progressbar {
         width: 35%;
-        left: -10px;
+        left: -67px;
         right: auto;
-        top: 85%;
+        top: 97%;
         bottom: auto;
         transform: scale(0.7);
         filter: brightness(0); }

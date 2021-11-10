@@ -3,7 +3,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
+$mainFont : 'Roboto';
 $font : "Noto Sans", 'Noto Sans KR';
 $titColor:#7588a0;
 $tablet : 1179px;
@@ -216,12 +218,13 @@ $mobile : 539px;
 
 #visual{ 
     width:100%; height:calc(100vh - 136px);
-    background:#efefef; position:relative;
+    position:relative; background:#efefef;
     .inner{
         width:100%; height:100%; position:relative; 
+        padding:80px 0 50px 0; 
         .mySwiper{
             width:1180px; height:100%; margin:0 auto; 
-            position:relative;  z-index:1;
+            position:relative;  z-index:1;   
             &::after{
                 content:''; display:block; clear:both;
             }
@@ -229,72 +232,134 @@ $mobile : 539px;
                 .swiper-slide{
                     article{
                         float:left; 
-                       &:first-child{ width:43%; margin-right:2%}
-                       &:last-child{ width:55%; }
+                        &:first-child{
+                            width:55%; margin-right:2%;
+                            
+                        }
+                        &:last-child{ width:43%; }
                     }
-                    .mainTxt{
-                        padding:250px 0px 0 50px;
+                    .newTxt{
                         h1{
-                            font:700 54px/1 $font; color:#333;
-                            margin-bottom:20px;
-                            letter-spacing:1px;
+                            font:100px/1 $mainFont;
+                            color:#111;
                         }
-                        .box1{
-                            display:inline-block;
-                            width:100px; height:30px;
-                            margin-right:10px;
-                            background:#ddd; text-align:center;
-                            font:13px/30px $font; color:#555;
-                        }
-                        .box2{
-                            display:inline-block; 
-                            width:150px; height:30px;
-                            background:#ddd; text-align:center;
-                            font:13px/30px $font; color:#555;
-                        }
-                        p{
-                            width:80%; margin-top:20px;
-                            font:15px/2 $font; color:#555;
-                        }
-                    }
-                    .mainVisual{
-                        padding-top:60px;
                         h2{
-                            display:inline-block;
-                            margin-right:20px;
-                            font:700 18px/1 $font; color:#333;
+                            font:100px/1 $mainFont;
+                            color:#111;
+                            margin-bottom:40px;
                         }
-                        p{
-                            display:inline-block;
-                            font:13px/1.2 $font; color:#999;
+                        .left{
+                            width:58%; margin-right:2%; float:left;
+                            position:relative;
+                            h3{
+                                position:relative;
+                                font: 24px/1 $mainFont; color:#333;
+                                margin-left:80px;
+                                &::before{
+                                    content:''; display:block;
+                                    width:60px; height:1px;
+                                    background:#999;
+                                    position:absolute; top:50%; left:-80px;
+                                }
+                            }
+                            .leftTxt{
+                                width:100%; padding-top:200px;
+                                .txt{
+                                    width:100%; margin-bottom:20px;
+                                    p{
+                                        font:14px/1 $mainFont; color:#555;
+                                    }
+                                    span{
+                                        font:12px/1 $font; color:#999;
+                                    }
+                                }
+                            }
                         }
-                        .pic{
-                            width:90%; height:620px;
-                            margin-top:50px;
-                            img{
-                                width:100%; height:100%;
-                                object-fit:cover;
+                        .right{
+                            width:40%; float:left; margin-top:20px;
+                            border-left:1px solid #ddd;
+                            padding:0 20px;
+                            .pic{
+                                width:100%; height:200px; margin-bottom:20px;
+                                img{ width:100%; height:100%; object-fit:cover; }
+                            }
+                            h4{
+                                font:700 16px/1 $font; color:#333;
+                                margin-bottom:10px;
+                            }
+                            p{
+                                font:14px/1.5 $font; color:#666
                             }
                         }
                     }
+                    // article{
+                    //     float:left; 
+                    //    &:first-child{ width:43%; margin-right:2%}
+                    //    &:last-child{ width:55%; }
+                    // }
+                    // .mainTxt{
+                    //     padding:250px 0px 0 50px;
+                    //     h1{
+                    //         font:700 54px/1 $font; color:#333;
+                    //         margin-bottom:20px;
+                    //         letter-spacing:1px;
+                    //     }
+                    //     .box1{
+                    //         display:inline-block;
+                    //         width:100px; height:30px;
+                    //         margin-right:10px;
+                    //         background:#ddd; text-align:center;
+                    //         font:13px/30px $font; color:#555;
+                    //     }
+                    //     .box2{
+                    //         display:inline-block; 
+                    //         width:150px; height:30px;
+                    //         background:#ddd; text-align:center;
+                    //         font:13px/30px $font; color:#555;
+                    //     }
+                    //     p{
+                    //         width:80%; margin-top:20px;
+                    //         font:15px/2 $font; color:#555;
+                    //     }
+                    // }
+                    // .mainVisual{
+                    //     padding-top:60px;
+                    //     h2{
+                    //         display:inline-block;
+                    //         margin-right:20px;
+                    //         font:700 18px/1 $font; color:#333;
+                    //     }
+                    //     p{
+                    //         display:inline-block;
+                    //         font:13px/1.2 $font; color:#999;
+                    //     }
+                    //     .pic{
+                    //         width:90%; height:620px;
+                    //         margin-top:50px;
+                    //         img{
+                    //             width:100%; height:100%;
+                    //             object-fit:cover;
+                    //         }
+                    //     }
+                    // }
                 }
             }
             .swiper-button-next{
-                left:440px; right:auto;
-                top:85%; bottom:auto;
+                left:40px; right:auto;
+                top:93%; bottom:auto;
                 transform:scale(0.4);
                 filter:grayscale(100%);
             }
             .swiper-button-prev{
-                left:390px; right:auto;
-                top:85%; bottom:auto;
+                left:-10px; right:auto;
+                top:93%; bottom:auto;
                 transform:scale(0.4);
                 filter:grayscale(100%);
             }
             .swiper-pagination-progressbar{
                 width:35%;
-                left:-10px; right:auto;
-                top:85%; bottom:auto;
+                left:-67px; right:auto;
+                top:97%; bottom:auto;
                 transform: scale(0.7);
                 filter:brightness(0);
             }
