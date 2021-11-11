@@ -1452,26 +1452,30 @@ fieldset {
     position: absolute;
     top: 20px;
     right: 20px;
-    font: bold 14px/1 "Noto Sans", "Noto Sans KR";
+    font: 18px/1 "Noto Sans", "Noto Sans KR";
     color: #fff;
     cursor: pointer; }
 
 @media screen and (max-width: 1179px) {
   .gallery .inner {
     width: 100%;
-    padding: 0 20px; }
-    .gallery .inner #gallery article {
-      width: 33.333%; } }
+    padding: 0 20px; } }
 @media screen and (max-width: 699px) {
   .gallery .inner #gallery article {
-    width: 50%; } }
+    width: 50%; }
+
+  .pop {
+    padding: 80px 40px; } }
 @media screen and (max-width: 539px) {
   .gallery .inner h1 {
     font-size: 28px; }
   .gallery .inner #searchBox {
     text-align: center; }
   .gallery .inner #gallery article {
-    width: 100%; } }
+    width: 100%; }
+
+  .pop {
+    padding: 80px 20px; } }
 /*youtube---------------------------------*/
 .youtube .sub_visual {
   background: url(../img/youtube/bg3.jpg) no-repeat center/cover;
@@ -1498,7 +1502,7 @@ fieldset {
       color: #555; }
   .youtube .inner #vidGallery article {
     width: 580px;
-    height: 350px;
+    height: 330px;
     margin-right: 20px;
     float: left;
     background: #fff;
@@ -1543,14 +1547,13 @@ fieldset {
         opacity: 1; }
     .youtube .inner #vidGallery article .con {
       width: 100%;
-      height: 100px;
       position: relative;
-      padding: 20px 0; }
+      margin-top: 10px; }
       .youtube .inner #vidGallery article .con h2 {
         display: block;
         font: 700 18px/1.2 "Noto Sans", "Noto Sans KR";
         color: #333;
-        margin-bottom: 20px; }
+        margin-bottom: 10px; }
       .youtube .inner #vidGallery article .con p {
         display: block;
         font: 14px/1.3 "Noto Sans", "Noto Sans KR";
@@ -1586,24 +1589,47 @@ fieldset {
     width: 100%;
     padding: 0 20px; }
     .youtube .inner #vidGallery article {
-      width: 49%;
-      margin-right: 2%; }
-      .youtube .inner #vidGallery article .btns > a {
-        font-size: 16px; }
-      .youtube .inner #vidGallery article .con h2 {
-        font-size: 14px; }
-      .youtube .inner #vidGallery article .con p {
-        width: 95%; } }
+      width: 100%;
+      height: 350px;
+      margin-right: 0; }
+
+  .vidpop {
+    padding: 80px 20px; }
+    .vidpop iframe {
+      width: 100%;
+      height: 450px; } }
 @media screen and (max-width: 539px) {
   /*youtube---------------------------------*/
-  .youtube .inner {
-    width: 100%;
-    padding: 0 20px; }
-    .youtube .inner #vidGallery article {
+  .youtube {
+    padding: 0 0 80px 0; }
+    .youtube .inner {
       width: 100%;
-      margin-right: 0%; }
-      .youtube .inner #vidGallery article .con h2 {
-        width: 90%; } }
+      padding: 0 20px; }
+      .youtube .inner #vidGallery h1 {
+        font-size: 28px; }
+      .youtube .inner #vidGallery .top h2 {
+        font-size: 26px; }
+      .youtube .inner #vidGallery .top p {
+        width: 100%;
+        font: 13px/1.5 "Noto Sans", "Noto Sans KR";
+        color: #555; }
+      .youtube .inner #vidGallery article {
+        width: 100%;
+        margin-right: 0; }
+        .youtube .inner #vidGallery article > a img {
+          transform: scale(1.35); }
+        .youtube .inner #vidGallery article .btns > a {
+          font-size: 14px; }
+        .youtube .inner #vidGallery article .con h2 {
+          font-size: 16px; }
+        .youtube .inner #vidGallery article .con p {
+          font-size: 13px; }
+
+  .vidpop {
+    padding: 80px 20px; }
+    .vidpop iframe {
+      width: 100%;
+      height: 300px; } }
 /*location---------------------------------*/
 .location .sub_visual {
   background: url(../img/location/bg3.jpg) no-repeat bottom/cover;

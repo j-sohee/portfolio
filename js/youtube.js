@@ -71,7 +71,7 @@ $("body").on("click", "#vidGallery article a", function(e){
                         width:"100%",
                         height: 600
                     }),
-                    $("<span>").text("CLOSE")
+                    $("<span>").text("close")
                 )
         )
 });
