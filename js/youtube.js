@@ -24,10 +24,10 @@ $.ajax({
         date = date.split("T")[0];
 
         if( len >  70){
-            txt = txt.substr(0, 55) + "...";
+            txt = txt.substr(0, 80) + "...";
         }
         if( titLen > 50){
-            tit = tit.substr(0, 40) + "...";
+            tit = tit.substr(0, 50) + "...";
         }
 
         $("#vidGallery")
@@ -39,10 +39,10 @@ $.ajax({
                                     $("<img>").attr({ src : data.snippet.thumbnails.high.url })
                                  ),
                         $("<div class='btns'>")
-                                .append(
-                                    $("<a>").attr({ href : data.snippet.resourceId.videoId})
-                                            .text("VIEW")
-                                ),
+                        .append(
+                            $("<a>").attr({ href : data.snippet.resourceId.videoId})
+                                    .text("VIEW")
+                        ),
                         $("<div class='con'>")
                                 .append(
                                     $("<h2>").text(tit),
