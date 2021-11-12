@@ -55,6 +55,8 @@ const $prev = $("#visual").find(".prev");
 const $next = $("#visual").find(".next");
 let speed = 500;
 
+$slider.children("ul").find("li").last().prependTo($slider.children("ul"));
+
 $prev.on("click", function(e){
     e.preventDefault();
     $slider.children("ul").animate({ marginLeft : "0%"},speed, function(){
