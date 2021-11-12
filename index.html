@@ -9,8 +9,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
 </head>
@@ -176,9 +174,9 @@
     </header>
     <figure id="visual">
         <div class="inner">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+            <section id="slider">
+                <ul>
+                    <li data-index="1">
                         <article class="newTxt">
                             <h1>Architechtrue</h1>
                             <h2>& Desgin</h2>
@@ -205,11 +203,11 @@
                         </article>
                         <article class="newVisual">
                             <div class="pic">
-                                <img src="img/main/visual/main01.jpg">
+                                <img src="img/main/visual/main04.jpg">
                             </div>
                         </article>
-                    </div>
-                    <div class="swiper-slide">
+                    </li>
+                    <li data-index="2">
                         <article class="newTxt">
                             <h1>Minimalist</h1>
                             <h2>Interior</h2>
@@ -239,8 +237,8 @@
                                 <img src="img/main/visual/main02.jpg">
                             </div>
                         </article>
-                    </div>
-                    <div class="swiper-slide">
+                    </li>
+                    <li data-index="3">
                         <article class="newTxt">
                             <h1>Minimalist</h1>
                             <h2>Design</h2>
@@ -270,12 +268,15 @@
                                 <img src="img/main/visual/main03.jpg">
                             </div>
                         </article>
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
+                    </li>
+                </ul>
+            </section>
+            <a href="#" class="prev">
+                <span>prev</span>
+            </a>
+            <a href="#" class="next">
+                <span>next</span>
+            </a>
         </div>
     </figure>
     <section id="brand" class="myScroll">

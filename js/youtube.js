@@ -45,7 +45,7 @@ $.ajax({
                         ),
                         $("<div class='con'>")
                                 .append(
-                                    $("<h2>").text(tit),
+                                    $("<h3>").text(tit),
                                     $("<p>").text(txt)
                                 )
                     )

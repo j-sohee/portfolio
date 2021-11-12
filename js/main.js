@@ -49,6 +49,29 @@ $(window).on("scroll", function(){
     }
 });
 
+//main slider
+const $slider = $("#visual").find("#slider");
+const $prev = $("#visual").find(".prev");
+const $next = $("#visual").find(".next");
+let speed = 500;
+
+$prev.on("click", function(e){
+    e.preventDefault();
+    $slider.children("ul").animate({ marginLeft : "0%"},speed, function(){
+        $(this).css({ marginLeft : "-100%"});
+        $(this).children("li").last().prependTo(this);
+    });
+})
+
+$next.on("click", function(e){
+    e.preventDefault();
+    $slider.children("ul").animate({ marginLeft : "-200%"},speed, function(){
+        $(this).css({ marginLeft : "-100%"});
+        $(this).children("li").first().appendTo(this);
+    });
+})
+
+//navi
 $("#navi li a").on("click", function(e){
     e.preventDefault();
     let target = $(this).attr("href");
@@ -59,48 +82,7 @@ $("#navi li a").on("click", function(e){
     },1000);
 });
 
-//visual swiper
-var swiper = new Swiper(".mySwiper", {
-    pagination: {
-        el: ".swiper-pagination",
-        type: "progressbar",
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
 
-//visual txtsliding
-const $sub_txt = $("#visual").find(".sub_txt");
-const $sub_pic = $("#visual .main1").find(".pic");
-
-slidingTxt(".tit1", 500);
-slidingTxt(".tit2", 800, 500);
-
-function slidingTxt(el, speed, delay){
-    let bgColor = $(el).find("span").css("color");
-    $(el).append(
-        $("<em class='mask'>").css({
-            display: "block",
-            width: "100%",
-            height : "100%",
-            backgroundColor : bgColor,
-            position: "absolute",
-            top: 0,
-            left : "-100%"
-        })
-    )
-
-    $(el).find(".mask").stop().delay(delay).animate({ left : 0 },speed, "easeInExpo", function(){
-        $(this).prev("span").css({ opacity : 1});
-        $(this).animate({ left:"100%"},speed, "easeInExpo", function(){
-            $(this).remove;
-            $sub_txt.animate({ left:0, opacity:1}, speed)
-            $sub_pic.animate({ width:"100%", opacity:1}, speed*2)
-        })
-    })
-}
 
 //쿠키팝업----------------------------------------------
 let isCookie = document.cookie.indexOf("popup=done");
