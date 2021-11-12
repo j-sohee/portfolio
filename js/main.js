@@ -51,51 +51,67 @@ $(window).on("scroll", function(){
 
 
 //main slider
-function Slider(opt){
-    this.initDom(opt);
-    this.bindingEvent();
-    this.init(this.$slider);
+
+class Slider{
+    constructor(selector,opt){
+        if(!selector){
+            console.error("selector값은 필수입력사항입니다");
+            return;
+        }
+    
+        const defaults = {
+            prev : ".prev",
+            next : ".next",
+            speed : 1000
+        }
+        let result_opt = Object.assign({}, defaults, opt)
+    
+        this.initDom(selector, result_opt);
+        this.bindingEvent();
+        this.init(this.$slider);
+    }
+    
+    initDom(selector, result_opt){
+        this.$slider = $(selector);
+        this.$prev = $(result_opt.prev);
+        this.$next = $(result_opt.next);
+        this.speed = result_opt.speed;
+    }
+    
+    bindingEvent(){
+        this.$prev.on("click", e=>{
+            e.preventDefault();
+            this.prev(this.$slider);
+        });
+    
+        this.$next.on("click", e=>{
+            e.preventDefault();
+            this.next(this.$slider);
+        });
+    }
+    
+    init(el){
+        let sliderLen = el.children("ul").find("li").length;
+        el.children("ul").css({ width : 100 * sliderLen +"%"});
+        el.children("ul").find("li").css({ width: 100 / sliderLen +"%"})
+        el.children("ul").find("li").last().prependTo(el.children("ul"));
+    }
+    
+    prev(el){
+        el.children("ul").animate({ marginLeft : "0%"},this.speed, function(){
+            $(this).css({ marginLeft : "-100%"});
+            $(this).children("li").last().prependTo(this);
+        });
+    }
+    
+    next(el){
+        el.children("ul").animate({ marginLeft : "-200%"},this.speed, function(){
+            $(this).css({ marginLeft : "-100%"});
+            $(this).children("li").first().appendTo(this);
+        });
+    }
 }
 
-Slider.prototype.initDom = function(opt){
-    this.$slider = $(opt.frame);
-    this.$prev = $(opt.prev);
-    this.$next = $(opt.next);
-    this.speed = opt.speed;
-}
-
-Slider.prototype.bindingEvent = function(){
-    this.$prev.on("click", function(e){
-        e.preventDefault();
-        this.prev(this.$slider);
-    }.bind(this));
-
-    this.$next.on("click", function(e){
-        e.preventDefault();
-        this.next(this.$slider);
-    }.bind(this));
-}
-
-Slider.prototype.init = function(el){
-    let sliderLen = el.children("ul").find("li").length;
-    el.children("ul").css({ width : 100 * sliderLen +"%"});
-    el.children("ul").find("li").css({ width: 100 / sliderLen +"%"})
-    el.children("ul").find("li").last().prependTo(el.children("ul"));
-}
-
-Slider.prototype.prev = function(el){
-    el.children("ul").animate({ marginLeft : "0%"},this.speed, function(){
-        $(this).css({ marginLeft : "-100%"});
-        $(this).children("li").last().prependTo(this);
-    });
-}
-
-Slider.prototype.next = function(el){
-    el.children("ul").animate({ marginLeft : "-200%"},this.speed, function(){
-        $(this).css({ marginLeft : "-100%"});
-        $(this).children("li").first().appendTo(this);
-    });
-}
 
 
 //navi
