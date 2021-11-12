@@ -221,7 +221,7 @@ $mobile : 539px;
     position:relative; background:#fff;
     .inner{
         width:1180px; height:100%; position:relative; 
-        padding:80px 0 50px 0;  margin:0 auto; 
+        padding:70px 0;  margin:0 auto; 
         #slider{
             width:100%; height:100%; overflow:hidden;
             ul{
@@ -241,7 +241,7 @@ $mobile : 539px;
                         }
                         &:last-child{ width:43%; }
                     }
-                    .newTxt{
+                    .mainTxt{
                         h1{
                             font:90px/1 $mainFont;
                             color:#111;
@@ -263,14 +263,14 @@ $mobile : 539px;
                             }
                         }
                         .wrap{
-                            width:100%; margin-top:40px;
+                            width:100%; margin-top:60px;
                             position:relative;
                             &::after{
                                 content:''; display:block; clear:both;
                             }
                             .left{
                                 width:58%; margin-right:2%; float:left;
-                                padding-top:280px;
+                                padding-top:270px;
                                 .txt{
                                     width:100%; margin-bottom:20px;
                                     p{
@@ -282,11 +282,11 @@ $mobile : 539px;
                                 }
                             }
                             .right{
-                                width:40%; float:left; margin-top:20px;
+                                width:40%; float:left; margin-top:40px;
                                 border-left:1px solid #ddd;
                                 padding:0 20px;
                                 .pic{
-                                    width:100%; height:200px; margin-bottom:20px;
+                                    width:100%; height:160px; margin-bottom:20px;
                                     img{ width:100%; height:100%; object-fit:cover; }
                                 }
                                 h4{
@@ -299,7 +299,7 @@ $mobile : 539px;
                             }
                         }
                     }
-                    .newVisual{
+                    .mainVisual{
                         width:100%; height:100%;
                         .pic{
                             width:100%; height:100%;
@@ -310,103 +310,86 @@ $mobile : 539px;
                     }
                 }
             }
-            .swiper-button-next{
-                left:350px; right:auto;
-                top:97%; bottom:auto;
-                transform:scale(0.4);
-                filter:grayscale(100%);
-            }
-            .swiper-button-prev{
-                left:300px; right:auto;
-                top:97%; bottom:auto;
-                transform:scale(0.4);
-                filter:grayscale(100%);
-            }
-            .swiper-pagination-progressbar{
-                width:35%;
-                left:-60px; right:auto;
-                top:97%; bottom:auto;
-                transform: scale(0.7);
-                filter:brightness(0);
-            }
         }
         .prev{
-            display:block; width:25px; height:25px;
-            float:left; border:1px solid #ccc; transition:0.5s;
-            position:relative; left:0px; bottom:40px;
+            display:block; width:20px; height:20px;
+            float:left; transition:0.5s;
+            position:relative; left:0px; bottom:30px;
             &::before{
                 display:block; content:'';
-                width:100%; height:1px; background:#999;
-                position:absolute; top:50%; left:0;
-                transform-origin:left center;
-                transform:rotate(-30deg); transition:0.5s;
+                width:100%; height:1px; background:#333;
+                position:absolute; top:0; left:0;
+                transform-origin:center center;
+                transform:rotate(-180deg); transition:0.5s;
             }
             span{
                 position:absolute; top:50%; left:50%;
-                transform:translate(100%,-50%);
-                opacity:0; transition:0.5s;
-                font:12px/1 $font; color:#333;
+                transform:translate(-50%,-50%);
+                opacity:1; transition:0.5s;
+                font:12px/1 $font; color:#666;
             }
             &::after{
                 display:block; content:'';
-                width:100%; height:1px; background:#999;
-                position:absolute; top:50%; left:0;
-                transform-origin:left center;
-                transform:rotate(30deg); transition:0.5s;
+                width:100%; height:1px; background:#333;
+                position:absolute; top:100%; left:0;
+                transform-origin:center center;
+                transform:rotate(180deg); transition:0.5s;
             }
-
             &:hover{
                 border:none;
                 &::before{
-                    top:0; transform-origin:center center;
-                    transform:rotate(-180deg);
+                    top:50%; transform-origin:left center;
+                    transform:rotate(-30deg);
                 }
                 span{
-                    opacity:1;
-                    transform:translate(-50%,-50%);
+                    opacity:0;
+                    transform:translate(-100%,-50%);
                 }
                 &::after{
-                    top:100%; transform-origin:center center;
-                    transform:rotate(180deg);
+                    top:50%; transform-origin:left center;
+                    transform:rotate(30deg);
                 }
             }
         }
         .next{
-            display:block; width:25px; height:25px;
-            border:1px solid #ccc; transition:0.5s;
-            float:left; position:relative; left:40px; bottom:40px;
+            display:block; width:20px; height:20px;
+            transition:0.5s; float:left;
+            position:relative; left:65px; bottom:30px;
             &::before{
                 display:block; content:'';
-                width:100%; height:1px; background:#999;
-                position:absolute; top:50%; left:0;
-                transform-origin:right center;
-                transform:rotate(30deg); transition:0.5s;
+                width:100%; height:1px; background:#333;
+                transform-origin:center center;
+                position:absolute; top:0; left:0; 
+                transform:rotate(180deg); 
+                transition:0.5s;
             }
             span{
                 position:absolute; top:50%; left:50%;
-                transform:translate(100%,-50%);
-                opacity:0; transition:0.5s;
-                font:12px/1 $font; color:#333;
+                transform:translate(-50%,-50%);
+                opacity:1; transition:0.5s;
+                font:12px/1 $font; color:#666;
             }
             &::after{
                 display:block; content:'';
-                width:100%; height:1px; background:#999;
-                position:absolute; top:50%; left:0;
-                transform-origin:right center;
-                transform:rotate(-30deg); transition:0.5s;
+                width:100%; height:1px; background:#333;
+                position:absolute; top:100%; left:0;
+                transform-origin:center center;
+                transform:rotate(-180deg);
+                transition:0.5s;
             }
             &:hover{
                 border:none;
                 &::before{
-                    top:0; transform-origin:center center;
-                    transform:rotate(180deg);
+                    top:50%; transform-origin:right center;
+                    transform:rotate(30deg); 
                 }
                 span{
-                    opacity:1; transform:translate(-50%,-50%);
+                    opacity:0; transform:translate(100%,-50%);
                 }
                 &::after{
-                    top:100%; transform-origin:center center;
-                    transform:rotate(-180deg);
+                    top:50%; transform:rotate(-30deg); 
+                    transform-origin:right center;
+                    
                 }
             }
         }

@@ -2148,7 +2148,7 @@ fieldset {
     width: 1180px;
     height: 100%;
     position: relative;
-    padding: 80px 0 50px 0;
+    padding: 70px 0;
     margin: 0 auto; }
     #visual .inner #slider {
       width: 100%;
@@ -2173,19 +2173,19 @@ fieldset {
               margin-right: 2%; }
             #visual .inner #slider ul li article:last-child {
               width: 43%; }
-          #visual .inner #slider ul li .newTxt h1 {
+          #visual .inner #slider ul li .mainTxt h1 {
             font: 90px/1 "Roboto";
             color: #111; }
-          #visual .inner #slider ul li .newTxt h2 {
+          #visual .inner #slider ul li .mainTxt h2 {
             font: 90px/1 "Roboto";
             color: #111;
             margin-bottom: 20px; }
-          #visual .inner #slider ul li .newTxt > p {
+          #visual .inner #slider ul li .mainTxt > p {
             position: relative;
             font: 24px/1 "Roboto";
             color: #333;
             margin-left: 60px; }
-            #visual .inner #slider ul li .newTxt > p::before {
+            #visual .inner #slider ul li .mainTxt > p::before {
               content: '';
               display: block;
               width: 40px;
@@ -2194,193 +2194,169 @@ fieldset {
               position: absolute;
               top: 50%;
               left: -60px; }
-          #visual .inner #slider ul li .newTxt .wrap {
+          #visual .inner #slider ul li .mainTxt .wrap {
             width: 100%;
-            margin-top: 40px;
+            margin-top: 60px;
             position: relative; }
-            #visual .inner #slider ul li .newTxt .wrap::after {
+            #visual .inner #slider ul li .mainTxt .wrap::after {
               content: '';
               display: block;
               clear: both; }
-            #visual .inner #slider ul li .newTxt .wrap .left {
+            #visual .inner #slider ul li .mainTxt .wrap .left {
               width: 58%;
               margin-right: 2%;
               float: left;
-              padding-top: 280px; }
-              #visual .inner #slider ul li .newTxt .wrap .left .txt {
+              padding-top: 270px; }
+              #visual .inner #slider ul li .mainTxt .wrap .left .txt {
                 width: 100%;
                 margin-bottom: 20px; }
-                #visual .inner #slider ul li .newTxt .wrap .left .txt p {
+                #visual .inner #slider ul li .mainTxt .wrap .left .txt p {
                   font: 14px/1 "Roboto";
                   color: #555; }
-                #visual .inner #slider ul li .newTxt .wrap .left .txt span {
+                #visual .inner #slider ul li .mainTxt .wrap .left .txt span {
                   font: 12px/1 "Noto Sans", "Noto Sans KR";
                   color: #999; }
-            #visual .inner #slider ul li .newTxt .wrap .right {
+            #visual .inner #slider ul li .mainTxt .wrap .right {
               width: 40%;
               float: left;
-              margin-top: 20px;
+              margin-top: 40px;
               border-left: 1px solid #ddd;
               padding: 0 20px; }
-              #visual .inner #slider ul li .newTxt .wrap .right .pic {
+              #visual .inner #slider ul li .mainTxt .wrap .right .pic {
                 width: 100%;
-                height: 200px;
+                height: 160px;
                 margin-bottom: 20px; }
-                #visual .inner #slider ul li .newTxt .wrap .right .pic img {
+                #visual .inner #slider ul li .mainTxt .wrap .right .pic img {
                   width: 100%;
                   height: 100%;
                   object-fit: cover; }
-              #visual .inner #slider ul li .newTxt .wrap .right h4 {
+              #visual .inner #slider ul li .mainTxt .wrap .right h4 {
                 font: 700 16px/1 "Noto Sans", "Noto Sans KR";
                 color: #333;
                 margin-bottom: 10px; }
-              #visual .inner #slider ul li .newTxt .wrap .right p {
+              #visual .inner #slider ul li .mainTxt .wrap .right p {
                 font: 14px/1.5 "Noto Sans", "Noto Sans KR";
                 color: #666; }
-          #visual .inner #slider ul li .newVisual {
+          #visual .inner #slider ul li .mainVisual {
             width: 100%;
             height: 100%; }
-            #visual .inner #slider ul li .newVisual .pic {
+            #visual .inner #slider ul li .mainVisual .pic {
               width: 100%;
               height: 100%; }
-              #visual .inner #slider ul li .newVisual .pic img {
+              #visual .inner #slider ul li .mainVisual .pic img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover; }
-      #visual .inner #slider .swiper-button-next {
-        left: 350px;
-        right: auto;
-        top: 97%;
-        bottom: auto;
-        transform: scale(0.4);
-        filter: grayscale(100%); }
-      #visual .inner #slider .swiper-button-prev {
-        left: 300px;
-        right: auto;
-        top: 97%;
-        bottom: auto;
-        transform: scale(0.4);
-        filter: grayscale(100%); }
-      #visual .inner #slider .swiper-pagination-progressbar {
-        width: 35%;
-        left: -60px;
-        right: auto;
-        top: 97%;
-        bottom: auto;
-        transform: scale(0.7);
-        filter: brightness(0); }
     #visual .inner .prev {
       display: block;
-      width: 25px;
-      height: 25px;
+      width: 20px;
+      height: 20px;
       float: left;
-      border: 1px solid #ccc;
       transition: 0.5s;
       position: relative;
       left: 0px;
-      bottom: 40px; }
+      bottom: 30px; }
       #visual .inner .prev::before {
         display: block;
         content: '';
         width: 100%;
         height: 1px;
-        background: #999;
+        background: #333;
         position: absolute;
-        top: 50%;
+        top: 0;
         left: 0;
-        transform-origin: left center;
-        transform: rotate(-30deg);
+        transform-origin: center center;
+        transform: rotate(-180deg);
         transition: 0.5s; }
       #visual .inner .prev span {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(100%, -50%);
-        opacity: 0;
+        transform: translate(-50%, -50%);
+        opacity: 1;
         transition: 0.5s;
         font: 12px/1 "Noto Sans", "Noto Sans KR";
-        color: #333; }
+        color: #666; }
       #visual .inner .prev::after {
         display: block;
         content: '';
         width: 100%;
         height: 1px;
-        background: #999;
+        background: #333;
         position: absolute;
-        top: 50%;
+        top: 100%;
         left: 0;
-        transform-origin: left center;
-        transform: rotate(30deg);
+        transform-origin: center center;
+        transform: rotate(180deg);
         transition: 0.5s; }
       #visual .inner .prev:hover {
         border: none; }
         #visual .inner .prev:hover::before {
-          top: 0;
-          transform-origin: center center;
-          transform: rotate(-180deg); }
+          top: 50%;
+          transform-origin: left center;
+          transform: rotate(-30deg); }
         #visual .inner .prev:hover span {
-          opacity: 1;
-          transform: translate(-50%, -50%); }
+          opacity: 0;
+          transform: translate(-100%, -50%); }
         #visual .inner .prev:hover::after {
-          top: 100%;
-          transform-origin: center center;
-          transform: rotate(180deg); }
+          top: 50%;
+          transform-origin: left center;
+          transform: rotate(30deg); }
     #visual .inner .next {
       display: block;
-      width: 25px;
-      height: 25px;
-      border: 1px solid #ccc;
+      width: 20px;
+      height: 20px;
       transition: 0.5s;
       float: left;
       position: relative;
-      left: 40px;
-      bottom: 40px; }
+      left: 65px;
+      bottom: 30px; }
       #visual .inner .next::before {
         display: block;
         content: '';
         width: 100%;
         height: 1px;
-        background: #999;
+        background: #333;
+        transform-origin: center center;
         position: absolute;
-        top: 50%;
+        top: 0;
         left: 0;
-        transform-origin: right center;
-        transform: rotate(30deg);
+        transform: rotate(180deg);
         transition: 0.5s; }
       #visual .inner .next span {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(100%, -50%);
-        opacity: 0;
+        transform: translate(-50%, -50%);
+        opacity: 1;
         transition: 0.5s;
         font: 12px/1 "Noto Sans", "Noto Sans KR";
-        color: #333; }
+        color: #666; }
       #visual .inner .next::after {
         display: block;
         content: '';
         width: 100%;
         height: 1px;
-        background: #999;
+        background: #333;
         position: absolute;
-        top: 50%;
+        top: 100%;
         left: 0;
-        transform-origin: right center;
-        transform: rotate(-30deg);
+        transform-origin: center center;
+        transform: rotate(-180deg);
         transition: 0.5s; }
       #visual .inner .next:hover {
         border: none; }
         #visual .inner .next:hover::before {
-          top: 0;
-          transform-origin: center center;
-          transform: rotate(180deg); }
+          top: 50%;
+          transform-origin: right center;
+          transform: rotate(30deg); }
         #visual .inner .next:hover span {
-          opacity: 1;
-          transform: translate(-50%, -50%); }
+          opacity: 0;
+          transform: translate(100%, -50%); }
         #visual .inner .next:hover::after {
-          top: 100%;
-          transform-origin: center center;
-          transform: rotate(-180deg); }
+          top: 50%;
+          transform: rotate(-30deg);
+          transform-origin: right center; }
 
 #brand {
   width: 100%;

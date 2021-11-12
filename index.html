@@ -11,6 +11,16 @@
     <script src="js/jquery.easing.1.3.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+            new Slider({
+                frame : "#visual #slider",
+                prev : ".prev",
+                next : ".next",
+                speed : 500
+            });
+        });
+    </script>
 </head>
 <body>
     <header id="header" class="myScroll">
@@ -177,7 +187,7 @@
             <section id="slider">
                 <ul>
                     <li data-index="1">
-                        <article class="newTxt">
+                        <article class="mainTxt">
                             <h1>Architechtrue</h1>
                             <h2>& Desgin</h2>
                             <p>Let's work</p>
@@ -201,14 +211,14 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="newVisual">
+                        <article class="mainVisual">
                             <div class="pic">
                                 <img src="img/main/visual/main04.jpg">
                             </div>
                         </article>
                     </li>
                     <li data-index="2">
-                        <article class="newTxt">
+                        <article class="mainTxt">
                             <h1>Minimalist</h1>
                             <h2>Interior</h2>
                             <p>Let's work</p>
@@ -232,14 +242,14 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="newVisual">
+                        <article class="mainVisual">
                             <div class="pic">
                                 <img src="img/main/visual/main02.jpg">
                             </div>
                         </article>
                     </li>
                     <li data-index="3">
-                        <article class="newTxt">
+                        <article class="mainTxt">
                             <h1>Minimalist</h1>
                             <h2>Design</h2>
                             <p>Let's work</p>
@@ -263,7 +273,7 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="newVisual">
+                        <article class="mainVisual">
                             <div class="pic">
                                 <img src="img/main/visual/main03.jpg">
                             </div>
