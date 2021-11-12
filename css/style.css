@@ -1890,7 +1890,7 @@ fieldset {
             line-height: 16px; } }
 #header {
   width: 100%;
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid #ddd;
   position: relative;
   z-index: 5; }
   #header .inner {
@@ -2129,7 +2129,7 @@ fieldset {
   width: 100%;
   height: calc(100vh - 136px);
   position: relative;
-  background: #efefef; }
+  background: #fff; }
   #visual .inner {
     width: 100%;
     height: 100%;
@@ -2256,14 +2256,14 @@ fieldset {
 #brand {
   width: 100%;
   padding: 150px 0;
-  background: #7588a0; }
+  background: #ddd; }
   #brand .inner {
     width: 1180px;
     margin: 0 auto;
     position: relative; }
     #brand .inner h1 {
       font: 16px/1 "Noto Sans", "Noto Sans KR";
-      color: #fff;
+      color: #333;
       letter-spacing: 2px;
       position: relative;
       padding-bottom: 30px;
@@ -2276,7 +2276,7 @@ fieldset {
         display: block;
         width: 0px;
         height: 1px;
-        background: #fff;
+        background: #000;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -2298,14 +2298,14 @@ fieldset {
           margin-right: 0; }
         #brand .inner .wrap article h2 {
           font: 42px/1.4 "Noto Sans", "Noto Sans KR";
-          color: #fff;
+          color: #333;
           margin-bottom: 30px;
           transition: 0.5s 0.4s;
           opacity: 0;
           transform: translateY(50px); }
         #brand .inner .wrap article p {
           font: 16px/2 "Noto Sans", "Noto Sans KR";
-          color: #ddd;
+          color: #555;
           margin-bottom: 40px;
           transition: 0.5s 0.6s;
           transform: translateY(50px);
@@ -2316,10 +2316,10 @@ fieldset {
           bottom: 0;
           right: 70px;
           font: 14px/1 "Noto Sans", "Noto Sans KR";
-          color: #ddd;
+          color: #999;
           text-align: right;
           letter-spacing: 2px;
-          border-bottom: 1px solid #ddd;
+          border-bottom: 1px solid #999;
           transition: 0.5s 0.6s;
           opacity: 0; }
         #brand .inner .wrap article div {
@@ -2363,7 +2363,7 @@ fieldset {
 #service {
   width: 100%;
   padding: 200px 0;
-  background: #efefef; }
+  background: #fff; }
   #service .inner {
     width: 1180px;
     margin: 0 auto;
