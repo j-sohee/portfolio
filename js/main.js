@@ -51,68 +51,68 @@ $(window).on("scroll", function(){
 
 
 //main slider
+const $visual = $(".visual");
+const $mainTit = $visual.find("#mainTit")
+const $mainVisual = $(".visual2 .mainVisual")
+const $next = $(".next");
+const $prev = $(".prev");
+let tit = 0;
+let speed = 500;
 
-class Slider{
-    constructor(selector,opt){
-        if(!selector){
-            console.error("selector값은 필수입력사항입니다");
-            return;
+$mainVisual.find("li").last().prependTo($mainVisual);
+
+$next.on("click", function(e){
+    e.preventDefault();
+
+    next_slider($mainVisual);
+
+    $mainTit.find("li.on").addClass("upper");
+    
+    setTimeout(function(){
+        $mainTit.find("li").removeClass("on");
+        $mainTit.find("li").removeClass("upper");
+        if(tit<2){
+            $mainTit.find("li").eq(tit + 1).addClass("on");
+            tit++;
+        }else{
+            tit = 0;
+            $mainTit.find("li").eq(tit).addClass("on");
         }
+    },speed)
+});
+
+$prev.on("click", function(e){
+    e.preventDefault();
+
+    prev_slider($mainVisual);
+
+    $mainTit.find("li.on").addClass("upper");
     
-        const defaults = {
-            prev : ".prev",
-            next : ".next",
-            speed : 1000
+    setTimeout(function(){
+        $mainTit.find("li").removeClass("on");
+        $mainTit.find("li").removeClass("upper");
+        if(tit>0){
+            $mainTit.find("li").eq(tit-1).addClass("on");
+            tit--;
+        }else{
+            tit = 2;
+            $mainTit.find("li").eq(tit).addClass("on");
         }
-        let result_opt = Object.assign({}, defaults, opt)
-    
-        this.initDom(selector, result_opt);
-        this.bindingEvent();
-        this.init(this.$slider);
-    }
-    
-    initDom(selector, result_opt){
-        this.$slider = $(selector);
-        this.$prev = $(result_opt.prev);
-        this.$next = $(result_opt.next);
-        this.speed = result_opt.speed;
-    }
-    
-    bindingEvent(){
-        this.$prev.on("click", e=>{
-            e.preventDefault();
-            this.prev(this.$slider);
-        });
-    
-        this.$next.on("click", e=>{
-            e.preventDefault();
-            this.next(this.$slider);
-        });
-    }
-    
-    init(el){
-        let sliderLen = el.children("ul").find("li").length;
-        el.children("ul").css({ width : 100 * sliderLen +"%"});
-        el.children("ul").find("li").css({ width: 100 / sliderLen +"%"})
-        el.children("ul").find("li").last().prependTo(el.children("ul"));
-    }
-    
-    prev(el){
-        el.children("ul").animate({ marginLeft : "0%"},this.speed, function(){
-            $(this).css({ marginLeft : "-100%"});
-            $(this).children("li").last().prependTo(this);
-        });
-    }
-    
-    next(el){
-        el.children("ul").animate({ marginLeft : "-200%"},this.speed, function(){
-            $(this).css({ marginLeft : "-100%"});
-            $(this).children("li").first().appendTo(this);
-        });
-    }
+    },500)
+});
+
+function prev_slider(el){
+    el.animate({marginLeft : "0%"}, speed,function(){
+        el.css({marginLeft:"-100%"});
+        el.find("li").last().prependTo(this);
+    });
 }
-
-
+function next_slider(el){
+    el.animate({marginLeft : "-200%"},speed,function(){
+        el.css({marginLeft:"-100%"});
+        el.find("li").first().appendTo(this);
+    });
+}
 
 //navi
 $("#navi li a").on("click", function(e){
