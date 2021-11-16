@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/join.js"></script>
     <script defer src="js/menu.js"></script>
+    <script>
+        $(document).ready(function(){
+            new MyForm();
+        })
+    </script>
 </head>
 <body>
     <header id="header_sub" class="myScroll">
@@ -236,7 +241,7 @@
                 </dl>
             </div>
             <!-- 회원정보 form, table -->
-            <form action="/" metod="get">
+            <form action="/" metod="get" id="myForm">
                 <fieldset>
                     <legend class="h">회원정보 입력 페이지</legend>
                     <div class="top_txt">

@@ -1,41 +1,54 @@
-//약관동의box scroll
-const $frame = $(".wrap");
-const $btns = $frame.find("dl dt a");
-const $boxs = $frame.find("dl dd");
-let speed = 500;
-let isDone = true;
 
-$btns.on("click", function(e){
-    e.preventDefault();
+function MyForm(){
+    this.init();
+    this.bindingEvent();
+}
 
-    let i = $(this).parent().index();
-    let isOn = $(this).hasClass("on");
+MyForm.prototype.init = function(){
+    //약관동의box scroll
+    this.$frame = $(".wrap");
+    this.$btns = this.$frame.find("dl dt a");
+    this.$boxs = this.$frame.find("dl dd");
+    this.speed = 500;
+    this.isDone = true;
+    this.$form = $("#myForm");
+    this.$btnSubmit = this.$form.find("input[type=submit]");
+}
 
-    $(this).removeClass("on");
-
-    if(isOn){
-        $(this).removeClass("on");
-        $(this).parent(i).next().slideUp(speed);
-    }else{
-        $(this).addClass("on");
-        $(this).parent(i).next().slideDown(speed);
-    }
-});
-
-//input_submit
-$("input[type=submit]").on("click", function(e){
-    e.preventDefault();
+MyForm.prototype.bindingEvent = function(){
+    this.$btns.on("click", function(e){
+        e.preventDefault();
     
-    if(!isTxt("userid",5)) e.preventDefault();
-    if(!isTxt("name",2)) e.preventDefault();
-    if(!isEmail("email")) e.preventDefault();
-
-    if(!isPwd("pwd", "pwd_check",8)) e.preventDefault();
-});
+        let i = $(this).parent().index();
+        let isOn = $(this).hasClass("on");
+    
+        $(this).removeClass("on");
+    
+        if(isOn){
+            $(this).removeClass("on");
+            $(this).parent(i).next().slideUp(this.speed);
+        }else{
+            $(this).addClass("on");
+            $(this).parent(i).next().slideDown(this.speed);
+        }
+    }.bind(this));
+    
+    //input_submit
+    this.$btnSubmit.on("click", function(e){
+        e.preventDefault();
+        
+        if(!this.isTxt("userid",5)) e.preventDefault();
+        if(!this.isTxt("name",2)) e.preventDefault();
+        if(!this.isEmail("email")) e.preventDefault();
+    
+        if(!this.isPwd("pwd", "pwd_check",8)) e.preventDefault();
+    }.bind(this));
+    
+}
 
 
 //텍스트 인증 함수 정의
-function isTxt(name, len){
+MyForm.prototype.isTxt = function(name, len){
 
     if(len == undefined) len = 5;
     let txt = $("[name="+name+"]").val();
@@ -55,7 +68,7 @@ function isTxt(name, len){
 }
 
 //이메일 인증함수 정의
-function isEmail(name){
+MyForm.prototype.isEmail = function(name){
 
     let txt = $("[name="+name+"]").val();
     if(/@/.test(txt)){
@@ -72,7 +85,7 @@ function isEmail(name){
     }
 }
 
-function isPwd(name1,name2,len){
+MyForm.prototype.isPwd = function(name1,name2,len){
     let pwd1 = $("input[name="+name1+"]").val();
     let pwd2 = $("input[name="+name1+"]").val();
 
