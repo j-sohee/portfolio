@@ -54,17 +54,20 @@ $(window).on("scroll", function(){
 const $visual = $(".visual");
 const $mainTit = $visual.find("#mainTit")
 const $mainVisual = $(".visual2 .mainVisual")
+const $smallVisual = $visual.find(".smallVisual");
 const $next = $(".next");
 const $prev = $(".prev");
 let num = 0;
 let speed = 500;
 
 $mainVisual.find("li").last().prependTo($mainVisual);
+$smallVisual.find("li").last().prependTo($smallVisual);
 
 $next.on("click", function(e){
     e.preventDefault();
 
     next_slider($mainVisual);
+    next_slider($smallVisual);
 
     $mainTit.find("li.on").addClass("upper");
     
@@ -85,18 +88,19 @@ $prev.on("click", function(e){
     e.preventDefault();
 
     prev_slider($mainVisual);
+    prev_slider($smallVisual);
 
     $mainTit.find("li.on").addClass("upper");
     
     setTimeout(function(){
         $mainTit.find("li").removeClass("on");
         $mainTit.find("li").removeClass("upper");
-        if(tit>0){
-            $mainTit.find("li").eq(tit-1).addClass("on");
-            tit--;
+        if(num>0){
+            $mainTit.find("li").eq(num-1).addClass("on");
+            num--;
         }else{
-            tit = 2;
-            $mainTit.find("li").eq(tit).addClass("on");
+            num = 2;
+            $mainTit.find("li").eq(num).addClass("on");
         }
     },500)
 });
