@@ -2172,14 +2172,14 @@ fieldset {
             font: 90px/1 "Roboto";
             color: #111;
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(-10px);
             transition: 0.5s; }
           #visual .inner .visual #mainTit > li h2 {
             font: 90px/1 "Roboto";
             color: #111;
             margin-bottom: 20px;
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(-5px);
             transition: 0.5s 0.2s; }
           #visual .inner .visual #mainTit > li > p {
             font: 24px/1 "Roboto";
@@ -2213,13 +2213,13 @@ fieldset {
                 width: 40px; }
           #visual .inner .visual #mainTit > li.upper h1 {
             opacity: 0;
-            transform: translateY(-10px); }
+            transform: translateY(10px); }
           #visual .inner .visual #mainTit > li.upper h2 {
             opacity: 0;
-            transform: translateY(-10px); }
+            transform: translateY(5px); }
           #visual .inner .visual #mainTit > li.upper > p {
             opacity: 0;
-            transform: translateY(-10px); }
+            transform: translateY(5px); }
       #visual .inner .visual .subVisual {
         width: 100%;
         position: relative;

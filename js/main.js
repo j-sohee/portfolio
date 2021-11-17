@@ -56,7 +56,7 @@ const $mainTit = $visual.find("#mainTit")
 const $mainVisual = $(".visual2 .mainVisual")
 const $next = $(".next");
 const $prev = $(".prev");
-let tit = 0;
+let num = 0;
 let speed = 500;
 
 $mainVisual.find("li").last().prependTo($mainVisual);
@@ -71,12 +71,12 @@ $next.on("click", function(e){
     setTimeout(function(){
         $mainTit.find("li").removeClass("on");
         $mainTit.find("li").removeClass("upper");
-        if(tit<2){
-            $mainTit.find("li").eq(tit + 1).addClass("on");
-            tit++;
+        if(num<2){
+            $mainTit.find("li").eq(num + 1).addClass("on");
+            num++;
         }else{
-            tit = 0;
-            $mainTit.find("li").eq(tit).addClass("on");
+            num = 0;
+            $mainTit.find("li").eq(num).addClass("on");
         }
     },speed)
 });
