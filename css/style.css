@@ -2847,7 +2847,7 @@ fieldset {
       width: 10px;
       height: 10px;
       border-radius: 5px;
-      background: #ddd;
+      background: #aaa;
       transition: 0.5s; }
       #navi li a.on {
         background: #111;

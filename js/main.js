@@ -30,11 +30,18 @@ const $boxs = $(".myScroll");
 const $btns = $("#navi li");
 let posArr = [];
 let len = $btns.length;
-let baseLine = -250;
+let baseLine = -200;
 
 for(let i=0; i<len; i++){
     posArr.push($boxs.eq(i).offset().top);
 }
+
+$(window).on("resize", function(){
+    posArr = [];
+    for(let i=0; i<len; i++){
+        posArr.push($boxs.eq(i).offset().top);
+    }
+})
 
 $(window).on("scroll", function(){
     let scroll = $(this).scrollTop();
@@ -49,6 +56,17 @@ $(window).on("scroll", function(){
     }
 });
 
+//navi버튼을 클릭했을 때
+$("#navi li a").on("click", function(e){
+    e.preventDefault();
+
+    let target = $(this).attr("href");
+    let targetPos = $(target).offset().top;
+
+    $("html,body").animate({ 
+        scrollTop : targetPos 
+    }, 1000)
+});
 
 //main slider
 const $visual = $(".visual");
