@@ -292,18 +292,18 @@ $mobile : 539px;
                 }
                 .right{
                     width:40%; height:100%; float:right;
-                    position:relative; overflow: hidden;
+                    position:relative;
                     
                     .line{
                         width:1px; height:380px;
                         background:#ddd;
-                        position:absolute; left:0; bottom:0;
+                        position:absolute; margin-top:50px;
                     }
                     .smallVisual{
-                        width:calc(100% * 3); height:100%; 
-                        margin-left:-100%;
+                        width:100%; height:100%; position:absolute;
                         li{
-                            width:calc(100%/3); height:100%; float:left;
+                            width:100%; height:100%;
+                            position:absolute; top:0; left:0; opacity:0;
                             padding:0 20px; transition:0.5s;
                             .pic{
                                 width:100%; height:160px; margin-bottom:20px;
@@ -316,6 +316,12 @@ $mobile : 539px;
                             }
                             p{
                                 font:14px/1.5 $font; color:#666;
+                            }
+                            &.on{
+                                opacity:1; transform:translateY(0px);
+                            }
+                            &.upper{
+                                opacity:0; transform:translateY(10px);
                             }
                         }
                     }
@@ -467,12 +473,12 @@ $mobile : 539px;
                 h2{
                     font:42px/1.4  $font; color:#333;
                     margin-bottom:30px;
-                    transition:0.5s 0.4s; opacity:0; transform:translateY(50px);
+                    transition:0.5s 0.4s; opacity:0; transform:translateY(30px);
                 }
                 p{
                     font:16px/2 $font; color:#555;
                     margin-bottom:40px; transition:0.5s 0.6s;
-                    transform:translateY(50px); opacity:0;
+                    transform:translateY(30px); opacity:0;
                 }
                 a{
                     display:inline-block;
@@ -488,11 +494,11 @@ $mobile : 539px;
                     
                     img{ width:100%; height:100%; object-fit: cover;}
                     &:first-child{ 
-                        opacity:0; transform:translateY(-50px); 
+                        opacity:0; transform:translateY(-30px); 
                         transition:0.5s 0.2s;
                     }
                     &:last-child{ 
-                        margin-right:0; opacity:0; transform:translateY(50px); transition:0.5s 0.2s;
+                        margin-right:0; opacity:0; transform:translateY(30px); transition:0.5s 0.2s;
                     }
                 }
             }
@@ -539,7 +545,7 @@ $mobile : 539px;
         article{
             width:380px; margin-right:20px;
             float:left; opacity:0; transition:0.5s;
-            transform:translateY(50px);
+            transform:translateY(30px);
             &:last-child{margin-right:0;}
             h1{
                 font:14px/1 $font; color:#333;

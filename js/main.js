@@ -30,7 +30,7 @@ const $boxs = $(".myScroll");
 const $btns = $("#navi li");
 let posArr = [];
 let len = $btns.length;
-let baseLine = -200;
+let baseLine = -250;
 
 for(let i=0; i<len; i++){
     posArr.push($boxs.eq(i).offset().top);
@@ -61,25 +61,30 @@ let num = 0;
 let speed = 500;
 
 $mainVisual.find("li").last().prependTo($mainVisual);
-$smallVisual.find("li").last().prependTo($smallVisual);
+
 
 $next.on("click", function(e){
     e.preventDefault();
 
     next_slider($mainVisual);
-    next_slider($smallVisual);
 
     $mainTit.find("li.on").addClass("upper");
+    $smallVisual.find("li.on").addClass("upper");
+    
     
     setTimeout(function(){
         $mainTit.find("li").removeClass("on");
         $mainTit.find("li").removeClass("upper");
+        $smallVisual.find("li").removeClass("on");
+        $smallVisual.find("li").removeClass("upper");
         if(num<2){
             $mainTit.find("li").eq(num + 1).addClass("on");
+            $smallVisual.find("li").eq(num + 1).addClass("on");
             num++;
         }else{
             num = 0;
             $mainTit.find("li").eq(num).addClass("on");
+            $smallVisual.find("li").eq(num).addClass("on");
         }
     },speed)
 });
@@ -88,7 +93,6 @@ $prev.on("click", function(e){
     e.preventDefault();
 
     prev_slider($mainVisual);
-    prev_slider($smallVisual);
 
     $mainTit.find("li.on").addClass("upper");
     
