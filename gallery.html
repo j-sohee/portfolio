@@ -14,7 +14,14 @@
     <script src="js/myFlickr.js"></script>
     <script>
         $(document).ready(function(){
-            new Myflickr();
+            new Myflickr({
+                frame : $("#gallery"),
+                searchFrame : ("#serach"),
+                type : "userid",
+                user_id : "194106842@N02",
+                api_key : "c28561608d1c0e9f7db60ecfda79bf27",
+                count :  20
+            });
         })
     </script>
 </head>
