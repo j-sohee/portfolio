@@ -29,12 +29,13 @@ Myflickr.prototype.bindingEvent = function(){
         this.gallery.removeClass("on");
         $(".loading").removeClass("off");
     
-    
-        input.val("");
-        getList({
+        this.input.val("");
+
+        this.getList({
             type:"search",
             tag : inputs
         });
+
     }.bind(this));
     
     $(window).on("keypress", function(e){
@@ -51,7 +52,7 @@ Myflickr.prototype.bindingEvent = function(){
     
            
             this.input.val("");
-            getList({
+            this.getList({
                 type:"search",
                 tag : inputs
             });
@@ -180,6 +181,7 @@ Myflickr.prototype.loadImg = function(){
     let photo = this.gallery.find("article").length;
 
     this.gallery.find("article img").each(function(index,data){
+
         data.onload = function(){
             imgNum++;
             console.log(imgNum);
@@ -188,7 +190,7 @@ Myflickr.prototype.loadImg = function(){
 
                 $(".loading").addClass("off");
 
-                new Isotope(this.gallery.selector+" article", {
+                new Isotope(this.gallery.selector, {
                     itemSelector : this.gallery.selector+" article",
                     columnWidth : this.gallery.selector+" article",
                     percentPosition : true,
