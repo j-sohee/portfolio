@@ -1,69 +1,85 @@
 
-getList({
-    type:"userid",
-    user_id:"194106842@N02"
-})
+function Myflickr(){
+    this.init();
+    this.bindingEvent();
+}
 
-$("#searchBox button").on("click", function(){
+Myflickr.prototype.init = function(){
+    this.gallery = $("#gallery");
+    this.search = $("#searchBox");
+    this.searchBtn = this.search.find("button");
+    this.input = this.search.find("input");
+}
 
-    let inputs = $("#searchBox input").val();
-
-    if(!inputs){
-        alert("검색어를 입력하세요");
-        return;
-    }
-
-    $("#gallery").removeClass("on");
-    $(".loading").removeClass("off");
-
-
-    $("#searchBox input").val("");
-    getList({
-        type:"search",
-        tag : inputs
-    });
-});
-
-$(window).on("keypress", function(e){
-    if(e.keyCode == 13){
-
-        let inputs = $("#searchBox input").val();
-
+Myflickr.prototype.bindingEvent = function(){
+    this.getList({
+        type:"userid",
+        user_id:"194106842@N02"
+    })
+    
+    this.searchBtn.on("click", function(){
+    
+        let inputs = this.input.val();
+    
         if(!inputs){
             alert("검색어를 입력하세요");
             return;
         }
-        $("#gallery").removeClass("on");
+    
+        this.gallery.removeClass("on");
         $(".loading").removeClass("off");
-
-       
-        $("#searchBox input").val("");
+    
+    
+        input.val("");
         getList({
             type:"search",
             tag : inputs
         });
-    }
-})
+    }.bind(this));
+    
+    $(window).on("keypress", function(e){
+        if(e.keyCode == 13){
+    
+            let inputs = this.input.val();
+    
+            if(!inputs){
+                alert("검색어를 입력하세요");
+                return;
+            }
+            this.gallery.removeClass("on");
+            $(".loading").removeClass("off");
+    
+           
+            this.input.val("");
+            getList({
+                type:"search",
+                tag : inputs
+            });
+        }
+    }.bind(this))
+    
+    $("body").on("click", this.gallery.selector+" article a", function(e){
+        e.preventDefault();
+    
+        let imgSrc = $(e.currentTarget).attr("href");
+    
+        $("body").append(
+            $("<div class='pop'>")
+                .append(
+                    $("<img>").attr({src : imgSrc }),
+                    $("<span>").text("close")
+                )
+        )
+    })
+    
+    $("body").on("click", ".pop span", function(){
+        $(".pop").remove();
+    })
+}
 
-$("body").on("click", "#gallery article a", function(e){
-    e.preventDefault();
 
-    let imgSrc = $(this).attr("href");
 
-    $("body").append(
-        $("<div class='pop'>")
-            .append(
-                $("<img>").attr({src : imgSrc }),
-                $("<span>").text("close")
-            )
-    )
-})
-
-$("body").on("click", ".pop span", function(){
-    $(".pop").remove();
-})
-
-function getList(opt){
+Myflickr.prototype.getList = function(opt){
     let result_opt = [];
 
     if(opt.type == "interesting"){
@@ -111,70 +127,77 @@ function getList(opt){
     }
 
     $.ajax(result_opt)
-
     .success(function(data){
 
         let items = data.photos.photo;
-        console.log(items);
 
-        $("#gallery").empty();
-    
-        $(items).each(function(index,data){
-    
-            let text = data.title; 
-            if(!data.title){
-                text = "No description in this photo";
-            }
-    
-            $("#gallery").append(
-                $("<article>")
-                    .append(
-                        $("<div class='list'>")
-                            .append(
-                                $("<div class='txt'>")
-                            .append(
-                                $("<p>").text("CATEGORY"),
-                                $("<span>").text(data.owner),
-                                $("<h2>").text(text)
-                            ),
-                            $("<a>").attr({
-                                href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
-                                })
-                                .append(
-                                    $("<img>").attr({ src : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg" })
-                                )
-                       )
-                        
-                    )
-            )
-     });
-    
-        let imgNum = 0;
-        let photo = $("#gallery article").length;
-    
-        $("#gallery article img").each(function(index,data){
-            data.onload = function(){
-                imgNum++;
-                console.log(imgNum);
-    
-                if(imgNum === photo){
-    
-                    $(".loading").addClass("off");
-    
-                    new Isotope("#gallery", {
-                        itemSelector : "#gallery article",
-                        columnWidth : "#gallery article",
-                        percentPosition : true,
-                        transitionDuration : "0.5s"
-                    });
-    
-                    $("#gallery").addClass("on");
-                }
-            }
-        })
-    })
+        this.createList(items);
+        this.loadImg();
+    }.bind(this))
     
     .error(function(err){
         console.err("데이터를 호출하는데 실패했습니다");
     })
 } 
+
+Myflickr.prototype.createList = function(items){
+
+    this.gallery.empty();
+
+    $(items).each(function(index,data){
+    
+        let text = data.title; 
+        if(!data.title){
+            text = "No description in this photo";
+        }
+
+        this.gallery.append(
+            $("<article>")
+                .append(
+                    $("<div class='list'>")
+                        .append(
+                            $("<div class='txt'>")
+                        .append(
+                            $("<p>").text("CATEGORY"),
+                            $("<span>").text(data.owner),
+                            $("<h2>").text(text)
+                        ),
+                        $("<a>").attr({
+                            href : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"
+                            })
+                            .append(
+                                $("<img>").attr({ src : "https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg" })
+                            )
+                        )
+                    
+                )
+        )
+    }.bind(this));
+}
+
+Myflickr.prototype.loadImg = function(){
+    let imgNum = 0;
+    let photo = this.gallery.find("article").length;
+
+    this.gallery.find("article img").each(function(index,data){
+        data.onload = function(){
+            imgNum++;
+            console.log(imgNum);
+
+            if(imgNum === photo){
+
+                $(".loading").addClass("off");
+
+                new Isotope(this.gallery.selector+" article", {
+                    itemSelector : this.gallery.selector+" article",
+                    columnWidth : this.gallery.selector+" article",
+                    percentPosition : true,
+                    transitionDuration : "0.5s"
+                });
+
+                this.gallery.addClass("on");
+                
+            }
+        }.bind(this);
+    }.bind(this));
+}
