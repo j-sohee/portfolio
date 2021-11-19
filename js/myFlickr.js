@@ -1,12 +1,3 @@
-/*
-// key : c28561608d1c0e9f7db60ecfda79bf27
-//원하는 이미지 출력
-https://www.flickr.com/services/rest/?method=flickr.photos.search
-
-//사진경로
-https://live.staticflickr.com/{server-id}/{id}_{secret}_{size-suffix}.jpg
-
-*/
 
 getList({
     type:"userid",
@@ -15,10 +6,17 @@ getList({
 
 $("#searchBox button").on("click", function(){
 
+    let inputs = $("#searchBox input").val();
+
+    if(!inputs){
+        alert("검색어를 입력하세요");
+        return;
+    }
+
     $("#gallery").removeClass("on");
     $(".loading").removeClass("off");
 
-    let inputs = $("#searchBox input").val();
+
     $("#searchBox input").val("");
     getList({
         type:"search",
@@ -28,10 +26,17 @@ $("#searchBox button").on("click", function(){
 
 $(window).on("keypress", function(e){
     if(e.keyCode == 13){
+
+        let inputs = $("#searchBox input").val();
+
+        if(!inputs){
+            alert("검색어를 입력하세요");
+            return;
+        }
         $("#gallery").removeClass("on");
         $(".loading").removeClass("off");
 
-        let inputs = $("#searchBox input").val();
+       
         $("#searchBox input").val("");
         getList({
             type:"search",
