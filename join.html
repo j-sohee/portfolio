@@ -12,7 +12,27 @@
     <script defer src="js/menu.js"></script>
     <script>
         $(document).ready(function(){
-            new MyForm();
+            new MyForm("#myForm",[
+                {
+                    type:"text",
+                    name: "name",
+                    len:2
+                },
+                {
+                    type:"text",
+                    name : "userid",
+                    len : 5
+                },
+                {
+                    type : "password",
+                    name : ["pwd", "pwd_check"],
+                    len : 8
+                },
+                {
+                    type : "email",
+                    name : "email"
+                }
+            ]);
         })
     </script>
 </head>
