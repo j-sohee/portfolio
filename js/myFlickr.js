@@ -14,6 +14,7 @@ class Myflickr{
         this.apiKey = options.api_key;
         this.count = options.count;
         this.type = options.type;
+        this.logo = $(options.title);
     }
     
     bindingEvent(){
@@ -42,8 +43,19 @@ class Myflickr{
             });
     
         });
+
+        this.logo.on("click", ()=>{
+
+            this.gallery.removeClass("on");
+            $(".loading").removeClass("off");
+
+            this.getList({
+                type:"userid",
+                user_id:this.userId
+            })
+        })
         
-        $(window).on("keypress", (e)=>{
+        $(window).on("keypress", e=>{
             if(e.keyCode == 13){
         
                 let inputs = this.input.val();

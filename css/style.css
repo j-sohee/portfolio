@@ -1348,7 +1348,8 @@ fieldset {
   background: url(../img/gallery/bg01.jpg) no-repeat center/cover; }
 .gallery .inner h1 {
   border-bottom: none;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  cursor: pointer; }
 .gallery .inner .loading {
   width: 80px;
   height: 80px;
@@ -2432,7 +2433,7 @@ fieldset {
 #brand {
   width: 100%;
   padding: 150px 0;
-  background: #ddd; }
+  background: #efefef; }
   #brand .inner {
     width: 1180px;
     margin: 0 auto;
