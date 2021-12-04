@@ -56,6 +56,17 @@ $(window).on("scroll", function(){
     }
 });
 
+//2번째단 video 재생
+const vid = document.querySelectorAll("video");
+for(let el of vid){
+    el.addEventListener("mouseenter", ()=>{
+        el.play();
+    });
+    el.addEventListener("mouseleave", ()=>{
+        el.pause();
+    })
+}
+
 //navi버튼을 클릭했을 때
 $("#navi li a").on("click", function(e){
     e.preventDefault();
