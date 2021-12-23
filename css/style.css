@@ -2296,23 +2296,36 @@ fieldset {
       position: relative;
       overflow: hidden; }
       #visual .inner .visual2 .mainVisual {
-        width: calc(100% * 3);
-        height: 100%;
-        position: absolute;
-        margin-left: -100%; }
-        #visual .inner .visual2 .mainVisual::after {
-          content: '';
-          display: block;
-          clear: both; }
+        width: 100%;
+        height: 100%; }
         #visual .inner .visual2 .mainVisual li {
-          width: calc(100%/3);
+          width: 100%;
           height: 100%;
-          float: left;
-          transition: 1s; }
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: 1s;
+          clip-path: inset(0 0% 0% 0); }
           #visual .inner .visual2 .mainVisual li img {
             width: 100%;
             height: 100%;
             object-fit: cover; }
+      #visual .inner .visual2 .top {
+        z-index: 2; }
+        #visual .inner .visual2 .top li {
+          clip-path: inset(0 100% 50% 0); }
+          #visual .inner .visual2 .top li.on {
+            clip-path: inset(0 0 50% 0); }
+          #visual .inner .visual2 .top li.upper {
+            clip-path: inset(0 0 50% 100%); }
+      #visual .inner .visual2 .bottom {
+        z-index: 1; }
+        #visual .inner .visual2 .bottom li {
+          clip-path: inset(0 100% 0 0); }
+          #visual .inner .visual2 .bottom li.on {
+            clip-path: inset(0 0 0 0); }
+          #visual .inner .visual2 .bottom li.upper {
+            clip-path: inset(0 0 0 100%); }
     #visual .inner .prev {
       display: block;
       width: 20px;
