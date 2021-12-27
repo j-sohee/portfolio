@@ -19,6 +19,15 @@ $mobile : 539px;
 @import "youtube.scss";
 @import "location.scss";
 
+#skip a{
+    position:fixed; width:100%; height:20px;
+    background:#333;
+    font:bold 16px/20px $font; color:#fff;
+    text-align:center; top:-30px; left:0px;
+    &.on{
+        top:0px;
+    }
+}
 
 #header{
     width:100%;

@@ -16,6 +16,15 @@ $("#gnb>li").each(function(index){
     });
 });
 
+const skip_btn = $("#skip a");
+skip_btn.on("focusin", function(){
+    $(this).addClass("on"); 
+})
+skip_btn.on("focusout", function(){
+    $(this).removeClass("on"); 
+})
+
+
 //gnbMo
 var btnCall = document.querySelector(".btnCall");
 var menuMo = document.querySelector(".menuMo");
