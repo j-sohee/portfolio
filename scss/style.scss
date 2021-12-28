@@ -939,6 +939,40 @@ $mobile : 539px;
 
     }
 } 
+#visual{ 
+    height:calc(100vh - 81px);
+    .inner{
+        width:100%; padding:50px 20px; 
+        .visual{
+            width:100%; height:200px; margin-right:0%;
+            #mainTit{
+                height:100%; position:relative;
+                >li{
+                    height:100%;
+                    h1{
+                        font-size:70px;
+                    }
+                    h2{
+                        font-size:70px;
+                    }
+                }
+            }
+            .subVisual{
+                display:none;
+            }
+        }
+        .visual2{
+            width:100%; height:70%; 
+        }
+        
+        .prev{
+            left:auto; bottom:50px; right:100px;
+        }
+        .next{
+            left:auto; right:20px; bottom:50px;
+        }
+    }
+}
 
 #brand{
     .inner{
@@ -1131,6 +1165,34 @@ $mobile : 539px;
         }
     }
 } 
+
+#visual{ 
+    .inner{
+        padding:20px 20px; 
+        .visual{
+            height:160px; 
+            #mainTit{
+                height:100%; position:relative;
+                >li{
+                    height:100%;
+                    h1{ font-size:46px; }
+                    h2{ font-size:46px; }
+                    >p{ font-size:20px; }
+                }
+            }
+        }
+        .visual2{
+            height:75%; 
+        }
+        
+        .prev{
+            left:20px; bottom:30px; right:auto;
+        }
+        .next{
+            bottom:30px;
+        }
+    }
+}
 
 #brand{
     padding:100px 0;
