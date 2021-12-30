@@ -2156,13 +2156,13 @@ fieldset {
 #visual {
   width: 100%;
   height: calc(100vh - 136px);
-  position: relative;
-  background: #fff; }
+  background: #fff;
+  z-index: 1; }
   #visual .inner {
     width: 1180px;
     height: 100%;
     position: relative;
-    padding: 70px 0;
+    padding: 60px 0;
     margin: 0 auto; }
     #visual .inner::after {
       content: '';
@@ -2170,14 +2170,15 @@ fieldset {
       clear: both; }
     #visual .inner .visual {
       width: 55%;
+      height: 100%;
       margin-right: 2%;
-      float: left; }
+      float: left;
+      position: relative; }
       #visual .inner .visual #mainTit {
         width: 100%;
-        position: absolute; }
+        height: 40%; }
         #visual .inner .visual #mainTit > li {
           width: 100%;
-          height: 280px;
           position: absolute;
           top: 0;
           left: 0;
@@ -2236,17 +2237,17 @@ fieldset {
             transform: translateY(5px); }
       #visual .inner .visual .subVisual {
         width: 100%;
-        position: relative;
-        top: 280px; }
+        height: 60%; }
         #visual .inner .visual .subVisual::after {
           content: '';
           display: block;
           clear: both; }
         #visual .inner .visual .subVisual .left {
           width: 60%;
-          height: 100%;
           float: left;
-          padding-top: 270px; }
+          position: absolute;
+          bottom: 40px;
+          left: 0; }
           #visual .inner .visual .subVisual .left .txt {
             width: 100%;
             margin-bottom: 20px; }
@@ -2269,8 +2270,7 @@ fieldset {
             margin-top: 50px; }
           #visual .inner .visual .subVisual .right .smallVisual {
             width: 100%;
-            height: 100%;
-            position: absolute; }
+            height: 100%; }
             #visual .inner .visual .subVisual .right .smallVisual li {
               width: 100%;
               height: 100%;
@@ -2954,8 +2954,46 @@ fieldset {
       top: 50%;
       right: 20px;
       transform: translateY(-50%); }
-    #header .inner .menuMo h1 a {
-      margin-bottom: 10px; }
+    #header .inner .menuMo {
+      width: 100%;
+      height: 100vh;
+      padding: 100px 0;
+      background: #111;
+      position: fixed;
+      top: -100%;
+      left: 0;
+      z-index: 10;
+      opacity: 0;
+      transition: 0.5s;
+      margin: 0 auto;
+      text-align: center; }
+      #header .inner .menuMo > h1 {
+        padding-bottom: 20px; }
+        #header .inner .menuMo > h1 a {
+          display: block;
+          font: 40px/1 "Noto Sans", "Noto Sans KR";
+          color: #fff; }
+        #header .inner .menuMo > h1 span {
+          font: 14px/1 "Noto Sans", "Noto Sans KR";
+          color: #7588a0;
+          letter-spacing: 1px; }
+      #header .inner .menuMo #gnbMo {
+        width: 100%;
+        height: 100%; }
+        #header .inner .menuMo #gnbMo > li {
+          width: 100%; }
+          #header .inner .menuMo #gnbMo > li a {
+            display: block;
+            width: 100%;
+            padding: 20px 0;
+            font: bold 46px/1 "Noto Sans", "Noto Sans KR";
+            color: #fff;
+            transition: 0.5s; }
+            #header .inner .menuMo #gnbMo > li a:hover {
+              color: #7588a0; }
+      #header .inner .menuMo.on {
+        top: 0;
+        opacity: 1; }
 
   #visual {
     height: calc(100vh - 81px); }

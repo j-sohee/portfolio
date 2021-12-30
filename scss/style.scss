@@ -227,21 +227,20 @@ $mobile : 539px;
 
 #visual{ 
     width:100%; height:calc(100vh - 136px);
-    position:relative; background:#fff;
+    background:#fff; z-index:1;
     .inner{
         width:1180px; height:100%; position:relative; 
-        padding:70px 0;  margin:0 auto; 
+        padding:60px 0;  margin:0 auto; 
         &::after{
             content:''; display:block; clear:both;
         }
         .visual{
-            width:55%; margin-right:2%; float:left;
+            width:55%; height:100%; margin-right:2%; float:left;
+            position:relative;
             #mainTit{
-                width:100%; position:absolute;
+                width:100%; height:40%; 
                 >li{
-                    width:100%; height:280px;
-                    position:absolute; top:0; left:0; opacity:0;
-                  
+                    width:100%; position:absolute; top:0; left:0; opacity:0;
                     h1{
                         font:90px/1 $mainFont; color:#111;
                         opacity:0;
@@ -282,13 +281,12 @@ $mobile : 539px;
                 }
             }
             .subVisual{
-                width:100%; position:relative; top:280px;
+                width:100%; height:60%;
                 &::after{
                     content:''; display:block; clear:both;
                 }
                 .left{
-                    width:60%; height:100%;float:left;
-                    padding-top:270px; 
+                    width:60%; float:left; position:absolute; bottom:40px; left:0; 
                     .txt{
                         width:100%; margin-bottom:20px;
                         p{
@@ -309,7 +307,7 @@ $mobile : 539px;
                         position:absolute; margin-top:50px;
                     }
                     .smallVisual{
-                        width:100%; height:100%; position:absolute;
+                        width:100%; height:100%;
                         li{
                             width:100%; height:100%;
                             position:absolute; top:0; left:0; opacity:0;
@@ -932,8 +930,37 @@ $mobile : 539px;
             top:50%; right:20px; transform:translateY(-50%);
         }
         .menuMo{
-            h1{
-                a{ margin-bottom:10px;}
+            width:100%; height:100vh; padding:100px 0;
+            background:#111; position:fixed; top:-100%; left:0; z-index:10; opacity:0; transition:0.5s;
+            margin:0 auto; text-align:center;
+            >h1{
+                padding-bottom:20px;
+                a{
+                    display:block;
+                    font:40px/1 $font; color:#fff;
+                }
+                span{
+                    font:14px/1 $font; color:$titColor;
+                    letter-spacing: 1px;
+                }
+            }
+            #gnbMo{
+                width:100%; height:100%;
+                >li{
+                    width:100%;
+                    a{
+                        display:block;
+                        width:100%; padding:20px 0;
+                        font:bold 46px/1 $font; color:#fff;
+                        transition:0.5s;
+                        &:hover{
+                            color:$titColor;
+                        }
+                    }
+                }
+            }
+            &.on{
+               top:0; opacity:1;
             }
         }
 
