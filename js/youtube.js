@@ -1,4 +1,3 @@
-
 class Youtube{
     constructor(option){
         this.init(option);

@@ -94,9 +94,7 @@ class Myflickr{
             $(".pop").remove();
         })
     }
-    
-    
-    
+
     getList(opt){
         let result_opt = [];
     
@@ -156,7 +154,7 @@ class Myflickr{
         .error(err=>{
             console.err("데이터를 호출하는데 실패했습니다");
         })
-    } 
+    }  
     
     createList(items){
     
@@ -219,5 +217,9 @@ class Myflickr{
                 }
             }
         });
+    }
+
+    searchTag(){
+        
     }
 }

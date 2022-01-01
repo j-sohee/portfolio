@@ -15,8 +15,8 @@
     <script>
         $(document).ready(function(){
             new Myflickr({
-                frame : $("#gallery"),
-                searchFrame : ("#serach"),
+                frame : "#gallery",
+                searchFrame : "#searchBox",
                 title : ".gallery h1",
                 type : "userid",
                 user_id : "194106842@N02",
@@ -193,7 +193,7 @@
             <img src="img/gallery/loading.gif" class="loading">
             <div id="searchBox">
                 <input type="text" class="search">
-                <button>SEARCH</button>
+                <button class="searchBtn">SEARCH</button>
             </div>
             <div id="gallery">
                 <!-- <article>
