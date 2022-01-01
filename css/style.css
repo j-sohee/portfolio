@@ -2999,56 +2999,63 @@ fieldset {
     height: calc(100vh - 81px); }
     #visual .inner {
       width: 100%;
-      padding: 50px 20px; }
+      padding: 60px 20px; }
+      #visual .inner::after {
+        content: '';
+        display: block;
+        clear: both; }
       #visual .inner .visual {
-        width: 100%;
-        height: 200px;
-        margin-right: 0%; }
-        #visual .inner .visual #mainTit {
-          height: 100%;
-          position: relative; }
-          #visual .inner .visual #mainTit > li {
-            height: 100%; }
-            #visual .inner .visual #mainTit > li h1 {
-              font-size: 70px; }
-            #visual .inner .visual #mainTit > li h2 {
-              font-size: 70px; }
-        #visual .inner .visual .subVisual {
-          display: none; }
+        margin-right: 1%; }
+        #visual .inner .visual #mainTit > li {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0; }
+          #visual .inner .visual #mainTit > li h1 {
+            font-size: 78px; }
+          #visual .inner .visual #mainTit > li h2 {
+            font-size: 78px; }
+        #visual .inner .visual .subVisual .right {
+          overflow: hidden; }
+          #visual .inner .visual .subVisual .right .line {
+            height: 50vh;
+            overflow: hidden; }
       #visual .inner .visual2 {
-        width: 100%;
-        height: 70%; }
+        width: 44%; }
       #visual .inner .prev {
-        left: auto;
-        bottom: 50px;
-        right: 100px; }
+        left: 20px; }
       #visual .inner .next {
-        left: auto;
-        right: 20px;
-        bottom: 50px; }
+        left: 100px; }
 
-  #brand .inner {
-    width: 100%;
-    padding: 0 20px; }
-    #brand .inner .wrap article {
+  #brand {
+    padding: 100px 0; }
+    #brand .inner {
       width: 100%;
-      margin-right: 0px; }
-      #brand .inner .wrap article:last-child {
-        margin-top: 20px; }
-      #brand .inner .wrap article h2 {
-        font-size: 38px; }
-      #brand .inner .wrap article a {
-        right: 10px; }
+      padding: 0 20px; }
+      #brand .inner .wrap article {
+        width: 100%;
+        margin-right: 0px; }
+        #brand .inner .wrap article div {
+          height: 600px; }
+        #brand .inner .wrap article:last-child {
+          margin-top: 20px; }
+        #brand .inner .wrap article h2 {
+          font-size: 38px; }
+        #brand .inner .wrap article a {
+          right: 10px; }
 
-  #service .inner {
-    width: 100%;
-    padding: 0 20px; }
-    #service .inner article {
+  #service {
+    padding: 100px 0; }
+    #service .inner {
       width: 100%;
-      margin-right: 0px;
-      margin-bottom: 40px; }
-      #service .inner article:last-child {
-        margin-bottom: 0px; }
+      padding: 0 20px; }
+      #service .inner article {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 40px; }
+        #service .inner article:last-child {
+          margin-bottom: 0px; }
 
   #banner {
     padding: 80px 0; }
@@ -3057,56 +3064,58 @@ fieldset {
       #banner .inner p {
         font-size: 14px; }
 
-  #comment .inner {
-    width: 100%;
-    padding: 0 20px; }
-    #comment .inner .tit_wrap {
+  #comment {
+    padding: 100px 0; }
+    #comment .inner {
       width: 100%;
-      position: relative; }
-      #comment .inner .tit_wrap h1 {
-        font: 14px/1 "Noto Sans", "Noto Sans KR";
-        color: #333;
-        letter-spacing: 2px;
-        position: relative;
-        padding-bottom: 20px;
-        margin-bottom: 20px; }
-        #comment .inner .tit_wrap h1::after {
-          content: '';
-          display: block;
-          width: 40px;
-          height: 1px;
-          background: #000;
+      padding: 0 20px; }
+      #comment .inner .tit_wrap {
+        width: 100%;
+        position: relative; }
+        #comment .inner .tit_wrap h1 {
+          font: 14px/1 "Noto Sans", "Noto Sans KR";
+          color: #333;
+          letter-spacing: 2px;
+          position: relative;
+          padding-bottom: 20px;
+          margin-bottom: 20px; }
+          #comment .inner .tit_wrap h1::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background: #000;
+            position: absolute;
+            bottom: 0;
+            left: 0; }
+        #comment .inner .tit_wrap h2 {
+          font: 30px/1 "Noto Sans", "Noto Sans KR";
+          color: #333;
+          margin-bottom: 20px; }
+        #comment .inner .tit_wrap .viewbtn {
+          font: 12px/2 "Noto Sans", "Noto Sans KR";
+          color: #999;
           position: absolute;
-          bottom: 0;
-          left: 0; }
-      #comment .inner .tit_wrap h2 {
-        font: 30px/1 "Noto Sans", "Noto Sans KR";
-        color: #333;
-        margin-bottom: 20px; }
-      #comment .inner .tit_wrap .viewbtn {
-        font: 12px/2 "Noto Sans", "Noto Sans KR";
-        color: #999;
-        position: absolute;
-        bottom: 0px;
-        right: 0;
-        border-bottom: 1px solid #ddd;
-        letter-spacing: 2px; }
-    #comment .inner .magazine_wrap {
-      width: 100%;
-      margin-right: 0px;
-      padding-right: 0px;
-      margin-bottom: 60px; }
-    #comment .inner .news_wrap {
-      width: 100%;
-      padding-left: 0; }
-      #comment .inner .news_wrap ul li a {
-        padding: 0 10px; }
-        #comment .inner .news_wrap ul li a .tit {
-          font-size: 15px; }
-        #comment .inner .news_wrap ul li a .data {
-          font-size: 12px; }
-        #comment .inner .news_wrap ul li a .day {
-          font-size: 16px; }
+          bottom: 0px;
+          right: 0;
+          border-bottom: 1px solid #ddd;
+          letter-spacing: 2px; }
+      #comment .inner .magazine_wrap {
+        width: 100%;
+        margin-right: 0px;
+        padding-right: 0px;
+        margin-bottom: 60px; }
+      #comment .inner .news_wrap {
+        width: 100%;
+        padding-left: 0; }
+        #comment .inner .news_wrap ul li a {
+          padding: 0 10px; }
+          #comment .inner .news_wrap ul li a .tit {
+            font-size: 15px; }
+          #comment .inner .news_wrap ul li a .data {
+            font-size: 12px; }
+          #comment .inner .news_wrap ul li a .day {
+            font-size: 16px; }
 
   /*footer----------------------------------*/
   #footer .inner {
@@ -3155,6 +3164,42 @@ fieldset {
     right: 10px; }
     #navi li {
       margin: 15px 0; } }
+@media screen and (max-width: 960px) {
+  #visual {
+    height: calc(100vh - 81px); }
+    #visual .inner {
+      width: 100%;
+      padding: 20px 20px; }
+      #visual .inner .visual {
+        width: 100%;
+        height: 21%;
+        margin-right: 0%;
+        float: none; }
+        #visual .inner .visual #mainTit {
+          width: 100%;
+          height: 100%; }
+          #visual .inner .visual #mainTit > li h1 {
+            font-size: 60px; }
+          #visual .inner .visual #mainTit > li h2 {
+            font-size: 60px; }
+          #visual .inner .visual #mainTit > li > p {
+            font-size: 20px; }
+            #visual .inner .visual #mainTit > li > p::before {
+              left: -55px; }
+        #visual .inner .visual .subVisual {
+          display: none; }
+      #visual .inner .visual2 {
+        width: 100%;
+        height: 75%;
+        float: none; }
+      #visual .inner .prev {
+        position: absolute;
+        left: 20px;
+        bottom: 20px; }
+      #visual .inner .next {
+        left: auto;
+        right: 20px;
+        bottom: 20px; } }
 @media screen and (max-width: 539px) {
   /*header----------------------------------*/
   #header .inner {
@@ -3180,31 +3225,24 @@ fieldset {
       opacity: 1; }
 
   #visual .inner {
-    padding: 20px 20px; }
+    padding: 0; }
     #visual .inner .visual {
-      height: 160px; }
-      #visual .inner .visual #mainTit {
-        height: 100%;
-        position: relative; }
-        #visual .inner .visual #mainTit > li {
-          height: 100%; }
-          #visual .inner .visual #mainTit > li h1 {
-            font-size: 46px; }
-          #visual .inner .visual #mainTit > li h2 {
-            font-size: 46px; }
-          #visual .inner .visual #mainTit > li > p {
-            font-size: 20px; }
+      display: none; }
     #visual .inner .visual2 {
-      height: 75%; }
+      width: 100%;
+      height: 94%;
+      float: none; }
     #visual .inner .prev {
+      position: absolute;
       left: 20px;
-      bottom: 30px;
-      right: auto; }
+      bottom: 20px; }
     #visual .inner .next {
-      bottom: 30px; }
+      left: auto;
+      right: 20px;
+      bottom: 20px; }
 
   #brand {
-    padding: 100px 0; }
+    padding: 60px 0; }
     #brand .inner h1 {
       font-size: 14px; }
     #brand .inner .wrap article h2 {
@@ -3215,10 +3253,11 @@ fieldset {
       font-size: 12px; }
     #brand .inner .wrap article div {
       width: 100%;
-      margin-right: 0; }
+      margin-right: 0;
+      margin-bottom: 10px; }
 
   #service {
-    padding: 100px 0; }
+    padding: 60px 0; }
     #service .inner article h2 {
       font-size: 26px; }
 
@@ -3232,7 +3271,7 @@ fieldset {
       font-size: 12px; }
 
   #comment {
-    padding: 100px 0; }
+    padding: 60px 0; }
     #comment .inner .tit_wrap {
       width: 100%;
       position: relative; }
@@ -3278,6 +3317,9 @@ fieldset {
       font-size: 12px;
       padding-left: 0; }
     #footer .innerBt .footerBox .leftBox .cs i {
-      font-size: 24px; } }
+      font-size: 24px; }
+
+  #navi {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

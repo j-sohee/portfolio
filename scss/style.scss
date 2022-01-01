@@ -966,48 +966,49 @@ $mobile : 539px;
 
     }
 } 
+
 #visual{ 
     height:calc(100vh - 81px);
     .inner{
-        width:100%; padding:50px 20px; 
+        width:100%; padding:60px 20px;
+        &::after{
+            content:''; display:block; clear:both;
+        }
         .visual{
-            width:100%; height:200px; margin-right:0%;
+             margin-right:1%;
             #mainTit{
-                height:100%; position:relative;
                 >li{
-                    height:100%;
-                    h1{
-                        font-size:70px;
-                    }
-                    h2{
-                        font-size:70px;
-                    }
+                    width:100%; position:absolute; top:0; left:0; opacity:0;
+                    h1{ font-size:78px; }
+                    h2{ font-size:78px; }
                 }
             }
             .subVisual{
-                display:none;
+                .right{
+                    overflow:hidden;
+                    .line{ height:50vh; overflow:hidden;}
+                }
             }
         }
         .visual2{
-            width:100%; height:70%; 
+            width:44%;
         }
         
-        .prev{
-            left:auto; bottom:50px; right:100px;
-        }
-        .next{
-            left:auto; right:20px; bottom:50px;
-        }
+        .prev{ left:20px; }
+        .next{ left:100px; }
     }
 }
-
 #brand{
+    padding:100px 0;
     .inner{
         width:100%; padding:0 20px;
         .wrap{
             article{
                 width:100%; margin-right:0px;
 
+                div{
+                    height:600px;
+                }
                 &:last-child{ margin-top:20px;}
 
                 h2{ font-size:38px; }
@@ -1019,6 +1020,7 @@ $mobile : 539px;
 }
 
 #service{
+    padding:100px 0;
     .inner{
         width:100%; padding:0 20px;
         article{
@@ -1039,6 +1041,7 @@ $mobile : 539px;
     }
 }
 #comment{
+    padding:100px 0;
     .inner{
         width:100%; padding:0 20px;
         //공통타이틀
@@ -1150,6 +1153,42 @@ $mobile : 539px;
 
 } 
 
+@media screen and (max-width:960px){
+    #visual{ 
+        height:calc(100vh - 81px);
+            .inner{
+                width:100%; padding:20px 20px;  
+                .visual{
+                    width:100%; height:21%; margin-right:0%; float:none;
+                    #mainTit{
+                        width:100%; height:100%; 
+                        >li{
+                            h1{ font-size:60px; }
+                            h2{ font-size:60px; }
+                            >p{
+                                font-size:20px;
+                                &::before{ left:-55px; }
+                            }
+                        }
+                    }
+                    .subVisual{
+                        display:none;
+                    }
+                }
+                .visual2{
+                    width:100%; height:75%; float:none;
+                }
+                
+                .prev{
+                    position:absolute; left:20px; bottom:20px;
+                }
+                .next{
+                    left:auto; right:20px; bottom:20px;
+                }
+            }
+    }
+     
+}
 @media screen and (max-width:$mobile){
 /*header----------------------------------*/
 #header{
@@ -1195,34 +1234,25 @@ $mobile : 539px;
 
 #visual{ 
     .inner{
-        padding:20px 20px; 
+        padding:0;
         .visual{
-            height:160px; 
-            #mainTit{
-                height:100%; position:relative;
-                >li{
-                    height:100%;
-                    h1{ font-size:46px; }
-                    h2{ font-size:46px; }
-                    >p{ font-size:20px; }
-                }
-            }
+             display:none;
         }
         .visual2{
-            height:75%; 
+            width:100%; height:94%; float:none;
         }
         
         .prev{
-            left:20px; bottom:30px; right:auto;
+            position:absolute; left:20px; bottom:20px;
         }
         .next{
-            bottom:30px;
+            left:auto; right:20px; bottom:20px;
         }
     }
 }
 
 #brand{
-    padding:100px 0;
+    padding:60px 0;
     .inner{
         h1{ font-size:14px; }
         .wrap{
@@ -1231,7 +1261,7 @@ $mobile : 539px;
                 p{ font-size:14px; }
                 a{ font-size:12px; }
                 div{
-                    width:100%; margin-right:0;
+                    width:100%; margin-right:0; margin-bottom:10px;
                 }
             }
         }
@@ -1240,15 +1270,13 @@ $mobile : 539px;
 }
 
 #service{
-    padding:100px 0;
+    padding:60px 0;
     .inner{
         article{
             h2{ font-size:26px; }
         }
     }
 }
-     
-
 #banner{
     .inner{
         width:100%; padding:0 20px;
@@ -1262,7 +1290,7 @@ $mobile : 539px;
 }
 
 #comment{
-    padding:100px 0;
+    padding:60px 0;
     .inner{
         //공통타이틀
         .tit_wrap{
@@ -1335,4 +1363,7 @@ $mobile : 539px;
         }
     }
 } 
+#navi{
+    display:none;
+}
 }
